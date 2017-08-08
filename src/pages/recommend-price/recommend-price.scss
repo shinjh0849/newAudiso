@@ -1,3 +1,117 @@
 page-recommend-price {
+    
+    *{
+        
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+    .bgCircleShadow{
+        position: absolute;
+        left: -205px;
+        top: 355px;
+        width: 765px;
+    }
+
+    .recommendShadow{
+        position: absolute;
+        left: 68px;
+        top: 586px;
+        width: 226px;
+    }
+    .bgCircle{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        369.5px;    
+        width:      740px;
+        height:     740px;
+        
+    }
+
+    .recommend{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        124px; 
+        width:      107px;
+        height:     17px;
+    }
+
+    .category{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        157px; 
+        
+        //height:     35px;
+        width:      185px;
+    }
+
+    .outer{
+        position:   absolute;
+       
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+        
+    }
+
+
+    .top{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        
+    }
+
+
+    .bottom{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+    }
+
+    .interactionOuter{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       109px;
+        top:        497px;
+        width:      146px;
+        height:     146px;
+    }
+
+    .interactionInner{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       136px;
+        top:        524px;
+        width:      92px;
+        height:     92px;
+    }
+
+    
+/*
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateY(-300px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(-300px) rotate(-360deg); }
+}*/
+
+
 
 }

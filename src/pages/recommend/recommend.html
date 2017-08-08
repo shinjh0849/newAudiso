@@ -1,18 +1,29 @@
-<!--
-  Generated template for the RecommendPage page.
+<ion-content t4-to-right (pan) = "moveButton($event)" (doubleClick) = "nextP()">
+  <div class = "bgCircleShadow"><img src = "assets/shadow/bigCShadow.png"></div>
+  <div class = "bgCircle"><img src = "assets/background/보라큰원.png"></div>
+  <div class = "recommend"><img src = "assets/21-24/Recommend.png"></div>
+  <div class = "category"><img src = "assets/21-24/text1_21_24.png"></div>
+ 
+  <div class = "recommendShadow" [@rightCircle] = "roomState"><img src = "assets/shadow/littleCShadow.png" ></div>
+  <div class = "bottom" [@rightCircle] = "roomState"><img src = "assets/21-24/bottom_button.png"></div>
+  <div class = "bottom" [@rightCircleR] = "roomState"><img src = "assets/21-24/bottom_button_blue.png"></div>
+  <div class = "bottom" [@rightCircleL] = "roomState"><img src = "assets/21-24/bottom_button.png"></div>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+  <div class = "recommendShadow" [@middleCircle] = "roomState"><img src = "assets/shadow/littleCShadow.png"></div>
+  <div class = "outer" [@middleCircle] = "roomState"><img src = "assets/21-24/outer_button.png"></div>
+  <div class = "outer" [@middleCircleR] = "roomState"><img src = "assets/21-24/outer_button_blue.png"></div>
+  <div class = "outer" [@middleCircleM] = "roomState"><img src = "assets/21-24/outer_button.png"></div>
+  <div class = "outer" [@middleCircleL] = "roomState"><img src = "assets/21-24/outer_button_pink.png"></div>
+  
+  <div class = "recommendShadow" [@leftCircle] = "roomState"><img src = "assets/shadow/littleCShadow.png"></div>
+  <div class = "top" [@leftCircle] = "roomState"><img src = " assets/21-24/top_button_pink.png"></div>
+  <div class = "top" [@leftCircleR] = "roomState"><img src = " assets/21-24/top_button.png"></div>
+  <div class = "top" [@leftCircleM] = "roomState"><img src = " assets/21-24/top_button_pink.png"></div>
+  <div class = "top" [@leftCircleL] = "roomState"><img src = " assets/21-24/top_button_pink.png"></div>
 
-  <ion-navbar>
-    <ion-title>recommend</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
+  <div>
+    <div class = "interactionOuter" [style.left] = "panXo + 'px'"><img src = "assets/interaction/interactionOuter.png"></div>
+    <div class = "interactionInner" [style.left] = "panXi + 'px'"><img src = "assets/interaction/interactionInner.png"></div>
+  </div>
 
 </ion-content>
