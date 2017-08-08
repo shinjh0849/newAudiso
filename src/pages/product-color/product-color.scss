@@ -1,3 +1,150 @@
-page-product-color {
+page-product-color{
+    *{
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+    
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -205px;
+        top:        308px;    
+        width:      765px;
+        height:     765px;
+    }
 
+    .WhiteShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       68px;
+        top:        630px;    
+        width:      226px;
+        height:     226px;
+    }
+
+    .BlackShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       68px;
+        top:        630px;    
+        width:      226px;
+        height:     226px;
+    }
+
+    .GrayShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       68px;
+        top:        630px;    
+        width:      226px;
+        height:     226px;
+    }
+
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        369.5px;    
+        width:      740px;
+        height:     740px;
+    }
+
+    .bgCircle{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        369.5px;    
+        width:      740px;
+        height:     740px;
+    }
+
+    .product{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        124px; 
+        width:      107px;
+        height:     17px;
+    }
+
+    .info{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        163px; 
+        width:      295px;
+        height:     93px;
+        
+    }
+
+    .pants{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       151px;
+        top:        82px; 
+        width:      58px;
+        height:     58px;
+        
+    }
+
+    .White{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        639px; 
+        width:      201px;
+        height:     201px;
+    }
+
+    .Black{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        639px; 
+        width:      201px;
+        height:     201px;
+    }   
+
+    .Gray{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        639px; 
+        width:      201px;
+        height:     201px;
+    }   
+    
+
+    .interactionOuter{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       109px;
+        top:        497px;
+        width:      146px;
+        height:     146px;
+    }
+
+    .interactionInner{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       136px;
+        top:        524px;
+        width:      92px;
+        height:     92px;
+    }
 }

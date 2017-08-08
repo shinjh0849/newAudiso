@@ -1,3 +1,201 @@
-page-recommend-product {
+page-recommend-product{
+    *{
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
 
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -205px;
+        top:        308px;    
+        width:      765px;
+        height:     765px;
+    }
+
+    .cShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       40px;
+        top:        575px;    
+        width:      275px;
+        height:     275px;
+    }
+
+    .bShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       40px;
+        top:        575px;    
+        width:      275px;
+        height:     275px;
+    }
+
+    .aShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       40px;
+        top:        575px;    
+        width:      275px;
+        height:     275px;
+    }
+
+
+    .bgCircle{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        325.5px;    
+        width:      740px;
+        height:     740px;
+    }
+
+    .recommend{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        124px; 
+        width:      107px;
+        height:     17px;
+    }
+
+    .product{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        157px; 
+        width:      125px;
+        height:     35px;
+        
+    }
+
+    .num{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       163px;
+        top:        143px; 
+        width:      33px;
+        height:     33px;
+    }
+
+    .cWhite{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+
+    .cPink{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+
+    .cBlue{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+
+    .bWhite{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+
+    .bPink{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+
+    .bBlue{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+   
+
+    .aWhite{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+    
+    .aPink{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+    
+    .aBlue{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       52px;
+        top:        585px; 
+        width:      250px;
+        height:     250px;
+    }   
+    
+
+    .interactionOuter{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       109px;
+        top:        497px;
+        width:      146px;
+        height:     146px;
+    }
+
+    .interactionInner{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       136px;
+        top:        524px;
+        width:      92px;
+        height:     92px;
+    }
 }
