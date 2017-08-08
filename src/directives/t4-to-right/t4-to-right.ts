@@ -37,35 +37,7 @@ export class T4ToRightDirective {
 
 
   handlePan(ev){
-   /*   this.aaa = ev.deltaX;
-      let newLeft = ev.deltaX;
-      let newTop = ev.center.y;
-      let margin = ev.center.x - this.element.nativeElement.offsetLeft;
-      let final = newLeft - this.element.nativeElement.offsetLeft;
-
-      this.dighdigh.emit(true);
-
-      console.log(this.dighdigh);
-
-     if(newLeft > 135 && !this.triggered){
-        this.triggered = true;
-        this.domCtrl.write( () => {
-            this.renderer.setElementStyle(this.element.nativeElement, 'left', 135 + 'px');
-        })
-       this.overDrag.emit(true); 
-
-     } else if (newLeft <= 135) {
-          this.domCtrl.write( () => {
-          this.renderer.setElementStyle(this.element.nativeElement, 'left', newLeft +'px');
-        })
-     }
-     
-     if(ev.isFinal == true){
-       this.domCtrl.write( () => {
-          this.renderer.setElementStyle(this.element.nativeElement, 'left', 0 + 'px');
-       })
-       this.triggered = false;
-     }*/
+  
    }
    
 }

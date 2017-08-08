@@ -1,3 +1,4 @@
+import { RecommendPage } from './../pages/recommend/recommend';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -51,6 +52,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
