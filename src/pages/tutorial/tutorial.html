@@ -1,18 +1,34 @@
-<!--
-  Generated template for the TutorialPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<ion-content t4-to-right (pan)= "onNext2($event)" t4-to-right (pan)= "onNext($event)" (longPress) = "onLongPress($event)" (doubleTap) = "onDoubleTap()"> 
+  <div class = "bg"><img src = "assets/background/brightBackground.png"></div>
+  <div class = "shadow" [@fly0]="show0"><img src = "assets/shadow/bigCShadow.png"></div> 
+  <div class = "wc" [@fly1]="show1"><img src = "assets/background/흰 원.png"></div> 
+  <div class = "log_in" [@fly2]="show2"><img src="assets/T2/log_in.png"></div>
+  <div class = "text_t2_00" [@fly3]="show3"><img src="assets/T2/text_t2_00.png"></div>
+  <div class = "text_t2_01" [@fly4]="show4"><img src="assets/T2/text_t2_01.png"></div>
+  <div class = "fingerprint" [@fly5]="show5"><img src="assets/T2/fingerprint.png"></div>
+  
+  <div  >
+    <div class = "TUTORIAL" [@fly6]="show6"><img src="assets/T3/TUTORIAL.png"></div>
+    <div class = "T3_text1" [@fly7]="show7"><img src="assets/T3/T3_text1.png"></div>
+    <div class = "T3_text2" [@fly8]="show8"><img src="assets/T3/T3_text2.png"></div>
+    <div class = "fingerHigh" [@fly9]="show9"><img src="assets/T3/fingerHigh.png"></div>
+    <div class = "navigator_1" [@fly10]="show10"><img src="assets/Navigator_1.png"></div>
+  </div>
+  
+  <div >
+    <div class = "maintext" [@fly11]="show11"><img src = "assets/T4/mainText.png"></div>
+    <div class = "text" [@fly12]="show12"><img src = "assets/T4/text.png"></div>
+    <div class = "dotC" [@fly14]="show14"><img src = "assets/T4/whiteButton.png"></div>
+    <div class = "fingerC" [style.left]="xxx + 'px'" [@fly15]="show15"><img src = "assets/T4/fingerButton.png"></div>
+    <div class = "navigator_2" [@fly16]="show16" [@fly16]="show16"><img src="assets/Navigator_2.png"></div>
+  </div>
 
-  <ion-navbar>
-    <ion-title>tutorial</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+  <div >
+    <div class= "dottedcircle" [@fly17]="show17"><img src = "assets/T5/5_4.png"></div>
+    <div class = "interbutton" [style.top]="yyy + 'px'" [@fly18]="show18"><img src="assets/T5/5_5.png"></div>
+    <div class = "text2" [@fly19]="show19"><img src = "assets/T5/5_2.png"></div>
+    <div class = "text3" [@fly20]="show20"><img src = "assets/T5/5_3.png"></div>
+    <div class = "navigator_3" [@fly21]="show21"><img src="assets/Navigator_3.png"></div>
+  </div>
 </ion-content>

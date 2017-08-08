@@ -27,6 +27,10 @@ import { NavigationPage } from '../pages/navigation/navigation';
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { ScanPage } from '../pages/scan/scan';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { P1UpslidingDirective } from "../directives/p1-upsliding/p1-upsliding";
+import { T4ToRightDirective } from "../directives/t4-to-right/t4-to-right";
+import { P1Page } from "../pages/p1/p1";
+import { TutorialPage } from "../pages/tutorial/tutorial";
 
 
 
@@ -41,6 +45,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     DoubleTapDirective,
     ShortPressDirective,
     LongPressDirective,
+    P1UpslidingDirective,
+    T4ToRightDirective,
 
     ProductColorPage,
     ProductConfirmPage,
@@ -51,7 +57,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     RecommendProductPage,
     NavigationPage,
     ScanPage,
-    QRcodePage
+    QRcodePage,
+    P1Page,
+    TutorialPage,
 
   ],
   imports: [
@@ -76,7 +84,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     RecommendProductPage,
     NavigationPage,
     ScanPage,
-    QRcodePage
+    QRcodePage,
+    P1Page,
+    TutorialPage,
 
   ],
   providers: [

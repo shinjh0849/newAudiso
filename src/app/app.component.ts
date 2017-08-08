@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { Tutorial2Page } from '../pages/tutorial2/tutorial2'
 import { SplashPage } from '../pages/splash/splash';
+import { P1Page } from "../pages/p1/p1";
+import { TutorialPage } from "../pages/tutorial/tutorial";
 
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { NavigationPage } from '../pages/navigation/navigation';
@@ -15,7 +17,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Tutorial2Page;
+  rootPage:any = TutorialPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
