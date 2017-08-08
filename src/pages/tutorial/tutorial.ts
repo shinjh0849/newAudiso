@@ -2,6 +2,7 @@ import { Component, trigger, state, style, transition, animate, keyframes, group
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Tutorial2Page } from '../tutorial2/tutorial2';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 @Component({
   selector: 'page-tutorial',
   templateUrl: 'tutorial.html',
@@ -593,7 +594,7 @@ export class TutorialPage {
   defaultY: number = 455;
   triggered: boolean = false;
   triggered2: boolean = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private tts:TextToSpeech, public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
@@ -609,7 +610,28 @@ export class TutorialPage {
     this.yyy = this.defaultY;
     this.index = 1;
   }
+//이거 쓰면 됨 이거 tts 하는 함수인데 그대로 갖다써볼까?
+   async hamsoo(hungry): Promise <any> {
+  try {
+    await this.tts.speak(hungry)
+    console.log("hi")
+  } 
+  catch(e) {
+  }
+ }
+//이거 끄는건데 잘 모르겠
+  async hamsoo2(): Promise <any> {
+  try {
+    this.tts.stop()
+    console.log("bye")
+  } 
+  catch(e) {
+  }
+ }
   onLongPress(e){
+    // 텍스트를 갖다가 넣으면 된답니다아아
+    this.hamsoo('dkjasdiojgasdjgaiosdgjadiogjasdiogjadsiogjdsgasdg');
+
      if(this.index == 1){
     this.show2 = (this.show2 === "second" ? "disA" : "second");
     this.show3 = (this.show3 === "second" ? "disA" : "second");
@@ -627,6 +649,7 @@ export class TutorialPage {
 
   onDoubleTap(){
     if(this.index == 2){
+      this.tts.stop();
     this.show7 = (this.show7 === "second" ? "disA" : "second");
     this.show8 = (this.show8 === "second" ? "disA" : "second");
     this.show9 = (this.show9 === "second" ? "disA" : "second");
