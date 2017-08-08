@@ -37,17 +37,19 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    Tutorial2Page,
-    LongPressDirective,
-    SplashPage,
-
+    
+    //Directives
     DoubleTapDirective,
     ShortPressDirective,
     LongPressDirective,
     P1UpslidingDirective,
     T4ToRightDirective,
 
+    //Pages
+    SplashPage,
+    HomePage,
+    TutorialPage,
+    Tutorial2Page,
     ProductColorPage,
     ProductConfirmPage,
     ProductSizePage,
@@ -58,23 +60,23 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
     NavigationPage,
     ScanPage,
     QRcodePage,
-    P1Page,
-    TutorialPage,
-
+    P1Page
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    Tutorial2Page,
+
+    //Pages
     SplashPage,
-    
+    HomePage,
+    TutorialPage,
+    Tutorial2Page,
+    P1Page,
     ProductColorPage,
     ProductConfirmPage,
     ProductSizePage,
@@ -85,14 +87,13 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
     NavigationPage,
     ScanPage,
     QRcodePage,
-    P1Page,
-    TutorialPage,
-
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     TextToSpeech,
+    //Plugins
     BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
