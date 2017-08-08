@@ -21,6 +21,10 @@ import { RecommendMaterialPage } from '../pages/recommend-material/recommend-mat
 import { RecommendPricePage } from '../pages/recommend-price/recommend-price';
 import { RecommendProductPage } from '../pages/recommend-product/recommend-product';
 import { NavigationPage } from '../pages/navigation/navigation';
+import { P1UpslidingDirective } from "../directives/p1-upsliding/p1-upsliding";
+import { T4ToRightDirective } from "../directives/t4-to-right/t4-to-right";
+import { P1Page } from "../pages/p1/p1";
+import { TutorialPage } from "../pages/tutorial/tutorial";
 
 
 
@@ -33,6 +37,8 @@ import { NavigationPage } from '../pages/navigation/navigation';
     DoubleTapDirective,
     ShortPressDirective,
     LongPressDirective,
+    P1UpslidingDirective,
+    T4ToRightDirective,
 
     ProductColorPage,
     ProductConfirmPage,
@@ -41,7 +47,9 @@ import { NavigationPage } from '../pages/navigation/navigation';
     RecommendMaterialPage,
     RecommendPricePage,
     RecommendProductPage,
-    NavigationPage
+    NavigationPage,
+    P1Page,
+    TutorialPage,
 
   ],
   imports: [
@@ -62,7 +70,9 @@ import { NavigationPage } from '../pages/navigation/navigation';
     RecommendMaterialPage,
     RecommendPricePage,
     RecommendProductPage,
-    NavigationPage
+    NavigationPage,
+    P1Page,
+    TutorialPage,
 
   ],
   providers: [
