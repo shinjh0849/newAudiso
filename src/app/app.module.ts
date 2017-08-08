@@ -1,9 +1,11 @@
+import { T4ToRightDirective } from './../directives/t4-to-right/t4-to-right';
 import { RecommendPage } from './../pages/recommend/recommend';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DoubleTapDirective } from '../directives/double-tap/double-tap';
 import { ShortPressDirective } from '../directives/short-press/short-press';
@@ -11,9 +13,6 @@ import { LongPressDirective } from '../directives/long-press/long-press';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
-import { TextToSpeech } from "@ionic-native/text-to-speech";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SplashPage } from '../pages/splash/splash';
 import { ProductSizePage } from '../pages/product-size/product-size';
@@ -38,8 +37,7 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
   declarations: [
     MyApp,
     HomePage,
-    Tutorial2Page,
-    LongPressDirective,
+
     SplashPage,
 
     DoubleTapDirective,
@@ -51,6 +49,7 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
     ProductColorPage,
     ProductConfirmPage,
     ProductSizePage,
+    RecommendPage,
     RecommendColorPage,
     RecommendMaterialPage,
     RecommendPricePage,
@@ -65,6 +64,7 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    
 
     IonicModule.forRoot(MyApp)
   ],
@@ -72,12 +72,12 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
   entryComponents: [
     MyApp,
     HomePage,
-    Tutorial2Page,
     SplashPage,
     
     ProductColorPage,
     ProductConfirmPage,
     ProductSizePage,
+    RecommendPage,
     RecommendColorPage,
     RecommendMaterialPage,
     RecommendPricePage,
@@ -92,8 +92,11 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
   providers: [
     StatusBar,
     SplashScreen,
+<<<<<<< HEAD
     TextToSpeech,
     BarcodeScanner,
+=======
+>>>>>>> JihoMin
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
