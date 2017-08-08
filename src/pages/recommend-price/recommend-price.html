@@ -1,18 +1,42 @@
-<!--
-  Generated template for the RecommendPricePage page.
+<ion-content t4-to-right (pan) = "moveButton($event)" (doubleTap) = "nextP()">
+  <div class = "bgCircleShadow"><img src = "assets/bgCircleShadow.png"></div>
+  <div class = "bgCircle"><img src = "assets/background/보라큰원.png"></div>
+  <div class = "recommend"><img src = "assets/21-24/Recommend.png"></div>
+  <div class = "category"><img src = "assets/25-29/price_text1.png"></div>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+  <div class = "recommendShadow" [@r3] = "roomState"><img src = "assets/shadow/littleCShadow.png"></div>
+  <div class = "bottom" [@r3] = "roomState"><img src = "assets/25-29/price_4.png"></div>
+  <div class = "bottom" [@r3P] = "roomState"><img src = "assets/25-29/price_4_pink.png"></div>
+  <div class = "bottom" [@r3B] = "roomState"><img src = "assets/25-29/price_4_blue.png"></div>
+  <div class = "bottom" [@r3N] = "roomState"><img src = "assets/25-29/price_4.png"></div>
 
-  <ion-navbar>
-    <ion-title>recommend-price</ion-title>
-  </ion-navbar>
+  <div class = "recommendShadow" [@r2] = "roomState"><img src = "assets/shadow/littleCShadow.png"></div>
+  <div class = "bottom" [@r2] = "roomState"><img src = "assets/25-29/price_3-4.png"></div>
+  <div class = "bottom" [@r2P] = "roomState"><img src = "assets/25-29/price_3-4_pink.png"></div>
+  <div class = "bottom" [@r2M] = "roomState"><img src = "assets/25-29/price_3-4_blue.png"></div>
+  <div class = "bottom" [@r2L] = "roomState"><img src = "assets/25-29/price_3-4.png"></div>
 
-</ion-header>
+  <div class = "recommendShadow" [@r] = "roomState"><img src = "assets/shadow/littleCShadow.png"></div>
+  <div class = "bottom" [@r] = "roomState"><img src = "assets/25-29/price_2-3.png"></div>
+  <div class = "bottom" [@rM] = "roomState"><img src = "assets/25-29/price_2-3_blue.png"></div>
+  <div class = "bottom" [@rP] = "roomState"><img src = "assets/25-29/price_2-3_pink.png"></div>
+  <div class = "bottom" [@rL] = "roomState"><img src = "assets/25-29/price_2-3.png"></div>
 
+  <div class = "recommendShadow" [@middleCircle] = "roomState"><img src = "assets/shadow/littleCShadow.png"></div>
+  <div class = "outer" [@middleCircle] = "roomState"><img src = "assets/25-29/price_1-2.png"></div>
+  <div class = "outer" [@middleCircleR] = "roomState"><img src = "assets/25-29/price_1-2_blue.png"></div>
+  <div class = "outer" [@middleCircleM] = "roomState"><img src = "assets/25-29/price_1-2.png"></div>
+  <div class = "outer" [@middleCircleL] = "roomState"><img src = "assets/25-29/price_1-2_pink.png"></div>
+  
+  <div class = "recommendShadow" [@leftCircle] = "roomState"><img src = "assets/shadow/littleCShadow.png"></div>
+  <div class = "top" [@leftCircle] = "roomState"><img src = " assets/25-29/price_0-1.png"></div>
+  <div class = "top" [@leftCircleR] = "roomState"><img src = " assets/25-29/price_0-1.png"></div>
+  <div class = "top" [@leftCircleM] = "roomState"><img src = " assets/25-29/price_0-1_pink.png"></div>
+  
 
-<ion-content padding>
+  <div>
+    <div class = "interactionOuter" [style.left] = "panXo + 'px'"><img src = "assets/interaction/interactionOuter.png"></div>
+    <div class = "interactionInner" [style.left] = "panXi + 'px'"><img src = "assets/interaction/interactionInner.png"></div>
+  </div>
 
 </ion-content>

@@ -1,3 +1,32 @@
 page-splash {
 
+    .scroll-content {
+        overflow: hidden !important;
+    }
+
+        .pLogo{
+        position: absolute;
+        left: 110px;
+        top: 286.85px;
+        width: 140px;
+        height: 122.4px;
+        }
+
+        .wLogo{
+        position: absolute;
+        left: 110px;
+        top: 286.85px;
+        width: 140px;
+        height: 122.4px;
+        }
+
+        .backG{
+        padding: 0;
+        border: 0;
+        left: 0px; 
+        top: 0px;
+        width: 360px;
+        height: 990.25px;
+        position: absolute;
+        }
 }

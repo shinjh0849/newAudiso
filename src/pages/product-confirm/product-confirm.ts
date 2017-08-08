@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { NavigationPage } from '../navigation/navigation';
 
-/**
- * Generated class for the ProductConfirmPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-product-confirm',
   templateUrl: 'product-confirm.html',
@@ -20,6 +13,11 @@ export class ProductConfirmPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductConfirmPage');
+  }
+
+
+    nextP(){
+    this.navCtrl.push(NavigationPage);
   }
 
 }
