@@ -23,6 +23,13 @@ import { RecommendMaterialPage } from '../pages/recommend-material/recommend-mat
 import { RecommendPricePage } from '../pages/recommend-price/recommend-price';
 import { RecommendProductPage } from '../pages/recommend-product/recommend-product';
 import { NavigationPage } from '../pages/navigation/navigation';
+import { QRcodePage } from '../pages/q-rcode/q-rcode';
+import { ScanPage } from '../pages/scan/scan';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { P1UpslidingDirective } from "../directives/p1-upsliding/p1-upsliding";
+import { T4ToRightDirective } from "../directives/t4-to-right/t4-to-right";
+import { P1Page } from "../pages/p1/p1";
+import { TutorialPage } from "../pages/tutorial/tutorial";
 
 
 
@@ -36,6 +43,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
     DoubleTapDirective,
     ShortPressDirective,
     LongPressDirective,
+    P1UpslidingDirective,
     T4ToRightDirective,
 
     ProductColorPage,
@@ -46,7 +54,11 @@ import { NavigationPage } from '../pages/navigation/navigation';
     RecommendMaterialPage,
     RecommendPricePage,
     RecommendProductPage,
-    NavigationPage
+    NavigationPage,
+    ScanPage,
+    QRcodePage,
+    P1Page,
+    TutorialPage,
 
   ],
   imports: [
@@ -70,12 +82,21 @@ import { NavigationPage } from '../pages/navigation/navigation';
     RecommendMaterialPage,
     RecommendPricePage,
     RecommendProductPage,
-    NavigationPage
+    NavigationPage,
+    ScanPage,
+    QRcodePage,
+    P1Page,
+    TutorialPage,
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
+<<<<<<< HEAD
+    TextToSpeech,
+    BarcodeScanner,
+=======
+>>>>>>> JihoMin
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
