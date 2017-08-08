@@ -1,4 +1,3 @@
-import { T4ToRightDirective } from './../directives/t4-to-right/t4-to-right';
 import { RecommendPage } from './../pages/recommend/recommend';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -6,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 import { DoubleTapDirective } from '../directives/double-tap/double-tap';
 import { ShortPressDirective } from '../directives/short-press/short-press';
@@ -15,6 +15,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { SplashPage } from '../pages/splash/splash';
+import { TutorialPage } from "../pages/tutorial/tutorial";
+import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
 import { ProductSizePage } from '../pages/product-size/product-size';
 import { ProductColorPage } from '../pages/product-color/product-color';
 import { ProductConfirmPage } from '../pages/product-confirm/product-confirm';
@@ -29,22 +31,16 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { P1UpslidingDirective } from "../directives/p1-upsliding/p1-upsliding";
 import { T4ToRightDirective } from "../directives/t4-to-right/t4-to-right";
 import { P1Page } from "../pages/p1/p1";
-import { TutorialPage } from "../pages/tutorial/tutorial";
+
+
 
 
 
 @NgModule({
   declarations: [
     MyApp,
-<<<<<<< HEAD
     
     //Directives
-=======
-    HomePage,
-
-    SplashPage,
-
->>>>>>> a84103d431558c49b9c8c38dc0a1934265201d21
     DoubleTapDirective,
     ShortPressDirective,
     LongPressDirective,
@@ -72,11 +68,6 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> a84103d431558c49b9c8c38dc0a1934265201d21
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -86,14 +77,9 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
     //Pages
     SplashPage,
     HomePage,
-<<<<<<< HEAD
     TutorialPage,
     Tutorial2Page,
     P1Page,
-=======
-    SplashPage,
-    
->>>>>>> a84103d431558c49b9c8c38dc0a1934265201d21
     ProductColorPage,
     ProductConfirmPage,
     ProductSizePage,
@@ -110,12 +96,9 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
   providers: [
     StatusBar,
     SplashScreen,
-<<<<<<< HEAD
     TextToSpeech,
     //Plugins
     BarcodeScanner,
-=======
->>>>>>> JihoMin
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
