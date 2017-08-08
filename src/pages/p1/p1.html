@@ -1,18 +1,17 @@
-<!--
-  Generated template for the P1Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>p1</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content p1-upsliding (overdrag) = "upCircle()" (shortPress) = "onNext()" (doubleTap) = "nextPage()">
+  <div class = "uniqlo"  [@flyUQ]="showUQ"><img src="assets/P1/19-01.png"></div>
+  <div class = "text1"  [@flyT1]="showT1"><img src="assets/P1/19-02.png"></div>
+  <div class = "text2"  [@flyT2]="showT2"><img src="assets/P1/19-03.png"></div>
+  <div class = "uni"  [@flyUni]="showUni"><img src="assets/P1/19-04.png"></div> 
+  
+  <div class = "purple"  [@flyCircleUp]="showCircleUp" ><img src = "assets/purpleCircle.png"></div> 
+  <div class = "qlo"  [@flyQloUp]="showQloUp"><img src="assets/P1/19-05.png"></div> 
+  <div class = "button"  [@flyBUp]="showBUp" (click)="rotate()"><img src="assets/P1/20-46.png"></div> 
+  <div class = "recommendW"  [@flyRecoUp]="showRecoUp"><img src="assets/P1/20-43.png"></div> 
+  <div class = "text3"  [@flyT3Up]="showT3Up"><img src="assets/P1/20-44.png"></div> 
+  <div class = "text4"  [@flyT4Up]="showT4Up"><img src="assets/P1/20-45.png"></div> 
+  
+  <div class = "recommendB" [@flyNewReco]="showNewReco"><img src = "assets/21-24/Recommend.png"></div>
+  <div class = "category" [@flyCate]="showCate"><img src = "assets/21-24/text1_21_24.png"></div>
+ 
 </ion-content>
