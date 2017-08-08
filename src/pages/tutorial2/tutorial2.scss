@@ -1,3 +1,264 @@
+
 page-tutorial2 {
+    *{ 
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+    .bg{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        width:      360px;
+        height:     740px;
+        left:       0;
+        top:        0; 
+    }
+
+    .wc{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -360px;
+        top:        0px;
+        width:      740px;
+        height:     740px;
+    }
+    
+    .cShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -372px;
+        top:        -7px;
+        width:      765px;
+        height:     765px;
+    }
+
+    .tutorial{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        124.375px;
+        width:      73.634px;
+        height:     16.75px;
+    }
+
+    .text1{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        186.5625px;
+        width:      289.68625px;
+        height:     209.12625px;
+    }
+
+    .text2{
+        position:   absolute;
+        border:     0;
+        padding:    0;
+        left:       32.375px;
+        top:        435.225px;
+        width:      201.7265px;
+        height:     63.75px;
+    }
+
+    .page{
+        position:   absolute;
+        border:     0;
+        padding:    0;
+        left:       32.5px;
+        top:        653.66025px;
+        width:      90.6665px;
+        height:     12.34px;
+    }
+
+    // 두번째 부분
+    .text2_1{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 124.375px;
+        width: 73.634px;
+        height: 16.75px;
+}
+    .text2_2{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.42625px;
+        top: 186.5625px;
+        width: 297.57225px;
+        height: 99.5px;
+    }
+
+    .text2_3{
+        position: absolute;
+        border: 0;
+        padding: 0;
+        left: 32.42625px;
+        top: 373.253px;
+        width: 199.62675px;
+        height: 87.5px;
+    }
+
+    .page2{
+        position: absolute;
+        border: 0;
+        padding: 0;
+        left: 35.1195px;
+        top: 653.66025px;
+        width: 88.047px;
+        height: 12.34125px;
+    }
+
+    // 세번째 부분
+    .interationCircle{
+        position: absolute;
+        left: 201.39475px;
+        top : 505.58125px;
+        padding: 0;
+        border: 0;
+        width: 82.52375px;
+        height: 82.16875px;
+    }
+
+    .dotCircle{
+        position: fixed;
+        padding: 0;
+        border: 0;
+        left: 75.185px;
+        top: 512.60325px;
+        width: 67.25025px;
+        height: 67.25px;
+        }
+
+    .text3_1{
+        position: fixed;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 124.375px;
+        width: 73.634px;
+        height: 16.75px;
+    }
+    .text3_2{
+        position: fixed;
+        padding: 0;
+        border: 0;
+        left: 32.42625px;
+        top: 186.5625px;
+        width: 297.57225px;
+        height: 99.5px;
+    }
+
+    .text3_3{
+        position: fixed;
+        border: 0;
+        padding: 0;
+        left: 32.5px;
+        top: 373.375px;
+        width: 253.35275px;
+        height: 88.3475px;
+    }
+
+    .page3{
+        position: fixed;
+        border: 0;
+        padding: 0;
+        left: 35.1195px;
+        top: 653.6602px;
+        width: 66.2647px;
+        height: 12.3412px;
+    }
+
+    .text4_2{
+        position: absolute;
+        width : 252.14675px;
+        left : 32.5px;
+        top : 373.125px;
+        padding: 0;
+        border: 0;
+    }
+
+    .text4_1{
+        position: absolute;
+        width : 311px;
+        left : 31.5px;
+        top : 186.5px;
+        padding: 0;
+        border: 0;
+    }
+
+    .text5_1{
+    position: fixed;
+    padding: 0;
+    border: 0;
+    left: 32.5px;
+    top: 186.5625px;
+    width: 257.34375px;
+    height: 213.9375px;
 
 }
+
+    .text5_2{
+    position: fixed;
+    border: 0;
+    padding: 0;
+    left: 32.5px;
+    top: 417.2625px;
+    width: 257.34375px;
+    height: 67.5px;
+}
+
+    .text6_1{
+        position:   fixed;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        186.5625px;
+        width:      298.871px;
+        height:     208.5px;
+    }
+
+    .text6_2{
+        position: fixed;
+        border: 0;
+        padding: 0;
+        left: 32.5px;
+        top: 417.305px;
+        width: 254.755px;
+        height: 63.75px;
+    }
+
+
+    .page4{
+        position: absolute;
+        border: 0;
+        padding: 0;
+        left: 35.1195px;
+        top: 653.6602px;
+        width: 88.047px;
+        height: 12.3412px;
+    }
+
+
+    .page5{
+        position: absolute;
+        border: 0;
+        padding: 0;
+        left: 35.1195px;
+        top: 653.6602px;
+        width: 90.6665px;
+        height: 12.785px;
+    }
+
+}
+
+
+
+
