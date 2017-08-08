@@ -1,3 +1,5 @@
+import { RecommendColorPage } from './../pages/recommend-color/recommend-color';
+import { RecommendPage } from './../pages/recommend/recommend';
 import { Component } from '@angular/core';
 import { Platform, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -11,7 +13,7 @@ import { SplashPage } from '../pages/splash/splash';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = RecommendPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {

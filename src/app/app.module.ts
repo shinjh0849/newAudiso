@@ -1,3 +1,4 @@
+import { T4ToRightDirective } from './../directives/t4-to-right/t4-to-right';
 import { RecommendPage } from './../pages/recommend/recommend';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -35,10 +36,12 @@ import { NavigationPage } from '../pages/navigation/navigation';
     DoubleTapDirective,
     ShortPressDirective,
     LongPressDirective,
+    T4ToRightDirective,
 
     ProductColorPage,
     ProductConfirmPage,
     ProductSizePage,
+    RecommendPage,
     RecommendColorPage,
     RecommendMaterialPage,
     RecommendPricePage,
@@ -49,6 +52,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    
 
     IonicModule.forRoot(MyApp)
   ],
@@ -61,6 +65,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
     ProductColorPage,
     ProductConfirmPage,
     ProductSizePage,
+    RecommendPage,
     RecommendColorPage,
     RecommendMaterialPage,
     RecommendPricePage,

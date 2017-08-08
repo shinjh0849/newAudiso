@@ -217,12 +217,11 @@ export class RecommendColorPage {
       } else if (e.deltaX <= -50 && this.triggered == false){
         //왼 쪽으로 넘기기 발생
         this.triggered = true;
-        this.panXi = this.inneerDefault;
+        //this.panXi = this.inneerDefault;
         if(this.roomState == 'r')
           this.roomState = 'm';
         else if(this.roomState == 'm')
-          this.roomState = 'l'; 
-        
+          this.roomState = 'l';
       } else {
         //넘기기 발생 안했을 때, 조이스틱 움직이는 코드
         this.panXi = this.inneerDefault + e.deltaX;

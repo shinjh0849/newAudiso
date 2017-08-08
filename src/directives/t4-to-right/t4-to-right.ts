@@ -21,17 +21,19 @@ export class T4ToRightDirective {
   @Output() dighdigh: any = new EventEmitter();
   triggered: boolean = false;
   
+  @Output()
+  panpan: EventEmitter<any> = new EventEmitter();
   constructor(public element: ElementRef, public renderer: Renderer, public domCtrl: DomController ) {
-    
+  
   }
 
-  ngAfterViewInit(){
+  ngOnInit(){
      // this.renderer.setElementStyle(this.element.nativeElement, 'position', 'absolute');    
       let hammer = new window['Hammer'](this.element.nativeElement);
       hammer.get('pan').set({ direction: window['Hammer'].DIRECTION_ALL});
       hammer.on('pan', (ev) => {
         this.handlePan(ev);
-
+        this.panpan.emit(ev);
       })
   }
 
