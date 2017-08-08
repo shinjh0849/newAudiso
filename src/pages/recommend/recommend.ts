@@ -242,6 +242,7 @@ export class RecommendPage {
   moveButton(e){
       console.log(this.triggered);
       console.log(this.roomState);
+      console.log(e.deltaX);
       if(e.deltaX >= 50 && this.triggered == false){
         // 오른쪽으로 넘기기 발생
         this.triggered = true;
