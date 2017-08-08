@@ -6,12 +6,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { SplashPage } from '../pages/splash/splash';
 
+import { QRcodePage } from '../pages/q-rcode/q-rcode';
+import { NavigationPage } from '../pages/navigation/navigation';
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = NavigationPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
