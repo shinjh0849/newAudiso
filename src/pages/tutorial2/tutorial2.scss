@@ -66,15 +66,6 @@ page-tutorial2 {
         height:     63.75px;
     }
 
-    .page{
-        position:   absolute;
-        border:     0;
-        padding:    0;
-        left:       32.5px;
-        top:        653.66025px;
-        width:      90.6665px;
-        height:     12.34px;
-    }
 
     // 두번째 부분
     .text2_1{
@@ -104,16 +95,6 @@ page-tutorial2 {
         top: 373.253px;
         width: 199.62675px;
         height: 87.5px;
-    }
-
-    .page2{
-        position: absolute;
-        border: 0;
-        padding: 0;
-        left: 35.1195px;
-        top: 653.66025px;
-        width: 88.047px;
-        height: 12.34125px;
     }
 
     // 세번째 부분
@@ -164,16 +145,6 @@ page-tutorial2 {
         top: 373.375px;
         width: 253.35275px;
         height: 88.3475px;
-    }
-
-    .page3{
-        position: fixed;
-        border: 0;
-        padding: 0;
-        left: 35.1195px;
-        top: 653.6602px;
-        width: 66.2647px;
-        height: 12.3412px;
     }
 
     .text4_2{
@@ -235,6 +206,37 @@ page-tutorial2 {
         height: 63.75px;
     }
 
+    // page navigators
+
+    .page{
+        position:   absolute;
+        border:     0;
+        padding:    0;
+        left:       32.5px;
+        top:        653.66025px;
+        width:      90.6665px;
+        height:     12.34px;
+    }
+
+    .page2{
+        position: absolute;
+        border: 0;
+        padding: 0;
+        left: 35.1195px;
+        top: 653.66025px;
+        width: 88.047px;
+        height: 12.34125px;
+    }
+
+    .page3{
+        position: fixed;
+        border: 0;
+        padding: 0;
+        left: 35.1195px;
+        top: 653.6602px;
+        width: 88.047px;
+        height: 12.3412px;
+    }
 
     .page4{
         position: absolute;
