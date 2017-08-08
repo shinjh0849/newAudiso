@@ -1,3 +1,239 @@
-page-recommend-material {
+page-recommend-material{
+    *{
+        
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -205px;
+        top:        308px;    
+        width:      765px;
+        height:     765px;
+    }
+
+    .heatShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       68px;
+        top:        586px;    
+        width:      226px;
+        height:     226px;
+    }
+    .airShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       68px;
+        top:        586px;    
+        width:      226px;
+        height:     226px;
+    }
+    .cottonShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       68px;
+        top:        586px;    
+        width:      226px;
+        height:     226px;
+    }
+    .nylonShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       68px;
+        top:        586px;    
+        width:      226px;
+        height:     226px;
+    }
+
+
+    .bgCircle{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        325.5px;    
+        width:      740px;
+        height:     740px;
+    }
+
+    .recommend{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        124px; 
+        width:      107px;
+        height:     17px;
+    }
+
+    .material{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        157px; 
+        width:      135px;
+        height:     35px;
+        
+    }
+
+    .cottonWhite{
+        position:   absolute;
+        margin-bottom: 600px;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    .cottonBlue{
+        position:   absolute;
+        margin-bottom: 600px;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    .cottonPink{
+        position:   absolute;
+        margin-bottom: 600px;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+
+    .nylonWhite{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+    }
+
+    .nylonBlue{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+    }
+
+    .nylonPink{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+    }
+
+
+    .airWhite{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    .airBlue{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    .airPink{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    .heatWhite{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    .heatBlue{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    .heatPink{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       79px;
+        top:        595px;
+        width:      201px;
+        height:     201px;
+    }
+
+    
+
+    .interactionOuter{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       109px;
+        top:        497px;
+        width:      146px;
+        height:     146px;
+    }
+
+    .interactionInner{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       136px;
+        top:        524px;
+        width:      92px;
+        height:     92px;
+    }
+
+    
+/*
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateY(-300px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(-300px) rotate(-360deg); }
+}*/
 
 }

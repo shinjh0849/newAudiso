@@ -1,0 +1,69 @@
+page-navigation {
+    *{
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -205px;
+        top:        308px;    
+        width:      765px;
+        height:     765px;
+    }
+
+    .bgCircle{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        325.5px;    
+        width:      740px;
+        height:     740px;
+    }
+
+    .navigation{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        124px;    
+        width:      106px;
+        height:     17px;
+    }
+
+    .text{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32px;
+        top:        157px;    
+        width:      253px;
+        height:     140px;
+    }
+
+    .arrow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       91px;
+        top:        393px;    
+        width:      177px;
+        height:     239px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: 100;
+    }
+
+    //이거 빠운스 빠운스 두근되
+    @keyframes bounce {
+        0% { transform: translate(0, 0) }
+        25% { transform: translate(0, 25px) }
+        50% { transform: translate(0, 0) }
+        75% { transform: translate(0, -25px) }
+        100% { transform: translate(0, 0) }
+    }
+}
