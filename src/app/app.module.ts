@@ -1,4 +1,5 @@
-import { T4ToRightDirective } from './../directives/t4-to-right/t4-to-right';
+import { Tutorial2Page } from './../pages/tutorial2/tutorial2';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { RecommendPage } from './../pages/recommend/recommend';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -59,6 +60,7 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
     QRcodePage,
     P1Page,
     TutorialPage,
+    Tutorial2Page
 
   ],
   imports: [
@@ -87,16 +89,14 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
     QRcodePage,
     P1Page,
     TutorialPage,
+    Tutorial2Page
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
-<<<<<<< HEAD
     TextToSpeech,
     BarcodeScanner,
-=======
->>>>>>> JihoMin
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
