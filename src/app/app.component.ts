@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { Tutorial2Page } from '../pages/tutorial2/tutorial2'
 import { SplashPage } from '../pages/splash/splash';
 
+import { QRcodePage } from '../pages/q-rcode/q-rcode';
+import { NavigationPage } from '../pages/navigation/navigation';
+
 
 @Component({
   templateUrl: 'app.html'

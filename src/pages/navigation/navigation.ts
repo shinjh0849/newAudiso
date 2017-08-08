@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ScanPage } from '../scan/scan';
 
 
 @Component({
@@ -15,4 +16,9 @@ export class NavigationPage {
     console.log('ionViewDidLoad NavigationPage');
   }
 
+  onDoubleTap(){
+    console.log('넘어갔어!');
+    this.navCtrl.push(ScanPage);
+    
+  }
 }

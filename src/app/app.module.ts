@@ -24,6 +24,9 @@ import { RecommendMaterialPage } from '../pages/recommend-material/recommend-mat
 import { RecommendPricePage } from '../pages/recommend-price/recommend-price';
 import { RecommendProductPage } from '../pages/recommend-product/recommend-product';
 import { NavigationPage } from '../pages/navigation/navigation';
+import { QRcodePage } from '../pages/q-rcode/q-rcode';
+import { ScanPage } from '../pages/scan/scan';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 
 
@@ -46,7 +49,9 @@ import { NavigationPage } from '../pages/navigation/navigation';
     RecommendMaterialPage,
     RecommendPricePage,
     RecommendProductPage,
-    NavigationPage
+    NavigationPage,
+    ScanPage,
+    QRcodePage
 
   ],
   imports: [
@@ -69,13 +74,16 @@ import { NavigationPage } from '../pages/navigation/navigation';
     RecommendMaterialPage,
     RecommendPricePage,
     RecommendProductPage,
-    NavigationPage
+    NavigationPage,
+    ScanPage,
+    QRcodePage
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
     TextToSpeech,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
