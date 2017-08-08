@@ -1,3 +1,4 @@
+import { TutorialPage } from './../pages/tutorial/tutorial';
 import { RecommendColorPage } from './../pages/recommend-color/recommend-color';
 import { RecommendPage } from './../pages/recommend/recommend';
 import { Component } from '@angular/core';
@@ -13,7 +14,7 @@ import { SplashPage } from '../pages/splash/splash';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = RecommendPage;
+  rootPage:any = TutorialPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
