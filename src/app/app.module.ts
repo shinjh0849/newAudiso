@@ -3,12 +3,9 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DoubleTapDirective } from '../directives/double-tap/double-tap';
 import { ShortPressDirective } from '../directives/short-press/short-press';
-import { LongPressDirective } from '../directives/long-press/long-press';
-
 import { LongPressDirective } from '../directives/long-press/long-press';
 
 import { MyApp } from './app.component';
