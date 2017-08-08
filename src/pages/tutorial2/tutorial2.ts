@@ -191,9 +191,36 @@ import { P1Page } from '../p1/p1';
       transition('on=>d', [
         animate('100ms')
       ])
-    ])
+    ]),
+
+    trigger('nav1', [
+      state('off', style({opacity: 0})),
+      state('on', style({opacity: 100})),
+      transition('off<=>on', [animate('100ms')])
+    ]),
+    trigger('nav2', [
+      state('off', style({opacity: 0})),
+      state('on', style({opacity: 100})),
+      transition('off<=>on', [animate('100ms')])
+    ]),
+    trigger('nav3', [
+      state('off', style({opacity: 0})),
+      state('on', style({opacity: 100})),
+      transition('off<=>on', [animate('100ms')])
+    ]),
+    trigger('nav4', [
+      state('off', style({opacity: 0})),
+      state('on', style({opacity: 100})),
+      transition('off<=>on', [animate('100ms')])
+    ]),
+    trigger('nav5', [
+      state('off', style({opacity: 0})),
+      state('on', style({opacity: 100})),
+      transition('off<=>on', [animate('100ms')])
+    ]),
   ]
 })
+
 export class Tutorial2Page {
 
   pageNum: number = 1;
@@ -208,6 +235,12 @@ export class Tutorial2Page {
   text6State: string = "off";
   circleState: string = "off";
 
+  nav1State: string = "off";
+  nav2State: string = "off";
+  nav3State: string = "off";
+  nav4State: string = "off";
+  nav5State: string = "off";
+
   position: number = 0;
   defaultX: number = 201.39475;
   triggered: boolean = false;
@@ -217,15 +250,7 @@ export class Tutorial2Page {
   constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
-  onLongPress(e) {
-    if(this.pageNum == 1) {
-      this.text1State = "d";
-      this.text2State = "on";
-      this.text2State1 = "on";
-      this.pageNum ++;
-    }
 
-  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tutorial2Page');
@@ -252,6 +277,7 @@ export class Tutorial2Page {
       this.startState = "on";
       this.tutorialState = "on";
       this.text1State = "on";
+      this.nav1State = "on";
     }
   }
 
@@ -292,18 +318,31 @@ export class Tutorial2Page {
       }
     }
   }
-  
+  onLongPress(e) {
+    if(this.pageNum == 1) {
+      this.text1State = "d";
+      this.text2State = "on";
+      this.text2State1 = "on";
+      this.nav1State = "off";
+      this.nav2State = "on";
+      this.pageNum ++;
+    }
+
+  }
   page2Load() {
     if(this.pageNum == 3) {
       this.text3State = "d"; 
       this.circleState = "d";
       this.text2State = "on";
       this.text2State1 = "on";
+      this.nav3State = "off";
+      this.nav2State = "on";
       console.log("page2Load from 3. pageNum:" + this.pageNum); 
     }
   }
 
-  page3Load() {
+  // 2랑 3이랑 네비게이터가 같음 (같은 화면으로 되어있음) 그래서 네비게이터 안건드려도 됨!!!!
+  page3Load() {  
     if(this.pageNum == 2) {
       this.text2State1 = "d";
       this.text3State = "on";
@@ -316,17 +355,22 @@ export class Tutorial2Page {
       this.text4State = "d";
       this.text3State = "on";
       this.circleState = "on";
+      this.nav3State = "off";
+      this.nav2State = "on";
       this.triggered = false;
       this.position = this.defaultX;
             console.log("page3Load from 4. pageNum:" + this.pageNum); 
     }
   }
-
+  
+  // 네비게이터 숫자 헷갈리지 말자 ... 3페이지부터 2 ~ 6페이지 5
   page4Load() {
     if(this.pageNum == 3) {
       this.text2State = "d";
       this.text3State = "d";
       this.text4State = "on";
+      this.nav2State = "off";
+      this.nav3State = "on";
       this.triggered = false;
       this.position = this.defaultX;
             console.log("page4Load from 3. pageNum:" + this.pageNum); 
@@ -335,6 +379,8 @@ export class Tutorial2Page {
     if(this.pageNum == 5) {
       this.text5State = "d";
       this.text4State = "on";
+      this.nav4State = "off";
+      this.nav3State = "on";
       this.triggered = false;
       this.position = this.defaultX ;
             console.log("page4Load from 5. pageNum:" + this.pageNum); 
@@ -346,6 +392,8 @@ export class Tutorial2Page {
     if(this.pageNum == 4) {
       this.text4State = "d";
       this.text5State = "on";
+      this.nav3State = "off";
+      this.nav4State = "on";
       this.triggered = false;
       this.position = this.defaultX;
             console.log("page5Load from 4. pageNum:" + this.pageNum); 
@@ -354,6 +402,8 @@ export class Tutorial2Page {
     if(this.pageNum == 6) {
       this.text6State = "d";
       this.text5State = "on";
+      this.nav5State = "off";
+      this.nav4State = "on";
       this.triggered = false;
       this.position = this.defaultX;
             console.log("page5Load from 6. pageNum:" + this.pageNum); 
@@ -365,6 +415,8 @@ export class Tutorial2Page {
     if(this.pageNum == 5) {
       this.text5State = "d";
       this.text6State = "on";
+      this.nav4State = "off";
+      this.nav5State = "on";
       this.triggered = false;
       this.position = this.defaultX;
             console.log("page6Load from 5. pageNum:" + this.pageNum); 
