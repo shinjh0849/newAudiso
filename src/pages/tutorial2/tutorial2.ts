@@ -13,7 +13,7 @@ import { P1Page } from '../p1/p1';
     // 시작하는 원
     trigger('startCircle', [
       state('off', style({
-        left: '-760px'
+        left: '-800px'
       })),
       state('on', style({
         left: '*'
@@ -24,13 +24,13 @@ import { P1Page } from '../p1/p1';
         transform: 'scale(70)'
       })),
       transition('off=>on', [
-        animate('0.7s 3s cubic-bezier(.5,.27,.13,1.06)'//, keyframes([
+        animate('2s 3s cubic-bezier(.67,1.28,.64,1.35)'//, keyframes([
           //style({left: '-740px', offset: 0}),
           //style({left: '-330px', offset: 0.8}),
           //style({left: '-360px', offset: 1}),
         //]))
-        )
-      ]),
+        )]
+      ),
       transition('on=>last', [
        // animate('500ms 800ms', keyframes([
        //   style({left: '-360px', offset: 0}),
