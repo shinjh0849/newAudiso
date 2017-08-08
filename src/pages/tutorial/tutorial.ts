@@ -688,7 +688,7 @@ onNext2(e){
 
         this.show6 = (this.show6 === "second" ? "disA" : "second");
         // 다음 페이지로 넘어감
-       // this.navCtrl.push(Tutorial2Page);
+        this.navCtrl.push(Tutorial2Page);
 
      } else { // 놓았을 때 원래 위치로 오게 하는 것
           this.yyy = this.defaultY + e.deltaY;

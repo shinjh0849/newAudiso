@@ -66,6 +66,10 @@ import { ScanPage } from '../pages/scan/scan';
     ScanPage,
     QRcodePage,
     
+    P1Page,
+    TutorialPage,
+    Tutorial2Page
+
   ],
   imports: [
     BrowserModule,
@@ -94,6 +98,10 @@ import { ScanPage } from '../pages/scan/scan';
     ScanPage,
     QRcodePage,
     
+    P1Page,
+    TutorialPage,
+    Tutorial2Page
+
   ],
   providers: [
     StatusBar,
