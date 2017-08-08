@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { SplashPage } from '../pages/splash/splash';
 import { P1Page } from "../pages/p1/p1";
 import { TutorialPage } from "../pages/tutorial/tutorial";
+import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
 
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { NavigationPage } from '../pages/navigation/navigation';

@@ -250,25 +250,37 @@ export class Tutorial2Page {
   constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
+ async hamsoo(): Promise <any> {
+  try {
+    await this.tts.speak('소망님을 위한 똑똑한 쇼핑 친구 유니와 클로를 이용해 보세요')
+    console.log("hi")
 
+    if(this.pageNum == 1) {
+      this.startState = "on";
+      this.tutorialState = "on";
+      this.text1State = "on";
+      this.nav1State = "on";
+    }
+  } 
+  catch(e) {
+
+  }
+ }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tutorial2Page');
 
     //tts 이렇게 쓰면 될것 같은데 안해봐서 잘 모르겠음
     // then(() => 하고 여기에 페이지 넘기거나 로그 띄우거나 하면 되는데 지금 전환 테스트 해보려고 변수 넣어놓음)
-    this.tts.speak('소망님을 위한 똑똑한 쇼핑 친구 유니와 클로를 이용해 보세요')
-      .then(() => this.tts1 = true)
-      .catch((reason: any) => this.tts1 = true);
+    // this.tts.speak('소망님을 위한 똑똑한 쇼핑 친구 유니와 클로를 이용해 보세요');
+      //.then(() => this.hamsoo())
+      //.then()
+      //.catch();
     //.catch((reason: any) => console.log(reason));
-
-    this.pageNum = 1;
     
-    if (this.tts1 == true) {
-      this.startState = "on"
-    }
-
-    console.log(this.tts1);
+    this.pageNum = 1;
+          
+    this.startState = "on"
 
     this.position = this.defaultX;
 
@@ -279,6 +291,10 @@ export class Tutorial2Page {
       this.text1State = "on";
       this.nav1State = "on";
     }
+    
+    console.log("yogi")
+    this.hamsoo();
+    
   }
 
   clickEvent() {
@@ -318,6 +334,7 @@ export class Tutorial2Page {
       }
     }
   }
+
   onLongPress(e) {
     if(this.pageNum == 1) {
       this.text1State = "d";
