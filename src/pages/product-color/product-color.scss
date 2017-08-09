@@ -5,15 +5,7 @@ page-product-color{
         }
     }
     
-    .bgShadow{
-        position:   absolute;
-        padding:    0;
-        border:     0;
-        left:       -205px;
-        top:        308px;    
-        width:      765px;
-        height:     765px;
-    }
+
 
     .WhiteShadow{
         position:   absolute;
@@ -147,4 +139,15 @@ page-product-color{
         width:      92px;
         height:     92px;
     }
+
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -205px;
+        top:        355px;    
+        width:      765px;
+        height:     765px;
+    }
+
 }

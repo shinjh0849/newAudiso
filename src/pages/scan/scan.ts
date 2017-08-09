@@ -28,7 +28,7 @@ export class ScanPage {
     }
     this.results = await this.barcode.scan(this.options);
     console.log(this.results);
-    this.navCtrl.push(QRcodePage);
+    this.navCtrl.push(QRcodePage, {}, { animate: false });
   }
 
 }

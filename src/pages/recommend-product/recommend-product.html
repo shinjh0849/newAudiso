@@ -1,32 +1,32 @@
-<ion-content t4-to-right (pan) = "moveButton($event)" (doubleTap) = "nextP()">
-  
-  <div class = "bgShadow"><img src = "assets/shadow/bigCShadow.png"></div>  
-  <div class = "bgCircle"><img src = "assets/background/보라큰원.png"></div>
-  <div class = "recommend"><img src = "assets/21-24/Recommend.png"></div>
-  <div class = "product"><img src = "assets/Recommend_Product/product.png"></div>
-  <div class = "num"><img src = "assets/Recommend_Product/5.png"></div>
-  
-  <div class = "cShadow" [@Left] = "roomState"><img src = "assets/shadow/productShadow.png"></div>
-  <div class = "cWhite" [@Left] = "roomState"><img src = "assets/Recommend_Product/c_White.png"></div>
-  <div class = "cPink" [@PinkLeft] = "roomState"><img src = "assets/Recommend_Product/c_Pink.png"></div>
-  <div class = "cBlue" [@BlueLeft] = "roomState"><img src = "assets/Recommend_Product/c_Blue.png"></div>
-  <div class = "cWhite" [@WhiteLeft] = "roomState"><img src = "assets/Recommend_Product/c_White.png"></div>
-  
-  <div class = "bShadow" [@Middle] = "roomState"><img src = "assets/shadow/productShadow.png"></div>
-  <div class = "bWhite" [@Middle] = "roomState"><img src = "assets/Recommend_Product/b_White.png"></div>
-  <div class = "bPink" [@PinkMiddle] = "roomState"><img src = "assets/Recommend_Product/b_Pink.png"></div>
-  <div class = "bBlue" [@BlueMiddle] = "roomState"><img src = "assets/Recommend_Product/b_Blue.png"></div>
-  <div class = "bWhite" [@WhiteMiddle] = "roomState"><img src = "assets/Recommend_Product/b_White.png"></div>
+<ion-content t4-to-right (pan)="moveButton($event)" (doubleTap)="nextP()">
 
-  <div class = "aShadow" [@Right] = "roomState"><img src = "assets/shadow/productShadow.png"></div>
-  <div class = "aWhite" [@Right] = "roomState"><img src = "assets/Recommend_Product/a_White.png"></div>  
-  <div class = "aPink" [@PinkRight] = "roomState"><img src = "assets/Recommend_Product/a_Pink.png"></div>
-  <div class = "aBlue" [@BlueRight] = "roomState"><img src = "assets/Recommend_Product/a_Blue.png"></div>
-  <div class = "aWhite" [@WhiteRight] = "roomState"><img src = "assets/Recommend_Product/a_White.png"></div>  
-    
+  <div class="bgShadow"><img src="assets/shadow/bigCShadow.png"></div>
+  <div class="bgCircle"><img src="assets/background/보라큰원.png"></div>
+  <div class="recommend"><img src="assets/21-24/Recommend.png"></div>
+  <div class="product" [@flyin]="flyinState"><img src="assets/Recommend_Product/product.png"></div>
+  <div class="num" [@appear]="appearState"><img src="assets/Recommend_Product/5.png"></div>
+
+  <div class="cShadow" [@Left]="roomState"><img src="assets/shadow/productShadow.png"></div>
+  <div class="cWhite" [@Left]="roomState"><img src="assets/Recommend_Product/c_White.png"></div>
+  <div class="cPink" [@PinkLeft]="roomState"><img src="assets/Recommend_Product/c_Pink.png"></div>
+  <div class="cBlue" [@BlueLeft]="roomState"><img src="assets/Recommend_Product/c_Blue.png"></div>
+  <div class="cWhite" [@WhiteLeft]="roomState"><img src="assets/Recommend_Product/c_White.png"></div>
+
+  <div class="bShadow" [@Middle]="roomState"><img src="assets/shadow/productShadow.png"></div>
+  <div class="bWhite" [@Middle]="roomState"><img src="assets/Recommend_Product/b_White.png"></div>
+  <div class="bPink" [@PinkMiddle]="roomState"><img src="assets/Recommend_Product/b_Pink.png"></div>
+  <div class="bBlue" [@BlueMiddle]="roomState"><img src="assets/Recommend_Product/b_Blue.png"></div>
+  <div class="bWhite" [@WhiteMiddle]="roomState"><img src="assets/Recommend_Product/b_White.png"></div>
+
+  <div class="aShadow" [@Right]="roomState"><img src="assets/shadow/productShadow.png"></div>
+  <div class="aWhite" [@Right]="roomState"><img src="assets/Recommend_Product/a_White.png"></div>
+  <div class="aPink" [@PinkRight]="roomState"><img src="assets/Recommend_Product/a_Pink.png"></div>
+  <div class="aBlue" [@BlueRight]="roomState"><img src="assets/Recommend_Product/a_Blue.png"></div>
+  <div class="aWhite" [@WhiteRight]="roomState"><img src="assets/Recommend_Product/a_White.png"></div>
+
   <div>
-    <div class = "interactionOuter" [style.left] = "panXo + 'px'"><img src = "assets/interaction/interactionOuter.png"></div>
-    <div class = "interactionInner" [style.left] = "panXi + 'px'"><img src = "assets/interaction/interactionInner.png"></div>
+    <div class="interactionOuter" [style.left]="panXo + 'px'"><img src="assets/interaction/interactionOuter.png"></div>
+    <div class="interactionInner" [style.left]="panXi + 'px'"><img src="assets/interaction/interactionInner.png"></div>
   </div>
 
 </ion-content>

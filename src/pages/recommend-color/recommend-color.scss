@@ -1,7 +1,6 @@
 page-recommend-color {
 
     *{
-        
         .scroll-content{
         overflow: hidden !important;
         }
@@ -19,7 +18,7 @@ page-recommend-color {
         position: absolute;
         left: 68px;
         top: 586px;
-         width: 226px;
+        width: 226px;
     }
 
     .bgCircle{
@@ -106,14 +105,4 @@ page-recommend-color {
         width:      92px;
         height:     92px;
     }
-
-    
-/*
-@keyframes myOrbit {
-    from { transform: rotate(0deg) translateY(-300px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateY(-300px) rotate(-360deg); }
-}*/
-
-
-
 }
