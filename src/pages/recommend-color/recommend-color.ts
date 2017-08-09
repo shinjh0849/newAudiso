@@ -197,7 +197,7 @@ export class RecommendColorPage {
   }
   
   nextP(){
-    this.navCtrl.push(RecommendMaterialPage);
+    this.navCtrl.push(RecommendMaterialPage, {}, { animate: false });
   }
 
 

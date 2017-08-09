@@ -1,21 +1,56 @@
-import { Component,
-         trigger,
-         transition,
-         style,
-         animate,
-         group,
-         state
- } from '@angular/core';
+import {
+  Component,
+  trigger,
+  transition,
+  style,
+  animate,
+  group,
+  state
+} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ProductConfirmPage } from '../product-confirm/product-confirm';
-
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @Component({
   selector: 'page-product-size',
   templateUrl: 'product-size.html',
-  animations : [
+  animations: [
+    trigger('flyinPants', [
+      state('out', style({
+        left: '-250px'
+      })),
+      state('in', style({
+        left: '151px'
+      })),
+      state('down', style({
+        opacity: '0'
+      })),
+      transition('out=>in', [
+        animate('0.5s 1.5s cubic-bezier(.67,1.28,.64,1.35)')
+      ]),
+      transition('in=>down', [
+        animate('0.7s cubic-bezier(.67,1.28,.64,1.35)')
+      ]),
+    ]),
+    trigger('flyin', [
+      state('out', style({
+        left: '-300px'
+      })),
+      state('in', style({
+        left: '32px'
+      })),
+      state('down', style({
+        opacity: '0'
+      })),
+      transition('out=>in', [
+        animate('0.5s 1.5s cubic-bezier(.67,1.28,.64,1.35)')
+      ]),
+      transition('in=>down', [
+        animate('0.7s cubic-bezier(.67,1.28,.64,1.35)')
+      ]),
+    ]),
     trigger('Middle', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
       })),
       state('r', style({
@@ -32,21 +67,21 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
       transition('l<=>l2', [animate('0.3s')])
     ]),
     trigger('PinkMiddle', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-        opacity : 0
+        opacity: 0
       })),
       state('r', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
-        opacity : 0
+        opacity: 0
       })),
       state('l', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
-        opacity : 1
+        opacity: 1
       })),
       state('l2', style({
         transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
-        opacity : 0
+        opacity: 0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
@@ -54,21 +89,21 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('BlueMiddle', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-        opacity : 0
+        opacity: 0
       })),
       state('r', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
-        opacity : 1
+        opacity: 1
       })),
       state('l', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
-        opacity : 0
+        opacity: 0
       })),
       state('l2', style({
         transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
-        opacity : 0
+        opacity: 0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
@@ -76,29 +111,29 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('WhiteMiddle', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-        opacity : 1
+        opacity: 1
       })),
       state('r', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
-        opacity : 0
+        opacity: 0
       })),
       state('l', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
-        opacity : 0
+        opacity: 0
       })),
       state('l2', style({
         transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
-        opacity : 0
+        opacity: 0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
       transition('l<=>l2', [animate('0.3s')])
     ]),
 
-  trigger('Right', [
-      state('m', style({ 
+    trigger('Right', [
+      state('m', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
       })),
       state('r', style({
@@ -116,7 +151,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('PinkRight', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
         opacity: 1
       })),
@@ -138,7 +173,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('BlueRight', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
         opacity: 0
       })),
@@ -160,7 +195,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('WhiteRight', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
         opacity: 0
       })),
@@ -182,7 +217,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('Left', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
       })),
       state('r', style({
@@ -199,8 +234,8 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
       transition('l<=>l2', [animate('0.3s')])
     ]),
 
-     trigger('PinkLeft', [
-      state('m', style({ 
+    trigger('PinkLeft', [
+      state('m', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
         opacity: 0
       })),
@@ -222,7 +257,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('BlueLeft', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
         opacity: 1
       })),
@@ -242,9 +277,9 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
       transition('m<=>l', [animate('0.3s')]),
       transition('l<=>l2', [animate('0.3s')])
     ]),
-  
+
     trigger('WhiteLeft', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
         opacity: 0
       })),
@@ -266,7 +301,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('Left2', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
       })),
       state('r', style({
@@ -284,7 +319,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
     ]),
 
     trigger('PinkLeft2', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
         opacity: 0
       })),
@@ -305,7 +340,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
       transition('l<=>l2', [animate('0.3s')])
     ]),
     trigger('BlueLeft2', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
         opacity: 0
       })),
@@ -326,7 +361,7 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
       transition('l<=>l2', [animate('0.3s')])
     ]),
     trigger('WhiteLeft2', [
-      state('m', style({ 
+      state('m', style({
         transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
         opacity: 0
       })),
@@ -349,12 +384,13 @@ import { ProductConfirmPage } from '../product-confirm/product-confirm';
   ]
 })
 export class ProductSizePage {
-   roomState: string = "m";
-   panXi: number = 0;
-   panXo: number = 0;
-   innerDefault = 136;
-   outerDefault = 109;
-   triggered: boolean = false;
+  flyinState: string = "out";
+  roomState: string = "m";
+  panXi: number = 0;
+  panXo: number = 0;
+  innerDefault = 136;
+  outerDefault = 109;
+  triggered: boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -362,43 +398,45 @@ export class ProductSizePage {
     console.log('ionViewDidLoad RecommendPage');
     this.panXi = this.innerDefault;
     this.panXo = this.outerDefault
-  }
-  
-  nextP(){
-    this.navCtrl.push(ProductConfirmPage);
+    this.flyinState = "in"; console.log('flyState: ' + this.flyinState)
   }
 
+  nextP() {
+    this.flyinState = 'down';
+    this.navCtrl.push(ProductConfirmPage, {}, { animate: false });
+  }
 
-  moveButton(e){
-      console.log(this.triggered);
-      console.log(this.roomState);
-      if(e.deltaX >= 50 && this.triggered == false){
-        this.triggered = true;
-        this.panXi = this.innerDefault;
-        if(this.roomState == 'l')
-          this.roomState = 'm';
-        else if(this.roomState == 'm')
-          this.roomState = 'r';
-        else if(this.roomState == 'l2')
-          this.roomState = 'l';
 
-        
-      } else if (e.deltaX <= -50 && this.triggered == false){
-        this.triggered = true;
+  moveButton(e) {
+    console.log(this.triggered);
+    console.log(this.roomState);
+    if (e.deltaX >= 50 && this.triggered == false) {
+      this.triggered = true;
+      this.panXi = this.innerDefault;
+      if (this.roomState == 'l')
+        this.roomState = 'm';
+      else if (this.roomState == 'm')
+        this.roomState = 'r';
+      else if (this.roomState == 'l2')
+        this.roomState = 'l';
+
+
+    } else if (e.deltaX <= -50 && this.triggered == false) {
+      this.triggered = true;
+      this.panXi = this.innerDefault;
+      if (this.roomState == 'r')
+        this.roomState = 'm';
+      else if (this.roomState == 'm')
+        this.roomState = 'l';
+      else if (this.roomState == 'l')
+        this.roomState = 'l2';
+
+    } else {
+      this.panXi = this.innerDefault + e.deltaX;
+      if (e.isFinal == true) {
         this.panXi = this.innerDefault;
-        if(this.roomState == 'r')
-          this.roomState = 'm';
-        else if(this.roomState == 'm')
-          this.roomState = 'l'; 
-        else if(this.roomState == 'l')
-          this.roomState = 'l2';
-        
-      } else {
-        this.panXi = this.innerDefault + e.deltaX;
-        if(e.isFinal == true){
-          this.panXi = this.innerDefault;
-          this.triggered = false;
-        }
+        this.triggered = false;
       }
+    }
   }
 }

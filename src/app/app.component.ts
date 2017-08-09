@@ -13,13 +13,14 @@ import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
 
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { NavigationPage } from '../pages/navigation/navigation';
+import { RecommendMaterialPage } from '../pages/recommend-material/recommend-material';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TutorialPage;
+  rootPage:any = RecommendMaterialPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
