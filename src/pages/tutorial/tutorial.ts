@@ -609,11 +609,15 @@ export class TutorialPage {
     this.xxx = this.defaultX;
     this.yyy = this.defaultY;
     this.index = 1;
+    this.hamsoo('오디쏘 서비스로 쇼핑을 시작하시려면 지문인식(탭 한번)을 해주세요.');
+    
   }
 //이거 쓰면 됨 이거 tts 하는 함수인데 그대로 갖다써볼까?
-   async hamsoo(hungry): Promise <any> {
+  async hamsoo(hungry): Promise <any> {
   try {
-    await this.tts.speak(hungry)
+    await this.tts.speak({
+      text: hungry,
+      locale: 'ko-KR'})
     console.log("hi")
   } 
   catch(e) {
@@ -630,9 +634,11 @@ export class TutorialPage {
  }
   onLongPress(e){
     // 텍스트를 갖다가 넣으면 된답니다아아
-    this.hamsoo('dkjasdiojgasdjgaiosdgjadiogjasdiogjadsiogjdsgasdg');
+    
 
      if(this.index == 1){
+       this.tts.stop();
+       this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
     this.show2 = (this.show2 === "second" ? "disA" : "second");
     this.show3 = (this.show3 === "second" ? "disA" : "second");
     this.show4 = (this.show4 === "second" ? "disA" : "second");
@@ -650,18 +656,20 @@ export class TutorialPage {
   onDoubleTap(){
     if(this.index == 2){
       this.tts.stop();
-    this.show7 = (this.show7 === "second" ? "disA" : "second");
-    this.show8 = (this.show8 === "second" ? "disA" : "second");
-    this.show9 = (this.show9 === "second" ? "disA" : "second");
-    this.show10 = (this.show10 === "second" ? "disA" : "second");
-    
-    this.show11 = (this.show11 === "first" ? "second" : "first");
-    this.show12 = (this.show12 === "first" ? "second" : "first");
-    this.show14 = (this.show14 === "first" ? "second" : "first");
-    this.show15 = (this.show15 === "first" ? "second" : "first");
-    this.show16 = (this.show16 === "first" ? "second" : "first");
-    this.index = 3;
-  }
+      this.hamsoo('네, 잘하셨어요');
+
+      this.show7 = (this.show7 === "second" ? "disA" : "second");
+      this.show8 = (this.show8 === "second" ? "disA" : "second");
+      this.show9 = (this.show9 === "second" ? "disA" : "second");
+      this.show10 = (this.show10 === "second" ? "disA" : "second");
+      
+      this.show11 = (this.show11 === "first" ? "second" : "first");
+      this.show12 = (this.show12 === "first" ? "second" : "first");
+      this.show14 = (this.show14 === "first" ? "second" : "first");
+      this.show15 = (this.show15 === "first" ? "second" : "first");
+      this.show16 = (this.show16 === "first" ? "second" : "first");
+      this.index = 3;
+   }
   }
 
 

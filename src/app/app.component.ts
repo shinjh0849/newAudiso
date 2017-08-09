@@ -19,7 +19,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = P1Page;
+  rootPage:any = TutorialPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
