@@ -1,14 +1,21 @@
-
-page-p1 {
-
-     *{
+page-p1-1 {
+*{
        .scroll-content{
            overflow: hidden !important;
        }
        
     }
 
-  
+    .purple{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: -190px;
+        top: 559.5px;
+        width: 740px;
+        height: 740px;
+    }
+
     .uniqlo{
         position: absolute;
         padding: 0;
@@ -46,16 +53,6 @@ page-p1 {
         width: 54.3283px;
         height: 26.25px;
     }
-      .purple{
-        position: absolute;
-        padding: 0;
-        border: 0;
-        left: -190px;
-        top: 559.5px;
-        width: 740px;
-        height: 740px;
-    }
-
     .qlo{
         position: absolute;
         padding: 0;
@@ -65,7 +62,7 @@ page-p1 {
         width: 62.2813px;
         height: 27.5px;
     }
-
+    
     .recommendW{
         position: absolute;
          padding: 0;
@@ -102,25 +99,5 @@ page-p1 {
           width: 145.7205px;
           height: 145.7205px;
     }
-        
-        .recommendB{
-        position:   absolute;
-        padding:    0;
-        border:     0;
-        left:       32px;
-        top:        124px; 
-        width:      107px;
-        height:     17px;
-    }
 
-    .category{
-        position:   absolute;
-        padding:    0;
-        border:     0;
-        left:       32px;
-        top:        157px; 
-        width:      197px;
-        height:     35px;
-        
-    }
 }

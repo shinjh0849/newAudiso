@@ -1,0 +1,70 @@
+page-t2 {
+ *{
+       .scroll-content{
+           overflow: hidden !important;
+       }
+       
+    }
+    .bg{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 0px;
+        top: 0px;
+        width: 360px;
+        height: 740px;
+
+    }
+
+    .wc{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: -370px;
+        top: 0px;
+        width: 740px;
+    }
+    
+    .shadow{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: -370px;
+        top: 0px;
+        width: 740px;
+    }    
+
+    .log_in{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 124.375px;
+        width: 57.25px;
+    } 
+    
+    .text_t2_00{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 186.6px;
+        width: 236px;
+    } 
+    .text_t2_01{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 435px;
+        width: 134px;
+    } 
+    .fingerprint{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 126px;
+        top: 497.5px;
+        width: 107px;
+    }
+}

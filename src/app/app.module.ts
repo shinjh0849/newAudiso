@@ -34,6 +34,14 @@ import { RecommendProductPage } from '../pages/recommend-product/recommend-produ
 import { NavigationPage } from '../pages/navigation/navigation';
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { ScanPage } from '../pages/scan/scan';
+import { T1Page } from "../pages/t1/t1";
+import { T2Page } from "../pages/t2/t2";
+import { T3Page } from "../pages/t3/t3";
+import { T4Page } from "../pages/t4/t4";
+import { T5Page } from "../pages/t5/t5";
+import { P1_1Page } from "../pages/p1-1/p1-1";
+import { P1_2Page } from "../pages/p1-2/p1-2";
+
 
 
 
@@ -68,7 +76,16 @@ import { ScanPage } from '../pages/scan/scan';
     
     P1Page,
     TutorialPage,
-    Tutorial2Page
+    Tutorial2Page,
+    T1Page,
+    T2Page,
+    T3Page,
+    T4Page,
+    T5Page,
+    T5Page,
+    P1_1Page,
+    P1_2Page
+    
 
   ],
   imports: [
@@ -100,7 +117,17 @@ import { ScanPage } from '../pages/scan/scan';
     
     P1Page,
     TutorialPage,
-    Tutorial2Page
+    Tutorial2Page,
+    
+    T1Page,
+    T2Page,
+    T3Page,
+    T4Page,
+    T5Page,
+    T5Page,
+    P1_1Page,
+    P1_2Page
+  
 
   ],
   providers: [

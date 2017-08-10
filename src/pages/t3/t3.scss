@@ -1,0 +1,79 @@
+page-t3 {
+    
+     *{
+       .scroll-content{
+           overflow: hidden !important;
+       }
+       
+    }
+    .bg{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 0px;
+        top: 0px;
+        width: 360px;
+        height: 740px;
+
+    }
+
+    .wc{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: -370px;
+        top: 0px;
+        width: 740px;
+    }
+    
+    .shadow{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: -370px;
+        top: 0px;
+        width: 740px;
+    }    
+    
+    .TUTORIAL{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 132.75px;
+        width: 73.5px;
+    } 
+    
+    .T3_text1{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 200px;
+        width: 262px;
+    } 
+    .T3_text2{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 400px;
+        width: 125px;
+    } 
+    .fingerHigh{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 135px;
+        top: 515px;
+        width: 84.5px;
+    }
+    .navigator_1{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 650px;
+        width: 68.75px;
+    }
+}

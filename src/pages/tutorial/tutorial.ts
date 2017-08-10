@@ -1,6 +1,8 @@
 import { Component, trigger, state, style, transition, animate, keyframes, group } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { P1Page } from '../p1/p1';
+
 import { Tutorial2Page } from '../tutorial2/tutorial2';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 @Component({
@@ -613,6 +615,7 @@ export class TutorialPage {
     
   }
 //이거 쓰면 됨 이거 tts 하는 함수인데 그대로 갖다써볼까?
+
   async hamsoo(hungry): Promise <any> {
   try {
     await this.tts.speak({
@@ -623,23 +626,15 @@ export class TutorialPage {
   catch(e) {
   }
  }
-//이거 끄는건데 잘 모르겠
-  async hamsoo2(): Promise <any> {
-  try {
-    this.tts.stop()
-    console.log("bye")
-  } 
-  catch(e) {
-  }
- }
+
   onLongPress(e){
     // 텍스트를 갖다가 넣으면 된답니다아아
     
 
      if(this.index == 1){
-       this.tts.stop();
-       this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
-    this.show2 = (this.show2 === "second" ? "disA" : "second");
+   this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
+
+   this.show2 = (this.show2 === "second" ? "disA" : "second");
     this.show3 = (this.show3 === "second" ? "disA" : "second");
     this.show4 = (this.show4 === "second" ? "disA" : "second");
     this.show5 = (this.show5 === "second" ? "disA" : "second");
@@ -654,21 +649,25 @@ export class TutorialPage {
   }
 
   onDoubleTap(){
-    if(this.index == 2){
-      this.tts.stop();
-      this.hamsoo('네, 잘하셨어요');
 
+    this.hamsoo('응 수고수고 했어효오홍');
+    if(this.index == 2){
+
+       
       this.show7 = (this.show7 === "second" ? "disA" : "second");
       this.show8 = (this.show8 === "second" ? "disA" : "second");
       this.show9 = (this.show9 === "second" ? "disA" : "second");
       this.show10 = (this.show10 === "second" ? "disA" : "second");
-      
+     
       this.show11 = (this.show11 === "first" ? "second" : "first");
       this.show12 = (this.show12 === "first" ? "second" : "first");
       this.show14 = (this.show14 === "first" ? "second" : "first");
       this.show15 = (this.show15 === "first" ? "second" : "first");
       this.show16 = (this.show16 === "first" ? "second" : "first");
+
       this.index = 3;
+   
+    
    }
   }
 
@@ -676,10 +675,15 @@ export class TutorialPage {
   onNext(e){
     
     if(this.index == 3){
-    if( e.deltaX >= 128.5 && !this.triggered){ 
+
+      this.hamsoo('왼쪽에서 스와이핑 해주세요');
+    
+      
+      if( e.deltaX >= 128.5 && !this.triggered){ 
         this.triggered = true;
-        this.xxx = 71.25; // 원래 200
-        // 다음 에니메이션이 발생하게 한다.
+        this.xxx = 71.25; 
+      
+
         this.show11 = (this.show11 === "second" ? "disA" : "second");
         this.show12 = (this.show12 === "second" ? "disA" : "second");
         this.show14 = (this.show14 === "second" ? "disA" : "second");
@@ -694,7 +698,8 @@ export class TutorialPage {
         this.index = 4;
         
      } else { // 놓았을 때 원래 위치로 오게 하는 것
-          this.xxx = this.defaultX + e.deltaX;
+
+      this.xxx = this.defaultX + e.deltaX;
           if(e.isFinal == true){
             this.xxx = this.defaultX;
             this.triggered = false;
@@ -707,6 +712,9 @@ export class TutorialPage {
 onNext2(e){
   
     if(this.index == 4){
+
+   
+      
     if( e.deltaY >= 110 && !this.triggered2){ 
         this.triggered2 = true;
         this.yyy = 455;
@@ -719,9 +727,11 @@ onNext2(e){
 
         this.show6 = (this.show6 === "second" ? "disA" : "second");
         // 다음 페이지로 넘어감
-        this.navCtrl.push(Tutorial2Page);
+        this.navCtrl.push( P1Page, {}, {animate: false} );
 
      } else { // 놓았을 때 원래 위치로 오게 하는 것
+           this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? (띠링)');
+      
           this.yyy = this.defaultY + e.deltaY;
           if(e.isFinal == true){
             this.yyy = this.defaultY;
