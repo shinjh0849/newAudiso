@@ -14,7 +14,7 @@ import { T4Page } from "../t4/t4";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -41,7 +41,7 @@ import { T4Page } from "../t4/t4";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -49,7 +49,7 @@ import { T4Page } from "../t4/t4";
       state('second', style({
          padding: '0',
           border: '0',
-          left: '-370px',
+          left: '-360px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -68,7 +68,7 @@ import { T4Page } from "../t4/t4";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '-1000px',
           top: '132.75px',
           width: '73.5px'
         })),
@@ -80,7 +80,7 @@ import { T4Page } from "../t4/t4";
           width: '73.5px'
       })),
       transition('first => second', [
-        animate('0.5s')
+       animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -93,7 +93,7 @@ import { T4Page } from "../t4/t4";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-300px',
+          left: '-1000px',
           top: '200px',
           width: '262px'
       })),
@@ -105,7 +105,7 @@ import { T4Page } from "../t4/t4";
           width: '262px'
       })),
       transition('first => second', [
-        animate('0.5s')
+      animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s 1s')
@@ -118,7 +118,7 @@ import { T4Page } from "../t4/t4";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '-1000px',
           top: '400px',
           width: '125px'
       })),
@@ -130,12 +130,13 @@ import { T4Page } from "../t4/t4";
           width: '125px'
       })),
       transition('first => second', [
-        animate('0.6s')
+       animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s 1s')
       ])
     ]), 
+// 손가락 버튼
       trigger('fly9', [
        state('disA', style({
          opacity: 0
@@ -143,19 +144,22 @@ import { T4Page } from "../t4/t4";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '135px',
           top: '515px',
-          width: '84.5px'
+          width: '84.5px',
+          opacity: 0
       })),
       state('second', style({
          padding: '0',
          border: '0',
          left: '135px',
          top: '515px',
-         width: '84.5px'
+         width: '84.5px',
+         opacity: 1
+         
       })),
       transition('first => second', [
-        animate('0.5s')
+        animate('1s 1.5s')
       ]),
       transition('second => disA', [
         animate('1.5s', keyframes([
@@ -176,10 +180,10 @@ import { T4Page } from "../t4/t4";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '32.5px',
+          left: '-1000px',
           top: '650px',
           width: '68.75px',
-          opacity: 0
+
       })),
       state('second', style({
           padding: '0',
@@ -187,10 +191,10 @@ import { T4Page } from "../t4/t4";
           left: '32.5px',
           top: '650px',
           width: '68.75px',
-          opacity: 1
+
       })),
       transition('first => second', [
-        animate('0.5s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s 1s')
@@ -241,11 +245,12 @@ export class T3Page {
  onDoubleTap(){
    
     this.hamsoo('네, 잘하셨어요.');
+    /* 탭 하면 두근두근 하는건데 tts 때문에 되지 않는다.
     this.show9 = (this.show10 === "second" ? "disA" : "second");
-
-     setTimeout(() => {
+    */
+     //setTimeout(() => {
      this.navCtrl.push( T4Page, {}, {animate: false} );
-    }, 1500);
+   // }, 1500);
  
     
    }

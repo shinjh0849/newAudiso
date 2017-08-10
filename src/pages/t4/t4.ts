@@ -14,7 +14,7 @@ import { T5Page } from "../t5/t5";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -41,7 +41,7 @@ import { T5Page } from "../t5/t5";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -49,7 +49,7 @@ import { T5Page } from "../t5/t5";
       state('second', style({
          padding: '0',
           border: '0',
-          left: '-370px',
+          left: '-360px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -82,7 +82,7 @@ import { T5Page } from "../t5/t5";
           opacity: 1
       })),
       transition('first => second', [
-       animate('0.01s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -96,7 +96,7 @@ import { T5Page } from "../t5/t5";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-300px',
+          left: '-1000px',
           top: '186.5625px',
           width: '263.066px'
       })),
@@ -108,7 +108,7 @@ import { T5Page } from "../t5/t5";
           width: '263.066px'
       })),
       transition('first => second', [
-        animate('0.5s 1s')
+       animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -121,7 +121,7 @@ import { T5Page } from "../t5/t5";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '-1000px',
           top: '373.0757px',
           width: '179.69675px'
       })),
@@ -133,7 +133,7 @@ import { T5Page } from "../t5/t5";
           width: '179.69675px'
       })),
       transition('first => second', [
-        animate('0.6s 1s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -147,19 +147,21 @@ import { T5Page } from "../t5/t5";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '200.25px',
           top: '477.99225px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity: 0
       })),
       state('second', style({
           padding: '0',
           border: '0',
           left: '200.25px',
           top: '477.99225px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity: 1
       })),
       transition('first => second', [
-        animate('0.5s 1s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -172,19 +174,21 @@ import { T5Page } from "../t5/t5";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '71.25px',
           top: '477.99225px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity: 0
       })),
       state('second', style({
           padding: '0',
           border: '0',
           left: '71.25px',
           top: '477.99225px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity: 1
       })),
       transition('first => second', [
-        animate('0.5s 1s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -211,7 +215,7 @@ import { T5Page } from "../t5/t5";
           opacity: 1
       })),
       transition('first => second', [
-        animate('0.01s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')

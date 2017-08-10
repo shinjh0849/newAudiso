@@ -14,7 +14,7 @@ import { T3Page } from "../t3/t3";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -28,7 +28,7 @@ import { T3Page } from "../t3/t3";
           height: '765px'
       })),
       transition('first => second', [
-        animate('0.7s 1.5s')
+       animate('0.85s 1s cubic-bezier(.63,.28,.41,1.15)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -41,7 +41,7 @@ import { T3Page } from "../t3/t3";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -49,13 +49,13 @@ import { T3Page } from "../t3/t3";
       state('second', style({
          padding: '0',
           border: '0',
-          left: '-370px',
+          left: '-360px',
           top: '0px',
           width: '740px',
           height: '740px'
       })),
       transition('first => second', [
-         animate('0.7s 1.5s')
+       animate('0.85s 1s cubic-bezier(.63,.28,.41,1.15)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -68,7 +68,7 @@ import { T3Page } from "../t3/t3";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '124.375px',
           width: '57.25px'
       })),
@@ -80,7 +80,7 @@ import { T3Page } from "../t3/t3";
           width: '57.25px'
       })),
       transition('first => second', [
-      animate('0.7s 1.5s')
+      animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -93,7 +93,7 @@ import { T3Page } from "../t3/t3";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '186.6px',
           width: '236px'
       })),
@@ -105,7 +105,7 @@ import { T3Page } from "../t3/t3";
           width: '236px'
       })),
       transition('first => second', [
-      animate('0.7s 1.5s')
+      animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -118,7 +118,7 @@ import { T3Page } from "../t3/t3";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '435px',
           width: '134px'
       })),
@@ -130,7 +130,7 @@ import { T3Page } from "../t3/t3";
          width: '134px'
       })),
       transition('first => second', [
-      animate('0.7s 1.5s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -143,7 +143,7 @@ import { T3Page } from "../t3/t3";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '497.5px',
           width: '107px'
       })),
@@ -155,7 +155,7 @@ import { T3Page } from "../t3/t3";
           width: '107px'
       })),
       transition('first => second', [
-      animate('0.7s 1.5s')
+       animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')

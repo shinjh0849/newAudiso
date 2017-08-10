@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { DomController } from 'ionic-angular';
 import { Tut2_5Page } from "../tut2-5/tut2-5";
-import { P1Page } from "../p1/p1";
+import { P1_1Page } from "../p1-1/p1-1";
 
 
 @Component({
@@ -72,7 +72,7 @@ export class Tut2_6Page {
     this.text6State = "d";
 
     setTimeout(() => {
-      this.navCtrl.push(P1Page, {}, { animate: false });
+      this.navCtrl.push(P1_1Page, {}, { animate: false });
     }, 2000);
   }
 

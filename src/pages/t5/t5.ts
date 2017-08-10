@@ -2,7 +2,7 @@ import { Component, trigger, state, style, transition, animate, keyframes, group
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
  
-//import { Tut2_1Page } from "../tut2-1/tut2-1"; // 이게 지혜언니 페이지
+import { Tut2_1Page } from "../tut2-1/tut2-1"; // 이게 지혜언니 페이지
 import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 한다.
 
 @Component({
@@ -16,7 +16,7 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -43,7 +43,7 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-500px',
+          left: '-800px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -51,7 +51,7 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
       state('second', style({
          padding: '0',
           border: '0',
-          left: '-370px',
+          left: '-360px',
           top: '0px',
           width: '740px',
           height: '740px'
@@ -84,7 +84,7 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
           opacity: 1
       })),
       transition('first => second', [
-       animate('0.01s')
+       animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -97,19 +97,21 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-300px',
+          left: '137.75px',
           top: '564.693px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity: 0
       })),
       state('second', style({
           padding: '0',
           border: '0',
           left: '137.75px',
           top: '564.693px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity: 1
       })),
       transition('first => second', [
-        animate('0.5s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -123,33 +125,35 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '137.75px',
           top: '455.376px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity:0
       })),
       state('second', style({
           padding: '0',
           border: '0',
           left: '137.75px',
           top: '455.376px',
-          width: '84.61525px'
+          width: '84.61525px',
+          opacity: 1
       })),
       transition('first => second', [
-        animate('0.5s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
       ])
     ]),
 
-          trigger('fly19', [
+      trigger('fly19', [
        state('disA', style({
          opacity: 0
       })),
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-300px',
+          left: '-1000px',
           top: '186.5625px',
           width: '263.066px'
       })),
@@ -161,21 +165,21 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
           width: '263.066px'
       })),
       transition('first => second', [
-        animate('0.5s')
+        animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
       ])
     ]),
 
-          trigger('fly20', [
+      trigger('fly20', [
        state('disA', style({
          opacity: 0
       })),
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-200px',
+          left: '-1000px',
           top: '407.07575px',
           width: '179.69675px'
       })),
@@ -187,7 +191,7 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
           width: '179.69675px'
       })),
       transition('first => second', [
-        animate('0.6s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -215,7 +219,7 @@ import { P1_1Page } from "../p1-1/p1-1";// 지혜언니 페이지로 넘겨야 �
           opacity: 1
       })),
       transition('first => second', [
-        animate('0.01s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -275,7 +279,7 @@ onNext2(e){
         this.yyy = 562;
         this.hamsoo('네, 잘하셨어요.');
         setTimeout(() => {
-         this.navCtrl.push( P1_1Page, {}, {animate: false} ); // 지혜언니 페이지로 넘겨야 한다. Tut2_1Page
+         this.navCtrl.push( Tut2_1Page, {}, {animate: false} ); // 지혜언니 페이지로 넘겨야 한다. Tut2_1Page
         }, 1000);
      } else if (e.deltaY < 110) {
            this.yyy = this.defaultY + e.deltaY;

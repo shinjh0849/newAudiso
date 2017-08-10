@@ -15,7 +15,7 @@ import { P1_2Page } from "../p1-2/p1-2";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '124.375px',
           width: '76.3365px',
           height: '16.75px'
@@ -29,7 +29,7 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '16.75px'
       })),
       transition('first => second', [
-        animate('1s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -42,7 +42,7 @@ import { P1_2Page } from "../p1-2/p1-2";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '186.5625px',
           width: '251.136px',
           height: '154px'
@@ -56,7 +56,7 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '154px'
       })),
       transition('first => second', [
-        animate('1s')
+        animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -69,7 +69,7 @@ import { P1_2Page } from "../p1-2/p1-2";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '373.125px',
           width: '291.849px',
           height: '63.75px'
@@ -83,7 +83,7 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '63.75px'
       })),
       transition('first => second', [
-        animate('1s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -96,7 +96,7 @@ import { P1_2Page } from "../p1-2/p1-2";
        state('first', style({
           padding: '0',
           border: '0',
-          left: '-100px',
+          left: '-1000px',
           top: '491.25px',
           width: '54.3283px',
           height: '26.25px'
@@ -110,7 +110,7 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '26.25px'
       })),
       transition('first => second', [
-        animate('1s')
+        animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('second => disA', [
         animate('0.01s')
@@ -153,13 +153,13 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '740px'
       })),
       transition('none => first', [
-        animate('1s 0.7s')
+        animate('1s 0.85s cubic-bezier(.63,.28,.41,1.15)')
       ]),
       transition('first => second', [
         animate('0.6s cubic-bezier(.63,.28,.41,1.15)')
       ]),
       transition('second => third', [
-        animate('0.4s',  keyframes([
+        animate('0.4s cubic-bezier(.63,.28,.41,1.15)',  keyframes([
         style({ top: '-100px', offset: 0.5}),
         style({ top: '369.5px', offset: 1.0})
       ]))
@@ -193,8 +193,8 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '27.5px',
           opacity: 0
       })),
-            transition('none => first', [
-        animate('1s 0.7s')
+        transition('none => first', [
+        animate('1s 0.8s cubic-bezier(.45,.82,.8,1.05)')
       ]),
       transition('first => second', [
         animate('0.1s')
@@ -227,7 +227,7 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '16.75px'
       })),
       transition('first => second', [
-        animate('0.2s')
+        animate('0.15s')
       ]),
        transition('second => third', [
         animate('0.02s')
@@ -259,7 +259,7 @@ import { P1_2Page } from "../p1-2/p1-2";
            height: '154px'
       })),  
       transition('first => second', [
-        animate('0.2s')
+        animate('0.15s')
       ]),
        transition('second => third', [
         animate('0.02s')
@@ -291,7 +291,7 @@ import { P1_2Page } from "../p1-2/p1-2";
           height: '63.75px'
       })),        
       transition('first => second', [
-        animate('0.2s')
+        animate('0.15s')
       ]),
         transition('second => third', [
         animate('0.02s')
@@ -302,9 +302,10 @@ import { P1_2Page } from "../p1-2/p1-2";
        padding: '0',
           border: '0',
           left: '109.1475px',
-          top: '1000px', //
+          top: '497.5px', //
           width: '145.7205px',
-          height: '145.7205px'
+          height: '145.7205px',
+          opacity: 0
       })),
       state('second', style({
           padding: '0',
@@ -312,7 +313,8 @@ import { P1_2Page } from "../p1-2/p1-2";
           left: '109.1475px',
           top: '497.5px', 
           width: '145.7205px',
-          height: '145.7205px'
+          height: '145.7205px',
+          opacity: 1
       })),
      state('rotate', style({
        padding: '0',
@@ -331,10 +333,10 @@ import { P1_2Page } from "../p1-2/p1-2";
        height: '145.7205px'
      })),
       transition('first => second', [
-        animate('0.2s')
+        animate('0.01 cubic-bezier(.45,.82,.8,1.05)')
       ]),
        transition('second => rotate', [
-        animate('2s', style({transform: 'rotate(1000deg)'})) // 음성인식으로 고치기
+        animate('2s', style({transform: 'rotate(1000deg)'})) 
       ]),
         transition('rotate => third', [
         animate('0.02s')

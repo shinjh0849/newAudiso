@@ -304,24 +304,30 @@ async hamsoo(hungry): Promise <any> {
   catch(e) {
   }
 }
- rotate(){ // 버튼 클릭해
-    this.showBUp = (this.showBUp === "second" ? "rotate" : "second");
+
+/*
+우선 버튼 클릭하면 버튼이 돌게함. 이 함수는 html에서 이 버튼을 클릭하면 이 함수가 실행되서
+state를 변경시켜 에니메이션으로 rotate 되게 하는데 
+바꿀 때는 html 에서 음성이 인식된다는 사인을 주면 이 함수가 실행되게 하면 될 듯... ㅎㅎ
+ */
+ rotate(){   
+   this.showBUp = (this.showBUp === "second" ? "rotate" : "second");
 }
 
 onNext(){
 
-  // 이 부분은 보라 원이 위로 갔다가 아래로 가면서 추천 화면으로 바뀌는 에니메이션인데 이게 안된다. 그냥 다음 화면으로 넘어간다ㅜㅜ 
-    this.showCircleUp = (this.showCircleUp === "second" ? "third" : "second");
-    this.showRecoUp = (this.showRecoUp === "second" ? "third" : "second")
-    this.showT3Up = (this.showT3Up === "second" ? "third" : "second");
-    this.showT4Up = (this.showT4Up === "second" ? "third" : "second");
-    this.showBUp = (this.showBUp === "rotate" ? "third" : "rotate");
-    this.showNewReco = (this.showNewReco === "first" ? "second" : "first");
-    this.showCate = (this.showCate === "first" ? "second" : "first");
+  // 이 부분은 보라 원이 위로 갔다가 아래로 가면서 추천 화면으로 바뀌는 에니메이션인데 이게 핸드폰에서 안된다. 그냥 다음 화면으로 넘어간다ㅜㅜ 
+  //  this.showCircleUp = (this.showCircleUp === "second" ? "third" : "second");
+  //  this.showRecoUp = (this.showRecoUp === "second" ? "third" : "second")
+  //  this.showT3Up = (this.showT3Up === "second" ? "third" : "second");
+  //  this.showT4Up = (this.showT4Up === "second" ? "third" : "second");
+  //  this.showBUp = (this.showBUp === "rotate" ? "third" : "rotate");
+  //  this.showNewReco = (this.showNewReco === "first" ? "second" : "first");
+  //  this.showCate = (this.showCate === "first" ? "second" : "first");
   
-    setTimeout(() => {
+  //  setTimeout(() => {
          this.navCtrl.push( RecommendPage, {}, {animate: false} );
-        }, 3000);
+  //      }, 3000);
  
 }
 
