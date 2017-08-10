@@ -1,0 +1,15 @@
+<ion-content t4-to-right (click)="clickEvent()" (pan)="panEvent($event)" (doubleTap)="doubleTapEvent()">
+
+  <div class="bg"><img src="assets/background/brightBackground.png"></div>
+  <div [@circleS]="circleState" class="cShadow"><img src="assets/t2img/nextcircleShadow.png"></div>
+  <div [@circle]="circleState" class="wc"><img src="assets/t2img/nextcircle.png"></div>
+  <div [@gogo]="circleState" class="tutorial"><img src="assets/t2img/tutorial.png"></div>
+  
+  <div [@gogo]="circleState" class="dotCircle"><img src="assets/interaction/Dcircle.png"></div>
+  <div [@gogo]="circleState" class="interationCircle" [style.left] = "position + 'px'"> <img src="assets/interaction/circle.png"></div>
+ 
+  <div [@text6]="text6State" class="text6_1"><img src = "assets/t2img/p6_maintext.png"></div>
+  <div [@text6]="text6State" class="text6_2"><img src = "assets/t2img/navtext.png"></div>
+  <div [@gogo]="circleState" class="page5"><img src="assets/t2img/nav5_5.png"></div>
+ 
+</ion-content>

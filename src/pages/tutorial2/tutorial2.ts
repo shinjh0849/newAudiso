@@ -409,7 +409,7 @@ export class Tutorial2Page {
   // 2랑 3이랑 네비게이터가 같음 (같은 화면으로 되어있음) 그래서 네비게이터 안건드려도 됨!!!!
   // 페이지 3 로드: 직원을 한번 불러보시겠어요? - subtext 전환: 다시 들으시려면 탭 두번을, ...
   page3Load() {
-
+    
 
     if (this.pageNum == 2) {
       this.text2State1 = "d";
@@ -499,6 +499,8 @@ export class Tutorial2Page {
   lastPage() {
     this.startState = "last";
     this.navCtrl.push(P1Page);
+    
+    
   }
 
 

@@ -22,6 +22,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TutorialPage } from "../pages/tutorial/tutorial";
 import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
+import { Tut2_1Page } from '../pages/tut2-1/tut2-1' 
+import { Tut2_2Page } from '../pages/tut2-2/tut2-2' 
 import { P1Page } from "../pages/p1/p1";
 import { ProductSizePage } from '../pages/product-size/product-size';
 import { ProductColorPage } from '../pages/product-color/product-color';
@@ -34,6 +36,10 @@ import { RecommendProductPage } from '../pages/recommend-product/recommend-produ
 import { NavigationPage } from '../pages/navigation/navigation';
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { ScanPage } from '../pages/scan/scan';
+import { Tut2_3Page } from "../pages/tut2-3/tut2-3";
+import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
+import { Tut2_6Page } from "../pages/tut2-6/tut2-6";
+import { Tut2_5Page } from "../pages/tut2-5/tut2-5";
 
 
 
@@ -53,6 +59,12 @@ import { ScanPage } from '../pages/scan/scan';
     HomePage,
     TutorialPage,
     Tutorial2Page,
+    Tut2_1Page,
+    Tut2_2Page,
+    Tut2_3Page,
+    Tut2_4Page,
+    Tut2_5Page,
+    Tut2_6Page,
     P1Page,
     ProductColorPage,
     ProductConfirmPage,
@@ -64,11 +76,7 @@ import { ScanPage } from '../pages/scan/scan';
     RecommendProductPage,
     NavigationPage,
     ScanPage,
-    QRcodePage,
-    
-    P1Page,
-    TutorialPage,
-    Tutorial2Page
+    QRcodePage
 
   ],
   imports: [
@@ -85,6 +93,12 @@ import { ScanPage } from '../pages/scan/scan';
     HomePage,
     TutorialPage,
     Tutorial2Page,
+    Tut2_1Page,
+    Tut2_2Page,
+    Tut2_3Page,
+    Tut2_4Page,
+    Tut2_5Page,
+    Tut2_6Page,
     P1Page,
     ProductColorPage,
     ProductConfirmPage,
@@ -96,12 +110,7 @@ import { ScanPage } from '../pages/scan/scan';
     RecommendProductPage,
     NavigationPage,
     ScanPage,
-    QRcodePage,
-    
-    P1Page,
-    TutorialPage,
-    Tutorial2Page
-
+    QRcodePage
   ],
   providers: [
     StatusBar,

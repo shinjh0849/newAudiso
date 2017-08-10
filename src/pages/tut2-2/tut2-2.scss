@@ -1,0 +1,83 @@
+page-tut2-2 {
+*{ 
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+    .bg{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        width:      360px;
+        height:     740px;
+        left:       0;
+        top:        0; 
+    }
+
+    .wc{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -360px;
+        top:        0px;
+        width:      740px;
+        height:     740px;
+    
+    }
+
+    .cShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        width:      765px;
+        height:     765px;
+        left:       -372px;
+        top:        -7px;      
+    }
+
+    .tutorial{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        124.375px;
+        width:      73.634px;
+        height:     16.75px;
+    }
+    // 두번째 부분
+
+    .text2_2{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.42625px;
+        top: 186.5625px;
+        width: 297.57225px;
+        height: 99.5px;
+    }
+
+    .text2_3{
+        position: absolute;
+        border: 0;
+        padding: 0;
+        left: 32.42625px;
+        top: 373.253px;
+        width: 199.62675px;
+        height: 87.5px;
+    }
+
+
+    .page2{
+        position: absolute;
+        border: 0;
+        padding: 0;
+        left: 35.1195px;
+        top: 653.66025px;
+        width: 88.047px;
+        height: 12.34125px;
+    }
+
+
+
+}
