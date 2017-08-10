@@ -8,25 +8,27 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { SplashPage } from '../pages/splash/splash';
 import { P1Page } from "../pages/p1/p1";
-import { TutorialPage } from "../pages/tutorial/tutorial";
+import { TutorialPage } from '../pages/tutorial/tutorial';
 import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
 
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { NavigationPage } from '../pages/navigation/navigation';
 import { RecommendMaterialPage } from '../pages/recommend-material/recommend-material';
+import { StyleCheck1Page } from '../pages/style-check1/style-check1';
+
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = RecommendMaterialPage;
+  rootPage:any = RecommendMaterialPage
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
 
-      let splash = modalCtrl.create(SplashPage);
-      splash.present();
+      //let splash = modalCtrl.create(SplashPage);
+      //splash.present();
 
     });
   }

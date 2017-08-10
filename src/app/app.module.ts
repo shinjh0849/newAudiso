@@ -34,6 +34,15 @@ import { RecommendProductPage } from '../pages/recommend-product/recommend-produ
 import { NavigationPage } from '../pages/navigation/navigation';
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { ScanPage } from '../pages/scan/scan';
+import { StyleCheck1Page } from '../pages/style-check1/style-check1';
+import { StyleCheck2Page } from '../pages/style-check2/style-check2';
+import { StyleCheck3Page } from '../pages/style-check3/style-check3';
+import { Payment1Page } from '../pages/payment1/payment1';
+import { Payment2Page } from '../pages/payment2/payment2';
+import { Payment3Page } from '../pages/payment3/payment3';
+import { HistoryPage } from '../pages/history/history';
+import { Navigation2Page } from '../pages/navigation2/navigation2';
+import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
 
 
 
@@ -65,10 +74,16 @@ import { ScanPage } from '../pages/scan/scan';
     NavigationPage,
     ScanPage,
     QRcodePage,
-    
-    P1Page,
-    TutorialPage,
-    Tutorial2Page
+    FittingRoomPage,
+    Navigation2Page,
+    StyleCheck1Page,
+    StyleCheck2Page,
+    StyleCheck3Page,
+    Payment1Page,
+    Payment2Page,
+    Payment3Page,
+    HistoryPage
+
 
   ],
   imports: [
@@ -97,10 +112,15 @@ import { ScanPage } from '../pages/scan/scan';
     NavigationPage,
     ScanPage,
     QRcodePage,
-    
-    P1Page,
-    TutorialPage,
-    Tutorial2Page
+    FittingRoomPage,
+    Navigation2Page,
+    StyleCheck1Page,
+    StyleCheck2Page,
+    StyleCheck3Page,
+    Payment1Page,
+    Payment2Page,
+    Payment3Page,
+    HistoryPage
 
   ],
   providers: [
