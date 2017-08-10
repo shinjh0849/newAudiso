@@ -1,0 +1,94 @@
+page-t5 {
+
+     *{
+       .scroll-content{
+           overflow: hidden !important;
+       }
+       
+    }
+    .bg{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 0px;
+        top: 0px;
+        width: 360px;
+        height: 740px;
+
+    }
+
+    .wc{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: -370px;
+        top: 0px;
+        width: 740px;
+    }
+    
+    .shadow{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: -370px;
+        top: 0px;
+        width: 740px;
+    }    
+      .TUTORIAL{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 132.75px;
+        width: 73.5px;
+    } 
+    
+      .dottedcircle{
+        position: fixed;
+        padding: 0;
+        border: 0;
+        left: 137.75px;
+        top: 564.693px;
+        width: 84.61525px;
+        height: 84.61525px;
+        }
+
+
+    .interbutton{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 137.75px;
+        top: 455.376px;
+        width: 84.61525px;
+        height: 84.61525px;
+    }
+
+    .text2{
+        position: fixed;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 186.5625px;
+        width: 263.066px;
+        height: 110.5px;
+    }
+
+    .text3{
+        position: fixed;
+        border: 0;
+        padding: 0;
+        left: 32.5px;
+        top: 407.07575px;
+        width: 179.69675px;
+        height: 40px;
+    }
+  .navigator_3{
+        position: absolute;
+        padding: 0;
+        border: 0;
+        left: 32.5px;
+        top: 650px;
+        width: 68.75px;
+    }
+}

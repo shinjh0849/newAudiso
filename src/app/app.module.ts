@@ -40,6 +40,14 @@ import { Tut2_3Page } from "../pages/tut2-3/tut2-3";
 import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
 import { Tut2_6Page } from "../pages/tut2-6/tut2-6";
 import { Tut2_5Page } from "../pages/tut2-5/tut2-5";
+import { T1Page } from "../pages/t1/t1";
+import { T2Page } from "../pages/t2/t2";
+import { T3Page } from "../pages/t3/t3";
+import { T4Page } from "../pages/t4/t4";
+import { T5Page } from "../pages/t5/t5";
+import { P1_1Page } from "../pages/p1-1/p1-1";
+import { P1_2Page } from "../pages/p1-2/p1-2";
+
 
 
 
@@ -76,7 +84,20 @@ import { Tut2_5Page } from "../pages/tut2-5/tut2-5";
     RecommendProductPage,
     NavigationPage,
     ScanPage,
-    QRcodePage
+    QRcodePage,
+    
+    P1Page,
+    TutorialPage,
+    Tutorial2Page,
+    T1Page,
+    T2Page,
+    T3Page,
+    T4Page,
+    T5Page,
+    T5Page,
+    P1_1Page,
+    P1_2Page
+    
 
   ],
   imports: [
@@ -110,7 +131,22 @@ import { Tut2_5Page } from "../pages/tut2-5/tut2-5";
     RecommendProductPage,
     NavigationPage,
     ScanPage,
-    QRcodePage
+    QRcodePage,
+    
+    P1Page,
+    TutorialPage,
+    Tutorial2Page,
+    
+    T1Page,
+    T2Page,
+    T3Page,
+    T4Page,
+    T5Page,
+    T5Page,
+    P1_1Page,
+    P1_2Page
+  
+
   ],
   providers: [
     StatusBar,

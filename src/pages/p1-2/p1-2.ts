@@ -1,124 +1,13 @@
 import { Component, trigger, state, style, transition, animate, keyframes, group } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { RecommendPage } from '../recommend/recommend';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { RecommendPage } from "../recommend/recommend";
 
 @Component({
-  selector: 'page-p1',
-  templateUrl: 'p1.html',
+  selector: 'page-p1-2',
+  templateUrl: 'p1-2.html',
   animations: [
-    trigger('flyUQ', [
-     state('disA', style({
-         opacity: 0
-      })),
-       state('first', style({
-          padding: '0',
-          border: '0',
-          left: '-100px',
-          top: '124.375px',
-          width: '76.3365px',
-          height: '16.75px'
-      })),
-      state('second', style({
-         padding: '0',
-          border: '0',
-          left: '32.5px',
-          top: '124.375px',
-          width: '76.3365px',
-          height: '16.75px'
-      })),
-      transition('first => second', [
-        animate('1s')
-      ]),
-      transition('second => disA', [
-        animate('0.01s')
-      ])
-    ]), 
-      trigger('flyT1', [
-       state('disA', style({
-         opacity: 0
-      })),
-       state('first', style({
-          padding: '0',
-          border: '0',
-          left: '-100px',
-          top: '186.5625px',
-          width: '251.136px',
-          height: '154px'
-      })),
-      state('second', style({
-         padding: '0',
-          border: '0',
-          left: '32.5px',
-          top: '186.5625px',
-          width: '251.136px',
-          height: '154px'
-      })),
-      transition('first => second', [
-        animate('1s')
-      ]),
-      transition('second => disA', [
-        animate('0.01s')
-      ])
-    ]), 
-      trigger('flyT2', [
-       state('disA', style({
-         opacity: 0
-      })),
-       state('first', style({
-          padding: '0',
-          border: '0',
-          left: '-100px',
-          top: '373.125px',
-          width: '291.849px',
-          height: '63.75px'
-      })),
-      state('second', style({
-         padding: '0',
-          border: '0',
-          left: '32.5px',
-          top: '373.125px',
-          width: '291.849px',
-          height: '63.75px'
-      })),
-      transition('first => second', [
-        animate('1s')
-      ]),
-      transition('second => disA', [
-        animate('0.01s')
-      ])
-    ]),         
-      trigger('flyUni', [
-       state('disA', style({
-         opacity: 0
-      })),
-       state('first', style({
-          padding: '0',
-          border: '0',
-          left: '-100px',
-          top: '491.25px',
-          width: '54.3283px',
-          height: '26.25px'
-      })),
-      state('second', style({
-         padding: '0',
-          border: '0',
-          left: '149.672px',
-          top: '491.25px',
-          width: '54.3283px',
-          height: '26.25px'
-      })),
-      transition('first => second', [
-        animate('1s')
-      ]),
-      transition('second => disA', [
-        animate('0.01s')
-      ])
-    ]), 
-    
-    
-    ////
-    trigger('flyCircleUp', [
+   trigger('flyCircleUp', [
       state('none', style({
           padding: '0',
           border: '0',
@@ -158,11 +47,9 @@ import { RecommendPage } from '../recommend/recommend';
         animate('0.5s')
       ]),
       transition('second => third', [
-        animate('0.4s',  keyframes([
-        style({ top: '-100px', offset: 0.5}),
-        style({ top: '369.5px', offset: 1.0})
-      ]))
-      ])
+        animate('0.5s')
+      ]),
+          
     ])
    ,
     trigger('flyQloUp', [
@@ -385,69 +272,57 @@ import { RecommendPage } from '../recommend/recommend';
         animate('0.2s 0.3s')
       ]),   
     ])
-  ]
+    ]
 })
 
 
-export class P1Page {
+export class P1_2Page {
+  showCircleUp: string = "second";
+  showQloUp: string = "second";
 
-  showUQ: string = "first";
-  showT1: string = "first";
-  showT2: string = "first";
-  showUni: string = "first"; 
-
-  showCircleUp: string = "none";
-  showQloUp: string = "none";
-
-  showRecoUp: string = "first";
-  showT3Up: string = "first";
-  showT4Up: string = "first";
-  showBUp: string = "first";
+  showRecoUp: string = "second";
+  showT3Up: string = "second";
+  showT4Up: string = "second";
+  showBUp: string = "second";
   
   showNewReco: string = "first";
   showCate: string = "first";
-   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-  ionViewDidLoad() {
-    this.showUQ = (this.showUQ === "first" ? "second" : "first");
-    this.showT1 = (this.showT1 === "first" ? "second" : "first");
-    this.showT2 = (this.showT2 === "first" ? "second" : "first");
-    this.showUni = (this.showUni === "first" ? "second" : "first");
-    this.showCircleUp = (this.showCircleUp === "none" ? "first" : "none");
-    this.showQloUp = (this.showQloUp === "none" ? "first" : "none");
-  }
-  
 
-  upCircle(){
-    this.showCircleUp = (this.showCircleUp === "first" ? "second" : "first");
-    this.showQloUp = (this.showQloUp === "first" ? "second" : "first");
-    this.showRecoUp = (this.showRecoUp === "first" ? "second" : "first");
-    this.showT3Up = (this.showT3Up === "first" ? "second" : "first");
-    this.showT4Up = (this.showT4Up === "first" ? "second" : "first");
-    this.showBUp = (this.showBUp === "first" ? "second" : "first");
+  constructor(private tts:TextToSpeech, public navCtrl: NavController, public navParams: NavParams) {
   }
-  rotate(){ // 버튼 클릭해
+
+  ionViewDidLoad() {
+    this.hamsoo('튜토리얼이 끝난 후, 언제든 유니야 라고 불러주시면 질문을 하실 수 있고 음성 안내모드를 이용하시면 계속적으로 유니와 클로와 함께 쇼핑을 이어가실 수 있어요. 효과음이 들리면 화면 아무곳에 터치하시거나, 유니야 를 불러주세요 (띠링)');
+  }
+async hamsoo(hungry): Promise <any> {
+  try {
+    await this.tts.speak({
+      text: hungry,
+      locale: 'ko-KR'})
+    console.log("hi")
+  } 
+  catch(e) {
+  }
+}
+ rotate(){ // 버튼 클릭해
     this.showBUp = (this.showBUp === "second" ? "rotate" : "second");
-  }
-  onNext(){
-  
+}
+
+onNext(){
+
+  // 이 부분은 보라 원이 위로 갔다가 아래로 가면서 추천 화면으로 바뀌는 에니메이션인데 이게 안된다. 그냥 다음 화면으로 넘어간다ㅜㅜ 
     this.showCircleUp = (this.showCircleUp === "second" ? "third" : "second");
-  
-    this.showUQ = (this.showUQ === "second" ? "disA" : "second");
-    this.showT1 = (this.showT1 === "second" ? "disA" : "second");
-    this.showT2 = (this.showT2 === "second" ? "disA" : "second");
-    this.showUni = (this.showUni === "second" ? "disA" : "second");
-  
     this.showRecoUp = (this.showRecoUp === "second" ? "third" : "second")
     this.showT3Up = (this.showT3Up === "second" ? "third" : "second");
     this.showT4Up = (this.showT4Up === "second" ? "third" : "second");
     this.showBUp = (this.showBUp === "rotate" ? "third" : "rotate");
     this.showNewReco = (this.showNewReco === "first" ? "second" : "first");
     this.showCate = (this.showCate === "first" ? "second" : "first");
-    this.navCtrl.push(RecommendPage);
-  }
-
-
+  
+    setTimeout(() => {
+         this.navCtrl.push( RecommendPage, {}, {animate: false} );
+        }, 3000);
+ 
 }
 
-
+}
