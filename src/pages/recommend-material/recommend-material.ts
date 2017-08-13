@@ -31,7 +31,7 @@ import { RecommendProductPage } from '../recommend-product/recommend-product';
       ]),
       transition('in=>down', [
         animate('0.7s cubic-bezier(.67,1.28,.64,1.35)')
-      ]),
+      ])
     ]),
     trigger('Middle', [
       state('m', style({

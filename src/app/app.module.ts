@@ -48,6 +48,15 @@ import { T5Page } from "../pages/t5/t5";
 import { P1_1Page } from "../pages/p1-1/p1-1";
 import { P1_2Page } from "../pages/p1-2/p1-2";
 
+import { StyleCheck1Page } from '../pages/style-check1/style-check1';
+import { StyleCheck2Page } from '../pages/style-check2/style-check2';
+import { StyleCheck3Page } from '../pages/style-check3/style-check3';
+import { Payment1Page } from '../pages/payment1/payment1';
+import { Payment2Page } from '../pages/payment2/payment2';
+import { Payment3Page } from '../pages/payment3/payment3';
+import { HistoryPage } from '../pages/history/history';
+import { Navigation2Page } from '../pages/navigation2/navigation2';
+import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
 
 
 
@@ -96,8 +105,18 @@ import { P1_2Page } from "../pages/p1-2/p1-2";
     T5Page,
     T5Page,
     P1_1Page,
-    P1_2Page
+    P1_2Page,
     
+    FittingRoomPage,
+    Navigation2Page,
+    StyleCheck1Page,
+    StyleCheck2Page,
+    StyleCheck3Page,
+    Payment1Page,
+    Payment2Page,
+    Payment3Page,
+    HistoryPage
+
 
   ],
   imports: [
@@ -144,8 +163,17 @@ import { P1_2Page } from "../pages/p1-2/p1-2";
     T5Page,
     T5Page,
     P1_1Page,
-    P1_2Page
+    P1_2Page,
   
+    FittingRoomPage,
+    Navigation2Page,
+    StyleCheck1Page,
+    StyleCheck2Page,
+    StyleCheck3Page,
+    Payment1Page,
+    Payment2Page,
+    Payment3Page,
+    HistoryPage
 
   ],
   providers: [
