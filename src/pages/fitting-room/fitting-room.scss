@@ -1,0 +1,71 @@
+page-fitting-room{
+    *{
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+    .bgCircle{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        -50px;    
+        width:      740px;
+        height:     740px;
+    }
+
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -200px;
+        top:        -60px;    
+        width:      765px;
+        height:     765px;
+    }
+
+    .fittingRoom{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        124px; 
+        width:      117px;
+        height:     17px;
+    }
+
+
+    .mainText{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        180px; 
+        width:      289px;
+        height:     100px;
+    }
+
+    .subText{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        310px; 
+        width:      200px;
+        height:     80px;
+        
+    }
+
+    .interactionOuter{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       109px;
+        top:        497px; 
+        width:      149px;
+        height:     145px;
+    }   
+
+   
+}

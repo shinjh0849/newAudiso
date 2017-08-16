@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SplashPage } from '../pages/splash/splash';
 import { P1Page } from "../pages/p1/p1";
-import { TutorialPage } from "../pages/tutorial/tutorial";
+import { TutorialPage } from '../pages/tutorial/tutorial';
 import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
 import { Tut2_6Page } from "../pages/tut2-6/tut2-6";
 
@@ -15,8 +15,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
 import { RecommendMaterialPage } from '../pages/recommend-material/recommend-material';
 // T1Page 에서 시작해야 한다.
 import { T1Page } from "../pages/t1/t1";
-
-// T1
+import { StyleCheck1Page } from '../pages/style-check1/style-check1';
 
 
 @Component({

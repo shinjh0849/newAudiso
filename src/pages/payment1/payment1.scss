@@ -1,0 +1,65 @@
+page-payment1{
+    *{
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -200px;
+        top:        -60px;    
+        width:      765px;
+        height:     765px;
+    }
+
+
+    .mainText{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        187px; 
+        width:      248px;
+        height:     263px;
+    }
+
+    .purpleBG{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       0;
+        top:        0px;    
+        width:      360px;
+        height:     740px;
+    }
+
+
+    .whiteBG{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        -50px;    
+        width:      740px;
+        height:     740px;
+    }
+
+
+    .payment{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        124px; 
+        width:      77px;
+        height:     17px;
+    }
+
+
+
+   
+}

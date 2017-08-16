@@ -9,6 +9,7 @@ import {
   group,
   state
 } from '@angular/core';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @Component({
   selector: 'page-product-confirm',
@@ -53,17 +54,33 @@ import {
 
 export class ProductConfirmPage {
   flyinState: string = "out";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductConfirmPage');
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState)
+    this.speak('선택이 완료 되었어요. 상품을 찾으로 가시려면 탭 한번을,  위시리스트에 넣고 싶으시면 아래로 화면 슬라이딩를 해주세요')
   }
 
 
+  async speak(line): Promise<any>{
+    try{
+      await this.tts.speak({
+        text: line,
+        locale: 'ko-KR',
+        rate: 1
+      });
+      console.log('speak function start!');
+    }
+    catch(e){
+      console.log(e);
+    }
+  }
+
   nextP() {
     this.flyinState = 'down';
+    this.speak('울트라스트레치진 A를 같이 찾으러 가볼게요. 3블럭 앞에서 왼쪽으로 회전 후, 왼쪽 매대에 상품이 비치되어 있어요~! 그럼 가볼까요?')
     this.navCtrl.push(NavigationPage, {}, { animate: false });
   }
 }

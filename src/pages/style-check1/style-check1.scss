@@ -1,0 +1,71 @@
+page-style-check1{
+    *{
+        .scroll-content{
+        overflow: hidden !important;
+        }
+    }
+
+    .bgCircle{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -190px;
+        top:        -50px;    
+        width:      740px;
+        height:     740px;
+    }
+
+    .bgShadow{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       -200px;
+        top:        -60px;    
+        width:      765px;
+        height:     765px;
+    }
+
+    .styleCheck{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        128px; 
+        width:      107px;
+        height:     19px;
+    }
+
+
+    .mainText{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        194px; 
+        width:      295px;
+        height:     210px;
+        
+    }
+
+    .subText{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       32.5px;
+        top:        427px; 
+        width:      235px;
+        height:     46px;
+    }
+
+    .interactionOuter{
+        position:   absolute;
+        padding:    0;
+        border:     0;
+        left:       109px;
+        top:        497px; 
+        width:      149px;
+        height:     145px;
+    }   
+
+   
+}
