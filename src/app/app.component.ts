@@ -28,8 +28,8 @@ export class MyApp {
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
 
-      //let splash = modalCtrl.create(SplashPage);
-      //splash.present();
+      let splash = modalCtrl.create(SplashPage);
+      splash.present();
 
     });
   }
