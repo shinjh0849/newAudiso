@@ -390,7 +390,9 @@ export class RecommendMaterialPage {
   nextP() {
     this.flyinState = 'down';
     this.speak('면 소재가 선택되셨습니다.');
-    this.navCtrl.push(RecommendProductPage, {}, { animate: false });
+    setTimeout(()=> {
+      this.navCtrl.push(RecommendProductPage, {}, { animate: false });
+    }, 1500);
   }
 
   async speak(line): Promise<any>{

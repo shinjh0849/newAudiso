@@ -36,14 +36,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         width: '140px',
         height: '122.4px'
         })),
-      state('down', style({
-        padding: '0',
-        border: '0',
-        left: '110px',
-        top: '1000px',
-        width: '140px',
-        height: '122.4px'
-      })),
+    state('down', style({
+      padding: '0',
+      border: '0',
+      left: '110px',
+      top: '1000px',
+      width: '140px',
+      height: '122.4px'
+    })),
       transition('up => down', [
        animate('0.001s 0.9s')
        ])
@@ -68,7 +68,7 @@ export class SplashPage {
  
   ionViewDidEnter() {
  
-    this.splashScreen.hide();
+    this.splashScreen.show();
  
     setTimeout(() => {
       this.viewCtrl.dismiss();

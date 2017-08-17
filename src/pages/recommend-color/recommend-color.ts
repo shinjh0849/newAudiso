@@ -1,3 +1,4 @@
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Component,
          trigger,
          transition,
@@ -20,6 +21,23 @@ import { RecommendMaterialPage } from "../recommend-material/recommend-material"
   selector: 'page-recommend-color',
   templateUrl: 'recommend-color.html',
   animations : [
+    trigger('flyin', [
+      state('out', style({
+        left: '-250px'
+      })),
+      state('in', style({
+        left: '32px'
+      })),
+      state('down', style({
+        opacity: '0'
+      })),
+      transition('out=>in', [
+        animate('0.5s 1.5s cubic-bezier(.67,1.28,.64,1.35)')
+      ]),
+      transition('in=>down', [
+        animate('0.7s cubic-bezier(.67,1.28,.64,1.35)')
+      ])
+    ]),
     // 가운데 아이콘과 그의 색깔 다른 친구들
     trigger('middleCircleS', [
       state('m', style({ 
@@ -179,27 +197,46 @@ import { RecommendMaterialPage } from "../recommend-material/recommend-material"
   ]
 })
 export class RecommendColorPage {
-
-  roomState: string = "m";
+   flyinState: string = "out";
+   roomState: string = "m";
    panXi: number = 0;
    panXo: number = 0;
    inneerDefault = 136;
    outerDefault = 109;
    triggered: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private tts: TextToSpeech, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecommendPage');
     this.panXi = this.inneerDefault;
-    this.panXo = this.outerDefault
+    this.panXo = this.outerDefault;
+    this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
+    this.speak('스와이핑으로 원하시는 색상을 선택해주세요! 좌우 스와이핑를 통해 선택하실 수 있고 더블탭을 통해 입력 하실 수 있어요! 딱히 없으시면 화면 아래로 슬라이딩해주세요.');
   }
   
   nextP(){
-    this.navCtrl.push(RecommendMaterialPage, {}, { animate: false });
+    this.flyinState = 'down';
+    this.speak('어두운 색상이 선택되셨습니다.');
+    setTimeout(()=> {
+      this.navCtrl.push(RecommendMaterialPage, {}, { animate: false });
+    },1500) 
   }
 
+  async speak(line): Promise<any>{
+    try{
+      await this.tts.speak({
+        text: line,
+        locale: 'ko-KR',
+        rate: 1
+      });
+      console.log('speak function start!');
+    }
+    catch(e){
+
+    }
+  }
 
   moveButton(e){
       console.log(this.triggered);

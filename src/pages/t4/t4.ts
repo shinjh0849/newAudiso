@@ -276,7 +276,7 @@ export class T4Page {
         this.hamsoo('네, 잘하셨어요.');
         setTimeout(() => {
          this.navCtrl.push( T5Page, {}, {animate: false} );
-        }, 1000);
+        }, 1500);
  
      } else if (e.deltaX < 129) {
       this.xxx = this.defaultX + e.deltaX;

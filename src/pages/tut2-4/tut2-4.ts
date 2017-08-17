@@ -39,7 +39,7 @@ export class Tut2_4Page {
   defaultX: number = 201.39475;
   triggered: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts:TextToSpeech) {
   }
     // 페이지 4 로드: 유니와 클로와 함께 진열대도 둘러볼 수 있어요!
   ionViewDidLoad() {
@@ -50,12 +50,29 @@ export class Tut2_4Page {
       this.triggered = false;
        this.position = this.defaultX;
 
+      this.hamsoo(`
+            유니와 클로와 함께 진열대도 둘러볼 수 있어요!
+            진열대를 지나가면 실시간으로 진열대에 대한 설명을 들으실 수 있답니다.
+            특정 진열대에서 5초 이상 계시면, 진열대에 진열된 상품들의 가격, 핏, 재질과 같은 추가 정보를 들으실 수도 있어요.
+            음성 끝나고 바로) 다음으로 넘어가시려면 탭 한 번 
+            다시 들으시려면 더블탭을 
+            이전으로 돌아가려면 왼쪽으로 스와이핑을 해주세요.
+      `);
 
   }
     
   // 다시 들으시려면 탭 두번을
   doubleTapEvent() {
+
     console.log('double tap in page 4');
+    this.hamsoo(`
+            유니와 클로와 함께 진열대도 둘러볼 수 있어요!
+            진열대를 지나가면 실시간으로 진열대에 대한 설명을 들으실 수 있답니다.
+            특정 진열대에서 5초 이상 계시면, 진열대에 진열된 상품들의 가격, 핏, 재질과 같은 추가 정보를 들으실 수도 있어요.
+            음성 끝나고 바로) 다음으로 넘어가시려면 탭 한 번 
+            다시 들으시려면 더블탭을 
+            이전으로 돌아가려면 왼쪽으로 스와이핑을 해주세요.
+      `);
   }
 
   // 다음으로 넘어가시려면 탭 한번을
@@ -81,4 +98,16 @@ export class Tut2_4Page {
     }
   }
 
+  async hamsoo(talkThis): Promise<any> {
+    try {
+      await this.tts.speak({
+        text: talkThis, // 
+        locale: 'ko-KR',
+        rate: 1
+      })
+      console.log(talkThis)
+    }
+    catch (e) {
+    }
+  }
 }
