@@ -1,3 +1,4 @@
+/*
 import { Component, trigger, state, style, transition, animate, keyframes, group } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -629,34 +630,80 @@ export class TutorialPage {
     }
   }
 
-
-  onLongPress(e) {
-    // 텍스트를 갖다가 넣으면 된답니다아아
-
-
-    if (this.index == 1) {
-      this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
-
-      this.show2 = (this.show2 === "second" ? "disA" : "second");
-      this.show3 = (this.show3 === "second" ? "disA" : "second");
-      this.show4 = (this.show4 === "second" ? "disA" : "second");
-      this.show5 = (this.show5 === "second" ? "disA" : "second");
-
-      this.show6 = (this.show6 === "first" ? "second" : "first");
-      this.show7 = (this.show7 === "first" ? "second" : "first");
-      this.show8 = (this.show8 === "first" ? "second" : "first");
-      this.show9 = (this.show9 === "first" ? "second" : "first");
-      this.show10 = (this.show10 === "first" ? "second" : "first");
-      this.index = 2;
+  
+    onLongPress(e) {
+      // 텍스트를 갖다가 넣으면 된답니다아아
+  
+  
+      if (this.index == 1) {
+        this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
+  
+        this.show2 = (this.show2 === "second" ? "disA" : "second");
+        this.show3 = (this.show3 === "second" ? "disA" : "second");
+        this.show4 = (this.show4 === "second" ? "disA" : "second");
+        this.show5 = (this.show5 === "second" ? "disA" : "second");
+  
+        this.show6 = (this.show6 === "first" ? "second" : "first");
+        this.show7 = (this.show7 === "first" ? "second" : "first");
+        this.show8 = (this.show8 === "first" ? "second" : "first");
+        this.show9 = (this.show9 === "first" ? "second" : "first");
+        this.show10 = (this.show10 === "first" ? "second" : "first");
+        this.index = 2;
+      }
     }
-  }
+  
+    onDoubleTap() {
+  
+      this.hamsoo('응 수고수고 했어효오홍');
+      if (this.index == 2) { }
+    }
+  
+    //이거 끄는건데 잘 모르겠
+    async hamsoo2(): Promise<any> {
+      try {
+        this.tts.stop()
+        console.log("bye")
+      }
+      catch (e) {
+      }
+    }
+  
+    f3() {
+      this.f1().then(this.onLongPress)
+    }
+  
+    async f1(): Promise<any> {
+      this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
+    }
+    
+    onLongPress(e) {
+      // 텍스트를 갖다가 넣으면 된답니다아아
+  
+  
+      if (this.index == 1) {
+        this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
+  
+        this.show2 = (this.show2 === "second" ? "disA" : "second");
+        this.show3 = (this.show3 === "second" ? "disA" : "second");
+        this.show4 = (this.show4 === "second" ? "disA" : "second");
+        this.show5 = (this.show5 === "second" ? "disA" : "second");
+  
+        this.show6 = (this.show6 === "first" ? "second" : "first");
+        this.show7 = (this.show7 === "first" ? "second" : "first");
+        this.show8 = (this.show8 === "first" ? "second" : "first");
+        this.show9 = (this.show9 === "first" ? "second" : "first");
+        this.show10 = (this.show10 === "first" ? "second" : "first");
+        this.index = 2;
+      }
+    }
+    
 
-  onDoubleTap() {
-
-    this.hamsoo('응 수고수고 했어효오홍');
-    if (this.index == 2) { }
-  }
-
+    onDoubleTap() {
+  
+      this.hamsoo('응 수고수고 했어효오홍');
+      if (this.index == 2) { }}
+  
+  
   //이거 끄는건데 잘 모르겠
   async hamsoo2(): Promise<any> {
     try {
@@ -674,54 +721,9 @@ export class TutorialPage {
   async f1(): Promise<any> {
     this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
   }
-  /*
   onLongPress(e) {
     // 텍스트를 갖다가 넣으면 된답니다아아
 
-
-    if (this.index == 1) {
-      
-      
-      this.show2 = (this.show2 === "second" ? "disA" : "second");
-      this.show3 = (this.show3 === "second" ? "disA" : "second");
-      this.show4 = (this.show4 === "second" ? "disA" : "second");
-      this.show5 = (this.show5 === "second" ? "disA" : "second");
-
-      this.show6 = (this.show6 === "first" ? "second" : "first");
-      this.show7 = (this.show7 === "first" ? "second" : "first");
-      this.show8 = (this.show8 === "first" ? "second" : "first");
-      this.show9 = (this.show9 === "first" ? "second" : "first");
-      this.show10 = (this.show10 === "first" ? "second" : "first");
-      this.index = 2;
-    }
-  }
-
-  onDoubleTap() {
-    if (this.index == 2) {
-      
-      this.hamsoo('네, 잘하셨어요');
-
-       
-      this.show7 = (this.show7 === "second" ? "disA" : "second");
-      this.show8 = (this.show8 === "second" ? "disA" : "second");
-      this.show9 = (this.show9 === "second" ? "disA" : "second");
-      this.show10 = (this.show10 === "second" ? "disA" : "second");
-      this.show11 = (this.show11 === "first" ? "second" : "first");
-      this.show12 = (this.show12 === "first" ? "second" : "first");
-      this.show14 = (this.show14 === "first" ? "second" : "first");
-      this.show15 = (this.show15 === "first" ? "second" : "first");
-      this.show16 = (this.show16 === "first" ? "second" : "first");
-
-      this.index = 3;
-   
-    
-   }
-  }
-
-*/
-
-
-  onNext(e) {
 
     if (this.index == 3) {
       this.hamsoo('왼쪽에서 스와이핑 해주세요');
@@ -749,65 +751,185 @@ export class TutorialPage {
         if (e.isFinal == true) {
           this.xxx = this.defaultX;
           this.triggered = false;
-        }
-      }
+          if (this.index == 1) {
 
-    }
-  }
 
-  /*onNext2(e){
-    
-      if(this.index == 4){
-  
-     
-        
-      if( e.deltaY >= 110 && !this.triggered2){ 
-  =======
-  
-        } else { // 놓았을 때 원래 위치로 오게 하는 것
-          this.xxx = this.defaultX + e.deltaX;
-          if (e.isFinal == true) {
-            this.xxx = this.defaultX;
-            this.triggered = false;
+            this.show2 = (this.show2 === "second" ? "disA" : "second");
+            this.show3 = (this.show3 === "second" ? "disA" : "second");
+            this.show4 = (this.show4 === "second" ? "disA" : "second");
+            this.show5 = (this.show5 === "second" ? "disA" : "second");
+
+            this.show6 = (this.show6 === "first" ? "second" : "first");
+            this.show7 = (this.show7 === "first" ? "second" : "first");
+            this.show8 = (this.show8 === "first" ? "second" : "first");
+            this.show9 = (this.show9 === "first" ? "second" : "first");
+            this.show10 = (this.show10 === "first" ? "second" : "first");
+            this.index = 2;
           }
         }
-  
-      }
-    }
-  */
-  onNext2(e) {
 
-    if (this.index == 4) {
-      this.hamsoo('아래로 스와이핑 해주세요');
-      if (e.deltaY >= 110 && !this.triggered2) {
-        this.triggered2 = true;
-        this.yyy = 455;
-        // 다음 에니메이션이 발생하게 한다.
-        this.show17 = (this.show17 === "second" ? "disA" : "second");
-        this.show18 = (this.show18 === "second" ? "disA" : "second");
-        this.show19 = (this.show19 === "second" ? "disA" : "second");
-        this.show20 = (this.show20 === "second" ? "disA" : "second");
-        this.show21 = (this.show21 === "second" ? "disA" : "second");
+        onDoubleTap() {
+          if (this.index == 2) {
 
-        this.show6 = (this.show6 === "second" ? "disA" : "second");
-        // 다음 페이지로 넘어감
-        this.navCtrl.push(P1Page, {}, { animate: false });
+            this.hamsoo('네, 잘하셨어요');
 
-      } else { // 놓았을 때 원래 위치로 오게 하는 것
-        this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? (띠링)');
 
-        this.yyy = this.defaultY + e.deltaY;
-        if (e.isFinal == true) {
-          this.yyy = this.defaultY;
-          this.triggered2 = false;
+            this.show7 = (this.show7 === "second" ? "disA" : "second");
+            this.show8 = (this.show8 === "second" ? "disA" : "second");
+            this.show9 = (this.show9 === "second" ? "disA" : "second");
+            this.show10 = (this.show10 === "second" ? "disA" : "second");
+            this.show11 = (this.show11 === "first" ? "second" : "first");
+            this.show12 = (this.show12 === "first" ? "second" : "first");
+            this.show14 = (this.show14 === "first" ? "second" : "first");
+            this.show15 = (this.show15 === "first" ? "second" : "first");
+            this.show16 = (this.show16 === "first" ? "second" : "first");
+
+            this.index = 3;
+
+
+          }
         }
-      }
-    } else { // 놓았을 때 원래 위치로 오게 하는 것
-      this.yyy = this.defaultY + e.deltaY;
-      if (e.isFinal == true) {
-        this.yyy = this.defaultY;
-        this.triggered2 = false;
-      }
-    }
-  }
-}
+
+
+
+        onNext(e) {
+
+          if (this.index == 3) {
+            this.hamsoo('왼쪽에서 스와이핑 해주세요');
+            if (e.deltaX >= 128.5 && !this.triggered) {
+              this.triggered = true;
+              this.xxx = 71.25;
+
+
+              this.show11 = (this.show11 === "second" ? "disA" : "second");
+              this.show12 = (this.show12 === "second" ? "disA" : "second");
+              this.show14 = (this.show14 === "second" ? "disA" : "second");
+              this.show15 = (this.show15 === "second" ? "disA" : "second");
+              this.show16 = (this.show16 === "second" ? "disA" : "second");
+
+              this.show17 = (this.show17 === "first" ? "second" : "first");
+              this.show18 = (this.show18 === "first" ? "second" : "first");
+              this.show19 = (this.show19 === "first" ? "second" : "first");
+              this.show20 = (this.show20 === "first" ? "second" : "first");
+              this.show21 = (this.show21 === "first" ? "second" : "first");
+              this.index = 4;
+
+            } else { // 놓았을 때 원래 위치로 오게 하는 것
+
+              this.xxx = this.defaultX + e.deltaX;
+              if (e.isFinal == true) {
+                this.xxx = this.defaultX;
+                this.triggered = false;
+              }
+            }
+
+          }
+        }
+
+        
+        onNext2(e){
+          
+            if(this.index == 4){
+        
+           
+              
+            if( e.deltaY >= 110 && !this.triggered2){ 
+        =======
+        
+              } else { // 놓았을 때 원래 위치로 오게 하는 것
+                this.xxx = this.defaultX + e.deltaX;
+                if (e.isFinal == true) {
+                  this.xxx = this.defaultX;
+                  this.triggered = false;
+                }
+              }
+        
+            }
+          }
+        
+        onNext2(e) {
+
+          if (this.index == 4) {
+            this.hamsoo('아래로 스와이핑 해주세요');
+            if (e.deltaY >= 110 && !this.triggered2) {
+              this.triggered2 = true;
+              this.yyy = 455;
+              // 다음 에니메이션이 발생하게 한다.
+              this.show17 = (this.show17 === "second" ? "disA" : "second");
+              this.show18 = (this.show18 === "second" ? "disA" : "second");
+              this.show19 = (this.show19 === "second" ? "disA" : "second");
+              this.show20 = (this.show20 === "second" ? "disA" : "second");
+              this.show21 = (this.show21 === "second" ? "disA" : "second");
+
+              this.show6 = (this.show6 === "second" ? "disA" : "second");
+              // 다음 페이지로 넘어감
+              this.navCtrl.push(P1Page, {}, { animate: false });
+
+            } else { // 놓았을 때 원래 위치로 오게 하는 것
+              this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? (띠링)');
+
+            }
+          }
+
+          onNext2(e){
+            
+              if(this.index == 4){
+          
+             
+                
+              if( e.deltaY >= 110 && !this.triggered2){ 
+          =======
+          
+                } else { // 놓았을 때 원래 위치로 오게 하는 것
+                  this.xxx = this.defaultX + e.deltaX;
+                  if (e.isFinal == true) {
+                    this.xxx = this.defaultX;
+                    this.triggered = false;
+                  }
+                }
+          
+              }
+            }
+          
+          onNext2(e) {
+
+            if (this.index == 4) {
+              this.hamsoo('아래로 스와이핑 해주세요');
+              if (e.deltaY >= 110 && !this.triggered2) {
+                this.triggered2 = true;
+                this.yyy = 455;
+                // 다음 에니메이션이 발생하게 한다.
+                this.show17 = (this.show17 === "second" ? "disA" : "second");
+                this.show18 = (this.show18 === "second" ? "disA" : "second");
+                this.show19 = (this.show19 === "second" ? "disA" : "second");
+                this.show20 = (this.show20 === "second" ? "disA" : "second");
+                this.show21 = (this.show21 === "second" ? "disA" : "second");
+
+                this.show6 = (this.show6 === "second" ? "disA" : "second");
+                // 다음 페이지로 넘어감
+                this.navCtrl.push(P1Page, {}, { animate: false });
+
+                this.yyy = this.defaultY + e.deltaY;
+                if (e.isFinal == true) {
+                  this.yyy = this.defaultY;
+                  this.triggered2 = false;
+                }
+              }
+            } else { // 놓았을 때 원래 위치로 오게 하는 것
+              this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? (띠링)');
+
+              this.yyy = this.defaultY + e.deltaY;
+              if (e.isFinal == true) {
+                this.yyy = this.defaultY;
+                this.triggered2 = false;
+              }
+            }
+          } else { // 놓았을 때 원래 위치로 오게 하는 것
+            this.yyy = this.defaultY + e.deltaY;
+            if (e.isFinal == true) {
+              this.yyy = this.defaultY;
+              this.triggered2 = false;
+            }
+          }
+        }
+    */

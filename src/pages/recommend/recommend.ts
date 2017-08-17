@@ -1,6 +1,7 @@
 import { RecommendPricePage } from './../recommend-price/recommend-price';
 import { P1Page } from './../p1/p1';
 
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Component,
          trigger,
          transition,
@@ -25,6 +26,23 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-recommend',
   templateUrl: 'recommend.html',
   animations : [
+    trigger('flyin', [
+      state('out', style({
+        left: '-250px'
+      })),
+      state('in', style({
+        left: '32px'
+      })),
+      state('down', style({
+        opacity: '0'
+      })),
+      transition('out=>in', [
+        animate('0.5s 1.5s cubic-bezier(.67,1.28,.64,1.35)')
+      ]),
+      transition('in=>down', [
+        animate('0.7s cubic-bezier(.67,1.28,.64,1.35)')
+      ])
+    ]),
     // 가운데 아이콘과 그의 색깔 다른 친구들
     trigger('middleCircleR', [
       state('m', style({ 
@@ -218,24 +236,45 @@ import { NavController, NavParams } from 'ionic-angular';
   ]
 })
 export class RecommendPage {
+  flyinState: string = "out";
    roomState: string = "m";
    panXi: number = 0;
    panXo: number = 0;
    inneerDefault = 136;
    outerDefault = 109;
    triggered: boolean = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecommendPage');
     this.panXi = this.inneerDefault;
-    this.panXo = this.outerDefault
+    this.panXo = this.outerDefault;
+    this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
+    this.speak('스와이핑으로 원하시는 의류 카테고리를 선택해주세요!. 좌우 스와이핑를 통해 선택하실 수 있고 더블탭을 통해 입력 하실 수 있어요! 딱히 없으시면 화면 아래로 슬라이딩해주세요. (띠링)');
   }
   
+  async speak(line): Promise<any>{
+    try{
+      await this.tts.speak({
+        text: line,
+        locale: 'ko-KR',
+        rate: 1
+      });
+      console.log('speak function start!');
+    }
+    catch(e){
+
+    }
+  }
+
   nextP(){
     console.log("이야 신난다");
-    this.navCtrl.push(RecommendPricePage);
+    this.flyinState = 'down';
+    this.speak('Bottom이 선택되셨습니다.');
+    setTimeout(()=> {
+      this.navCtrl.push(RecommendPricePage, {}, { animate: false });
+    }, 1500);
   }
 
 

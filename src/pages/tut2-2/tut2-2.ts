@@ -29,7 +29,7 @@ export class Tut2_2Page {
   text2State1: string = "off";
   text2State: string = "off";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
   ionViewDidLoad() {
@@ -39,16 +39,39 @@ export class Tut2_2Page {
       this.text2State1 = "on";
       this.nav2State = "on";
 
+      this.hamsoo(`오디쏘는 직원도 부를 수 있답니다. 유니야를 부르시고 직원을 한 번 불러보시겠어요? (띠링)
+                    다음으로 넘어가시려면 탭 한 번 
+                    다시 들으시려면 더블탭을 해주세요!
+                  `)
+
   }
 
   doubleTapEvent() {
-    this.navCtrl.push(Tut2_1Page, {}, {animate: false});
+    this.hamsoo(`오디쏘는 직원도 부를 수 있답니다. 유니야를 부르시고 직원을 한 번 불러보시겠어요? (띠링)
+                    다음으로 넘어가시려면 탭 한 번 
+                    다시 들으시려면 더블탭을 해주세요!
+                  `)
+    //this.navCtrl.push(Tut2_1Page, {}, {animate: false});
 
     console.log(this.navCtrl);
   }
 
   clickEvent() {
     this.navCtrl.push(Tut2_4Page, {}, {animate: false});
+  }
+
+
+  async hamsoo(talkThis): Promise<any> {
+    try {
+      await this.tts.speak({
+        text: talkThis, // 
+        locale: 'ko-KR',
+        rate: 1
+      })
+      console.log(talkThis)
+    }
+    catch (e) {
+    }
   }
 
 }

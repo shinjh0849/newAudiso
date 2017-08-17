@@ -20,7 +20,6 @@ import { T4ToRightDirective } from "../directives/t4-to-right/t4-to-right";
 import { SplashPage } from '../pages/splash/splash';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { TutorialPage } from "../pages/tutorial/tutorial";
 import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
 import { Tut2_1Page } from '../pages/tut2-1/tut2-1' 
 import { Tut2_2Page } from '../pages/tut2-2/tut2-2' 
@@ -74,7 +73,6 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     //Pages
     SplashPage,
     HomePage,
-    TutorialPage,
     Tutorial2Page,
     Tut2_1Page,
     Tut2_2Page,
@@ -96,7 +94,6 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     QRcodePage,
     
     P1Page,
-    TutorialPage,
     Tutorial2Page,
     T1Page,
     T2Page,
@@ -131,7 +128,6 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     //Pages
     SplashPage,
     HomePage,
-    TutorialPage,
     Tutorial2Page,
     Tut2_1Page,
     Tut2_2Page,
@@ -153,7 +149,6 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     QRcodePage,
     
     P1Page,
-    TutorialPage,
     Tutorial2Page,
     
     T1Page,

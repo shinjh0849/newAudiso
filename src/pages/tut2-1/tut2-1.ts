@@ -106,7 +106,10 @@ export class Tut2_1Page {
   onLongPress(e) {
     this.text1State = "d";
     this.nav1State = "off";
-    this.navCtrl.push(Tut2_2Page, {}, { animate: false });
+    this.hamsoo('네 잘 하셨어요~ ');
+    setTimeout(()=> {
+      this.navCtrl.push(Tut2_2Page, {}, { animate: false });
+    }, 1500);
   }
 
   async hamsoo(talkThis): Promise<any> {

@@ -1,3 +1,4 @@
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { RecommendColorPage } from './../recommend-color/recommend-color';
 import { Component,
          trigger,
@@ -20,6 +21,23 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-recommend-price',
   templateUrl: 'recommend-price.html',
   animations : [
+    trigger('flyin', [
+      state('out', style({
+        left: '-250px'
+      })),
+      state('in', style({
+        left: '32px'
+      })),
+      state('down', style({
+        opacity: '0'
+      })),
+      transition('out=>in', [
+        animate('0.5s 1.5s cubic-bezier(.67,1.28,.64,1.35)')
+      ]),
+      transition('in=>down', [
+        animate('0.7s cubic-bezier(.67,1.28,.64,1.35)')
+      ])
+    ]),
     // 가운데 아이콘과 그의 색깔 다른 친구들
     trigger('middleCircleR', [
       state('m', style({ 
@@ -543,7 +561,7 @@ import { NavController, NavParams } from 'ionic-angular';
   ]
 })
 export class RecommendPricePage {
-
+flyinState: string = "out";
   roomState: string = "m";
    panXi: number = 0;
    panXo: number = 0;
@@ -551,17 +569,36 @@ export class RecommendPricePage {
    outerDefault = 109;
    triggered: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecommendPage');
     this.panXi = this.inneerDefault;
-    this.panXo = this.outerDefault
+    this.panXo = this.outerDefault;
+     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
+    this.speak('스와이핑으로 원하시는 가격대를 선택해주세요! 좌우 스와이핑를 통해 선택하실 수 있고 더블탭을 통해 입력 하실 수 있어요! 딱히 없으시면 화면 아래로 슬라이딩해주세요.');
+
   }
-  
-  nextP(){
-    this.navCtrl.push(RecommendColorPage);
+  async speak(line): Promise<any>{
+    try{
+      await this.tts.speak({
+        text: line,
+        locale: 'ko-KR',
+        rate: 1
+      });
+      console.log('speak function start!');
+    }
+    catch(e){
+
+    }
+  }
+  nextP(){console.log("이야 신난다");
+    this.flyinState = 'down';
+    this.speak('4만원 이상이 선택되셨습니다.');
+    setTimeout(()=> {
+      this.navCtrl.push(RecommendColorPage, {}, { animate: false });
+    }, 1500);
   }
 
 
