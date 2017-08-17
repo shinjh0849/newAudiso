@@ -11,10 +11,10 @@ import { Tut2_4Page } from "../tut2-4/tut2-4";
 
   animations: [
     trigger('text2', [
-      state('off', style({ left: '-740px' })),
+      state('off', style({ left: '-1000px' })),
       state('on', style({ left: '32.4262px' })),
       state('d', style({ opacity: 0 })),
-      transition('off=>on', [animate('700ms 150ms cubic-bezier(.46,.01,.13,1.06)')]),
+      transition('off=>on', [animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]),
       transition('on=>d', [animate('100ms')])
     ]),
     trigger('nav2', [

@@ -17,7 +17,7 @@ import { Tut2_2Page } from "../tut2-2/tut2-2";
         left: '740px',
         transform: 'scale(70)'
       })),
-      transition('off=>on', [animate('0.85s 1s cubic-bezier(.63,.28,.41,1.15)')]),
+      transition('off=>on', [animate('0.85s 1s cubic-bezier(.63,.28,.41,1.15)')]), //원 나오는 이징
       transition('on=>last', [animate('500ms 800ms')])
     ]),
     trigger('startCircleS', [
@@ -32,14 +32,14 @@ import { Tut2_2Page } from "../tut2-2/tut2-2";
       state('off', style({ left: '-300px' })),
       state('on', style({ left: '32.5px' })),
       state('d', style({ opacity: 0 })),
-      transition('off=>on', [animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]),
+      transition('off=>on', [animate('1000ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]), // 작은 글씨 이징: 1000ms
       transition('on=>d', [animate('100ms')])
     ]),
     trigger('text1', [
       state('off', style({ left: '-1000px' })),
       state('on', style({ left: '32.5px' })),
       state('d', style({ opacity: 0 })),
-      transition('off=>on', [ animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]),
+      transition('off=>on', [ animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]), // 큰 글씨 이징: 850ms
       transition('on=>d', [ animate('100ms')])
     ]),
     trigger('text1_1', [

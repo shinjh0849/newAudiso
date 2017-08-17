@@ -11,29 +11,29 @@ import { P1_1Page } from "../p1-1/p1-1";
   templateUrl: 'tut2-6.html',
   animations: [
     trigger('text6', [
-      state('off', style({ left: '-740px' })),
+      state('off', style({ left: '-1000px' })),
       state('on', style({ left: '32.5px' })),
       state('d', style({ left: '375px' })),
-      transition('off=>on', [animate('1000ms 150ms cubic-bezier(.46,.01,.13,1.06)')]),
-      transition('on=>d', [animate('100ms')])
+      transition('off=>on', [animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]),
+      transition('on=>d', [animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')])
     ]),
     trigger('circle', [
       state('on', style({ left: '-360px' })),
       state('go', style({ left: '0px' })),
       // transition('void=>on',),
       transition('on=>go', [
-        animate('1000ms 150ms cubic-bezier(.46,.01,.13,1.06)')])
+        animate('0.85s 1s cubic-bezier(.63,.28,.41,1.15)')])
     ]),
     trigger('circleS', [
       state('on', style({ left: '-372px' })),
       state('go', style({ left: '0px' })),
       // transition('void=>on',),
       transition('on=>go', [
-        animate('1000ms 150ms cubic-bezier(.46,.01,.13,1.06)')])
+        animate('0.85s 1s cubic-bezier(.63,.28,.41,1.15)')])
     ]),
     trigger('gogo', [
       state('go', style({ left: '802px' })),
-      transition('*=>go', [animate('2000ms 10ms cubic-bezier(.46,.01,.13,1.06)')])
+      transition('*=>go', [animate('0.85s 1s cubic-bezier(.63,.28,.41,1.15)')])
     ]),
   ],
 })

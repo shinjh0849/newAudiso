@@ -11,12 +11,12 @@ import { Tut2_6Page } from "../tut2-6/tut2-6";
   templateUrl: 'tut2-5.html',
   animations: [
     trigger('text5', [
-      state('off', style({ left: '-740px' })),
+      state('off', style({ left: '-1000px' })),
       state('on', style({ left: '32.5px' })),
       state('d', style({
         opacity: 0
       })),
-      transition('off=>on', [ animate('1000ms 150ms cubic-bezier(.46,.01,.13,1.06)')]),
+      transition('off=>on', [ animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]),
       transition('on=>d', [
         animate('100ms')
       ])

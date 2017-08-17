@@ -630,33 +630,34 @@ export class TutorialPage {
   }
 
 
-  onLongPress(e){
+  onLongPress(e) {
     // 텍스트를 갖다가 넣으면 된답니다아아
-    
 
-     if(this.index == 1){
-   this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
 
-   this.show2 = (this.show2 === "second" ? "disA" : "second");
-    this.show3 = (this.show3 === "second" ? "disA" : "second");
-    this.show4 = (this.show4 === "second" ? "disA" : "second");
-    this.show5 = (this.show5 === "second" ? "disA" : "second");
-    
-    this.show6 = (this.show6 === "first" ? "second" : "first");
-    this.show7 = (this.show7 === "first" ? "second" : "first");
-    this.show8 = (this.show8 === "first" ? "second" : "first");
-    this.show9 = (this.show9 === "first" ? "second" : "first");
-    this.show10 = (this.show10 === "first" ? "second" : "first");
-    this.index = 2;
-     }
+    if (this.index == 1) {
+      this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
+
+      this.show2 = (this.show2 === "second" ? "disA" : "second");
+      this.show3 = (this.show3 === "second" ? "disA" : "second");
+      this.show4 = (this.show4 === "second" ? "disA" : "second");
+      this.show5 = (this.show5 === "second" ? "disA" : "second");
+
+      this.show6 = (this.show6 === "first" ? "second" : "first");
+      this.show7 = (this.show7 === "first" ? "second" : "first");
+      this.show8 = (this.show8 === "first" ? "second" : "first");
+      this.show9 = (this.show9 === "first" ? "second" : "first");
+      this.show10 = (this.show10 === "first" ? "second" : "first");
+      this.index = 2;
+    }
   }
 
-  onDoubleTap(){
+  onDoubleTap() {
 
     this.hamsoo('응 수고수고 했어효오홍');
-    if(this.index == 2){
+    if (this.index == 2) { }
+  }
 
-      //이거 끄는건데 잘 모르겠
+  //이거 끄는건데 잘 모르겠
   async hamsoo2(): Promise<any> {
     try {
       this.tts.stop()
@@ -666,13 +667,14 @@ export class TutorialPage {
     }
   }
 
-f3(){
-  this.f1().then(this.onLongPress)
-}
+  f3() {
+    this.f1().then(this.onLongPress)
+  }
 
-  async f1(): Promise<any>{
+  async f1(): Promise<any> {
     this.hamsoo('첫번째 동작은 ‘탭 두번’ 이에요. 삐 소리가 들리면 화면에 탭 두번 해주세요. (띠링) ');
   }
+  /*
   onLongPress(e) {
     // 텍스트를 갖다가 넣으면 된답니다아아
 
@@ -716,7 +718,7 @@ f3(){
    }
   }
 
-
+*/
 
 
   onNext(e) {
@@ -725,8 +727,8 @@ f3(){
       this.hamsoo('왼쪽에서 스와이핑 해주세요');
       if (e.deltaX >= 128.5 && !this.triggered) {
         this.triggered = true;
-        this.xxx = 71.25; 
-      
+        this.xxx = 71.25;
+
 
         this.show11 = (this.show11 === "second" ? "disA" : "second");
         this.show12 = (this.show12 === "second" ? "disA" : "second");
@@ -740,29 +742,9 @@ f3(){
         this.show20 = (this.show20 === "first" ? "second" : "first");
         this.show21 = (this.show21 === "first" ? "second" : "first");
         this.index = 4;
-        
-     } else { // 놓았을 때 원래 위치로 오게 하는 것
-
-      this.xxx = this.defaultX + e.deltaX;
-          if(e.isFinal == true){
-            this.xxx = this.defaultX;
-            this.triggered = false;
-          }
-     }
-    
-    }
-  }
-
-/*onNext2(e){
-  
-    if(this.index == 4){
-
-   
-      
-    if( e.deltaY >= 110 && !this.triggered2){ 
-=======
 
       } else { // 놓았을 때 원래 위치로 오게 하는 것
+
         this.xxx = this.defaultX + e.deltaX;
         if (e.isFinal == true) {
           this.xxx = this.defaultX;
@@ -772,7 +754,27 @@ f3(){
 
     }
   }
-*/
+
+  /*onNext2(e){
+    
+      if(this.index == 4){
+  
+     
+        
+      if( e.deltaY >= 110 && !this.triggered2){ 
+  =======
+  
+        } else { // 놓았을 때 원래 위치로 오게 하는 것
+          this.xxx = this.defaultX + e.deltaX;
+          if (e.isFinal == true) {
+            this.xxx = this.defaultX;
+            this.triggered = false;
+          }
+        }
+  
+      }
+    }
+  */
   onNext2(e) {
 
     if (this.index == 4) {
@@ -789,23 +791,22 @@ f3(){
 
         this.show6 = (this.show6 === "second" ? "disA" : "second");
         // 다음 페이지로 넘어감
-        this.navCtrl.push( P1Page, {}, {animate: false} );
+        this.navCtrl.push(P1Page, {}, { animate: false });
 
-     } else { // 놓았을 때 원래 위치로 오게 하는 것
-           this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? (띠링)');
-      
-          this.yyy = this.defaultY + e.deltaY;
-          if(e.isFinal == true){
-            this.yyy = this.defaultY;
-            this.triggered2 = false;
-          }
-     }
       } else { // 놓았을 때 원래 위치로 오게 하는 것
+        this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? (띠링)');
+
         this.yyy = this.defaultY + e.deltaY;
         if (e.isFinal == true) {
           this.yyy = this.defaultY;
           this.triggered2 = false;
         }
+      }
+    } else { // 놓았을 때 원래 위치로 오게 하는 것
+      this.yyy = this.defaultY + e.deltaY;
+      if (e.isFinal == true) {
+        this.yyy = this.defaultY;
+        this.triggered2 = false;
       }
     }
   }

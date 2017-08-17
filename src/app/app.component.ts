@@ -16,13 +16,14 @@ import { RecommendMaterialPage } from '../pages/recommend-material/recommend-mat
 // T1Page 에서 시작해야 한다.
 import { T1Page } from "../pages/t1/t1";
 import { StyleCheck1Page } from '../pages/style-check1/style-check1';
+import { Tut2_1Page } from "../pages/tut2-1/tut2-1";
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = T1Page;
+  rootPage:any = Tut2_1Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
