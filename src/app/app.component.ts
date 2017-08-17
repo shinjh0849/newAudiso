@@ -29,6 +29,7 @@ export class MyApp {
 
       let splash = modalCtrl.create(SplashPage);
       splash.present();
+      statusBar.hide(); // statusBar hide 해볼까 말까
 
     });
   }
