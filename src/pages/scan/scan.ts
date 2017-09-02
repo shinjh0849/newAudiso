@@ -48,4 +48,7 @@ export class ScanPage {
     this.navCtrl.push(QRcodePage, {}, { animate: false });
   }
 
+  clickevent() {
+    this.navCtrl.push(QRcodePage, {}, { animate: false });
+  }
 }

@@ -15,6 +15,7 @@ import { Tut2_6Page } from "../pages/tut2-6/tut2-6";
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { NavigationPage } from '../pages/navigation/navigation';
 import { RecommendMaterialPage } from '../pages/recommend-material/recommend-material';
+import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
 // T1Page 에서 시작해야 한다.
 
 
@@ -22,7 +23,7 @@ import { RecommendMaterialPage } from '../pages/recommend-material/recommend-mat
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = T1Page;
+  rootPage:any = Tut2_4Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
