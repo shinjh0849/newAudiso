@@ -53,17 +53,15 @@ page-navigation2 {
         top:        393px;    
         width:      177px;
         height:     239px;
-        animation-name: bounce;
+        animation-name: asd;
         animation-duration: 2s;
         animation-iteration-count: 100;
     }
 
     //이거 빠운스 빠운스 두근되
-    @keyframes bounce {
-        0% { transform: translate(0, 0) }
-        25% { transform: translate(0, 25px) }
-        50% { transform: translate(0, 0) }
-        75% { transform: translate(0, -25px) }
-        100% { transform: translate(0, 0) }
+    @keyframes asd {
+        0%      { transform: translate(0, 25px) }
+        50%     { transform: translate(0, 0px) }
+        100%     { transform: translate(0, 25px) }
     }
 }
