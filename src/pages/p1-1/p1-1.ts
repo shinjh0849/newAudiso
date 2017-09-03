@@ -172,7 +172,7 @@ import { P1_2Page } from "../p1-2/p1-2";
           border: '0',
           left: '145.4688px',
           top: '1000px',
-          width: '62.2813px',
+          width: '100px',
           height: '27.5px'
       })),
       state('first', style({
