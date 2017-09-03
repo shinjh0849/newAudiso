@@ -48,7 +48,8 @@ import { T4Page } from "../pages/t4/t4";
 import { T5Page } from "../pages/t5/t5";
 import { P1_1Page } from "../pages/p1-1/p1-1";
 import { P1_2Page } from "../pages/p1-2/p1-2";
-
+import { Result1Page } from "../pages/result1/result1";
+import { Result2Page } from "../pages/result2/result2";
 import { StyleCheck1Page } from '../pages/style-check1/style-check1';
 import { StyleCheck2Page } from '../pages/style-check2/style-check2';
 import { StyleCheck3Page } from '../pages/style-check3/style-check3';
@@ -114,8 +115,10 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     Payment1Page,
     Payment2Page,
     Payment3Page,
-    HistoryPage
+    HistoryPage,
 
+    Result1Page,
+    Result2Page
 
   ],
   imports: [
@@ -170,7 +173,9 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     Payment1Page,
     Payment2Page,
     Payment3Page,
-    HistoryPage
+    HistoryPage,
+    Result1Page,
+    Result2Page
 
   ],
   providers: [
