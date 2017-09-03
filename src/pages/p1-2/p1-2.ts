@@ -311,7 +311,8 @@ state를 변경시켜 에니메이션으로 rotate 되게 하는데
 바꿀 때는 html 에서 음성이 인식된다는 사인을 주면 이 함수가 실행되게 하면 될 듯... ㅎㅎ
  */
  rotate(){   
-   this.showBUp = (this.showBUp === "second" ? "rotate" : "second");
+  this.navCtrl.push( RecommendPage, {}, {animate: false} );
+  // this.showBUp = (this.showBUp === "second" ? "rotate" : "second");
 }
 
 onNext(){
