@@ -18,9 +18,18 @@ import { Tut2_6Page } from "../pages/tut2-6/tut2-6";
 import { QRcodePage } from '../pages/q-rcode/q-rcode';
 import { NavigationPage } from '../pages/navigation/navigation';
 import { RecommendMaterialPage } from '../pages/recommend-material/recommend-material';
+import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
+import { Navigation2Page } from '../pages/navigation2/navigation2';
+import { Payment1Page } from '../pages/payment1/payment1';
+import { Payment2Page } from '../pages/payment2/payment2';
+import { Payment3Page } from '../pages/payment3/payment3';
+import { ProductColorPage } from '../pages/product-color/product-color';
+import { ProductConfirmPage } from '../pages/product-confirm/product-confirm';
 import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
+
 import { Tut2_1Page } from "../pages/tut2-1/tut2-1";
 import { Result1Page } from "../pages/result1/result1";
+
 // T1Page 에서 시작해야 한다.
 
 
@@ -28,13 +37,14 @@ import { Result1Page } from "../pages/result1/result1";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = RecommendPage;
+  rootPage:any = ProductConfirmPage;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, private androidFullScreen: AndroidFullScreen ) {
     platform.ready().then(() => {
 
-      let splash = modalCtrl.create(SplashPage);
-      splash.present();
+      //let splash = modalCtrl.create(SplashPage);
+      //splash.present();
       statusBar.hide(); // statusBar hide 해볼까 말까
       //splash.present();
       this.androidFullScreen.isImmersiveModeSupported()
