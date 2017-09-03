@@ -1,5 +1,23 @@
 <ion-content t4-to-right (pan) = "moveButton($event)" (doubleTap) = "nextP()">
-  <div class = "bgCircleShadow"><img src = "assets/shadow/bigCShadow.png"></div>
+
+    <div class = "bgCircle"><img src = "assets/21-24/배경.png"></div>
+    <div class = "recommend"><img src = "assets/21-24/Recommand2.png"></div>
+    <div class = "category" [@flyin] = "flyinState"><img src = "assets/21-24/text1_21_24_2.png"></div>
+
+    <div class = "top" [@right2Circle] = "roomState"><img src = " assets/21-24/innerwear_button2.png"></div>
+
+    <div class = "bottom" [@rightCircle] = "roomState"><img src = "assets/21-24/bottom_button2.png"></div>
+
+    <div class = "outer" [@middleCircle] = "roomState"><img src = "assets/21-24/outer_button2.png"></div>
+
+    <div class = "top" [@leftCircle] = "roomState"><img src = " assets/21-24/top_button2.png"></div>
+
+    <div class = "interactionOuter" ><img src = "assets/21-24/interaction button.png"></div>
+
+    
+
+
+  <!--   <div class = "bgCircleShadow"><img src = "assets/shadow/bigCShadow.png"></div>
   <div class = "bgCircle"><img src = "assets/background/보라큰원.png"></div>
   <div class = "recommend"><img src = "assets/21-24/Recommend.png"></div>
   <div class = "category" [@flyin] = "flyinState"><img src = "assets/21-24/text1_21_24.png"></div>
@@ -25,5 +43,5 @@
     <div class = "interactionOuter" [style.left] = "panXo + 'px'"><img src = "assets/interaction/interactionOuter.png"></div>
     <div class = "interactionInner" [style.left] = "panXi + 'px'"><img src = "assets/interaction/interactionInner.png"></div>
   </div>
-
+ -->
 </ion-content>
