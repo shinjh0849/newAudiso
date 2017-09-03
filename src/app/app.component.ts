@@ -1,3 +1,6 @@
+import { T3Page } from './../pages/t3/t3';
+import { T2Page } from './../pages/t2/t2';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { T1Page } from './../pages/t1/t1';
 import { HistoryPage } from './../pages/history/history';
 import { StyleCheck1Page } from './../pages/style-check1/style-check1';
@@ -23,14 +26,18 @@ import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Tut2_4Page;
+  rootPage:any = RecommendPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, private androidFullScreen: AndroidFullScreen ) {
     platform.ready().then(() => {
 
       let splash = modalCtrl.create(SplashPage);
       splash.present();
       statusBar.hide(); // statusBar hide 해볼까 말까
+      //splash.present();
+      this.androidFullScreen.isImmersiveModeSupported()
+      .then(() => this.androidFullScreen.immersiveMode())
+      .catch((error: any) => console.log(error));
 
     });
   }

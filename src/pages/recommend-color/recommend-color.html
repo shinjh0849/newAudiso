@@ -1,4 +1,16 @@
 <ion-content t4-to-right (pan) = "moveButton($event)" (doubleTap) = "nextP()">
+  
+  <div class = "bgCircle"><img src = "assets/30-32/배경.png"></div>
+  <div class = "recommend"><img src = "assets/21-24/Recommand2.png"></div>
+  <div class = "category" [@flyin] = "flyinState"><img src = "assets/30-32/textchoice2.png"></div>
+
+  <div class = "outer" [@rightCircle]  = "roomState"><img src = "assets/30-32/bright_C_2.png"></div>
+  <div class = "bottom" [@middleCircle] = "roomState"><img src = "assets/30-32/dark_C_2.png"></div>
+  <div class = "top" [@leftCircle] = "roomState"><img src =  " assets/30-32/central_C_2.png"></div>  
+
+   <div class = "interactionOuter" ><img src = "assets/21-24/interaction button.png"></div>
+
+  <!-- 
   <div class = "bgCircleShadow"><img src = "assets/shadow/bigCShado.png"></div>
 
   <div class = "bgCircle"><img src = "assets/background/보라큰원.png"></div>
@@ -23,6 +35,6 @@
   <div>
     <div class = "interactionOuter" [style.left] = "panXo + 'px'"><img src = "assets/interaction/interactionOuter.png"></div>
     <div class = "interactionInner" [style.left] = "panXi + 'px'"><img src = "assets/interaction/interactionInner.png"></div>
-  </div>
+  </div> -->
 
 </ion-content>

@@ -121,23 +121,23 @@ import { NavController, NavParams } from 'ionic-angular';
     trigger('middleCircle', [
       state('m', style({ 
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg) ',
-        
+        opacity:1
     })),
       state('r', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg) ',
-        
+        opacity:0
       })),
       state('l', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg) ',
-        
+        opacity:0
       })),
       state('l2', style({
         transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
-         
+         opacity:0
       })),
       state('l3', style({
         transform: 'rotate(-90deg) translateY(-370px) rotate(90deg)',
-         
+         opacity:0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
@@ -230,23 +230,23 @@ import { NavController, NavParams } from 'ionic-angular';
     trigger('r', [
       state('m', style({ 
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
-         
+         opacity:0
       })),
       state('r', style({
         transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
-         
+         opacity:0
       })),
       state('l', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-         
+         opacity:1
       })),
       state('l2', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
-         
+         opacity:0
       })),
       state('l3', style({
         transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
-        
+        opacity:0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
@@ -314,23 +314,23 @@ import { NavController, NavParams } from 'ionic-angular';
      trigger('leftCircle', [
       state('m', style({ 
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
-         
+         opacity:0
       })),
       state('r', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-         
+         opacity:1
       })),
       state('l', style({
         transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
-         
+         opacity:0
       })),
      state('l2', style({
         transform: 'rotate(-90deg) translateY(-370px) rotate(90deg)',
-         
+         opacity:0
       })),
        state('l3', style({
         transform: 'rotate(-120deg) translateY(-370px) rotate(120deg)',
-         
+         opacity:0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
@@ -423,23 +423,23 @@ import { NavController, NavParams } from 'ionic-angular';
     trigger('r2', [
       state('m', style({ 
         transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
-         
+         opacity:0
       })),
       state('r', style({
         transform: 'rotate(90deg) translateY(-370px) rotate(-90deg)',
-         
+         opacity:0
       })),
       state('l', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
-         
+         opacity:0
       })),
       state('l2', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-        
+        opacity:1
       })),
       state('l3', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
-         
+         opacity:0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
