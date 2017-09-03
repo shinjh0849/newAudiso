@@ -43,8 +43,32 @@ import { NavController, NavParams } from 'ionic-angular';
         animate('0.7s cubic-bezier(.67,1.28,.64,1.35)')
       ])
     ]),
+
+    // innerware (오른쪽2)
+    trigger('right2Circle', [
+      state('m', style({ 
+        transform: 'rotate(60deg) translateY(-370px) rotate(-60deg) ',
+        opacity: 0
+    })),
+      state('r', style({
+        transform: 'rotate(90deg) translateY(-370px) rotate(-90deg) ',
+        opacity: 0
+      })),
+      state('l', style({
+        transform: 'rotate(30deg) translateY(-370px) rotate(-30deg) ',
+        opacity: 0
+      })),
+      state('l2', style({
+        transform: 'rotate(0deg) translateY(-370px) rotate(0deg) ',
+        opacity: 1
+      })),
+      transition('m<=>r', [animate('0.3s')]),
+      transition('m<=>l', [animate('0.3s')]),
+      transition('l<=>l2', [animate('0.3s')])
+    ]),
+
     // 가운데 아이콘과 그의 색깔 다른 친구들
-    trigger('middleCircleR', [
+/*     trigger('middleCircleR', [
       state('m', style({ 
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg) ',
         opacity: 0
@@ -92,26 +116,31 @@ import { NavController, NavParams } from 'ionic-angular';
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')])
-    ]),
+    ]), */
     trigger('middleCircle', [
       state('m', style({ 
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg) ',
-        
+        opacity: 1        
     })),
       state('r', style({
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg) ',
-        
+        opacity: 0
       })),
       state('l', style({
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg) ',
-        
+        opacity: 0
+      })),
+       state('l2', style({
+        transform: 'rotate(-60deg) translateY(-370px) rotate(60deg) ',
+        opacity: 0
       })),
       transition('m<=>r', [animate('0.3s')]),
-      transition('m<=>l', [animate('0.3s')])
+      transition('m<=>l', [animate('0.3s')]),
+      transition('l<=>l2', [animate('0.3s')])
     ]),
 
     //오른쪽 아이콘과 그의 색깔 다른 친구들
-     trigger('rightCircleR', [
+ /*     trigger('rightCircleR', [
       state('m', style({ 
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
          opacity: 1
@@ -145,27 +174,32 @@ import { NavController, NavParams } from 'ionic-angular';
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')])
-    ]),
+    ]), */
 
     trigger('rightCircle', [
       state('m', style({ 
         transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
-         
+        opacity: 0
       })),
       state('r', style({
         transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
-         
+        opacity: 0
       })),
       state('l', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-         
+        opacity: 1
+      })),
+       state('l2', style({
+        transform: 'rotate(-30deg) translateY(-370px) rotate(30deg) ',
+        opacity: 0
       })),
       transition('m<=>r', [animate('0.3s')]),
-      transition('m<=>l', [animate('0.3s')])
+      transition('m<=>l', [animate('0.3s')]),
+      transition('l<=>l2', [animate('0.3s')])
     ]),
 
     //왼쪽 아이콘과 그의 색깔 다른 친구들
-    trigger('leftCircleR', [
+    /* trigger('leftCircleR', [
       state('m', style({ 
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
          opacity: 0
@@ -215,25 +249,29 @@ import { NavController, NavParams } from 'ionic-angular';
         transition('m<=>r', [animate('0.3s')]),
         transition('m<=>l', [animate('0.3s')]),
     ]),
-
+ */
      trigger('leftCircle', [
       state('m', style({ 
         transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
-         
+        opacity: 0
       })),
       state('r', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
-         
+        opacity: 1
       })),
       state('l', style({
         transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
-         
+        opacity: 0
+      })),
+       state('l2', style({
+        transform: 'rotate(0deg) translateY(-370px) rotate(0deg) ',
+        opacity: 0
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')]),
-    ]),
-
-  ]
+      transition('l<=>l2', [animate('0.3s')])
+     ])
+   ]
 })
 export class RecommendPage {
   flyinState: string = "out";
@@ -290,6 +328,8 @@ export class RecommendPage {
           this.roomState = 'm';
         else if(this.roomState == 'm')
           this.roomState = 'r';
+        else if(this.roomState == 'l2')
+          this.roomState = 'l';
 
         
       } else if (e.deltaX <= -50 && this.triggered == false){
@@ -300,6 +340,8 @@ export class RecommendPage {
           this.roomState = 'm';
         else if(this.roomState == 'm')
           this.roomState = 'l';
+        else if(this.roomState == 'l')
+          this.roomState = 'l2';
       } else {
         //넘기기 발생 안했을 때, 조이스틱 움직이는 코드
         this.panXi = this.inneerDefault + e.deltaX;
