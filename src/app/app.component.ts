@@ -17,6 +17,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
 import { RecommendMaterialPage } from '../pages/recommend-material/recommend-material';
 import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
 import { Tut2_1Page } from "../pages/tut2-1/tut2-1";
+import { Result1Page } from "../pages/result1/result1";
 // T1Page 에서 시작해야 한다.
 
 
@@ -24,7 +25,7 @@ import { Tut2_1Page } from "../pages/tut2-1/tut2-1";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Tut2_1Page;
+  rootPage:any = Result1Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
