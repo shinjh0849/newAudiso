@@ -27,6 +27,11 @@ import { ProductColorPage } from '../pages/product-color/product-color';
 import { ProductConfirmPage } from '../pages/product-confirm/product-confirm';
 import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
 import { RecommendProductPage } from '../pages/recommend-product/recommend-product';
+import { ProductSizePage } from '../pages/product-size/product-size';
+import { StyleCheck2Page } from '../pages/style-check2/style-check2';
+import { StyleCheck3Page } from '../pages/style-check3/style-check3';
+
+
 // T1Page 에서 시작해야 한다.
 
 
@@ -34,7 +39,7 @@ import { RecommendProductPage } from '../pages/recommend-product/recommend-produ
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ProductColorPage;
+  rootPage:any = RecommendPage;
   
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/ ) {

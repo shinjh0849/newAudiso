@@ -1,7 +1,7 @@
 <ion-content t4-to-right (pan)="moveButton($event)" (doubleTap)="nextP()">
 
   <div class="bg"><img src="assets/Recommend_Product/bg.png"></div>
-  <div class="recommend"><img src="assets/21-24/Recommend.png"></div>
+  <div class="recommend" [@flyin]="flyinState"><img src="assets/Product_Size/recommend.png"></div>
   <div class="product" [@flyin]="flyinState"><img src="assets/Recommend_Product/product.png"></div>
 
   <div class="cWhite" [@Left]="roomState"><img src="assets/Recommend_Product/c.png"></div>
@@ -11,7 +11,7 @@
   <div class="aWhite" [@Right]="roomState"><img src="assets/Recommend_Product/a.png"></div>
 
   <div>
-    <div class="interactionInner" [style.left]="panXi + 'px'"><img src="assets/interaction/interactionInner.png"></div>
+    <div class="interactionInner" [style.left]="panXi + 'px'"><img src="assets/interaction/interaction.png"></div>
   </div>
 
 </ion-content>
