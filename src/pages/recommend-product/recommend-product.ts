@@ -49,10 +49,10 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
       })),
       state('r', style({
-        transform: 'rotate(35.5deg) translateY(-370px) rotate(-35.5deg)',
+        transform: 'rotate(45deg) translateY(-370px) rotate(-45deg)',
       })),
       state('l', style({
-        transform: 'rotate(-35.5deg) translateY(-370px) rotate(35.5deg)',
+        transform: 'rotate(-45deg) translateY(-370px) rotate(45deg)',
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')])
@@ -63,11 +63,11 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
         opacity: 0
       })),
       state('r', style({
-        transform: 'rotate(35.5deg) translateY(-370px) rotate(-35.5deg)',
+        transform: 'rotate(40deg) translateY(-370px) rotate(-40deg)',
         opacity: 0
       })),
       state('l', style({
-        transform: 'rotate(-35.5deg) translateY(-370px) rotate(35.5deg)',
+        transform: 'rotate(-40deg) translateY(-370px) rotate(40deg)',
         opacity: 1
       })),
       transition('m<=>r', [animate('0.3s')]),
@@ -110,13 +110,13 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
     trigger('Right', [
       state('m', style({
-        transform: 'rotate(-35.5deg) translateY(-370px) rotate(35.5deg)',
+        transform: 'rotate(-40deg) translateY(-370px) rotate(40deg)',
       })),
       state('r', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
       })),
       state('l', style({
-        transform: 'rotate(-71deg) translateY(-370px) rotate(71deg)',
+        transform: 'rotate(-80deg) translateY(-370px) rotate(80deg)',
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')])
@@ -175,10 +175,10 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
     trigger('Left', [
       state('m', style({
-        transform: 'rotate(35.5deg) translateY(-370px) rotate(-35.5deg)',
+        transform: 'rotate(50deg) translateY(-370px) rotate(-50deg)',
       })),
       state('r', style({
-        transform: 'rotate(71deg) translateY(-370px) rotate(-71deg)',
+        transform: 'rotate(80deg) translateY(-370px) rotate(-80deg)',
       })),
       state('l', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',

@@ -8,8 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Plugin
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-import { AndroidFullScreen } from '@ionic-native/android-full-screen';
-import { NativeAudio } from '@ionic-native/native-audio';
+//import { AndroidFullScreen } from '@ionic-native/android-full-screen';
+//import { NativeAudio } from '@ionic-native/native-audio';
 
 //Directives
 import { DoubleTapDirective } from '../directives/double-tap/double-tap';
@@ -181,8 +181,8 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
   providers: [
     StatusBar,
     SplashScreen,
-    AndroidFullScreen,
-    NativeAudio,
+    //AndroidFullScreen,
+    //NativeAudio,
     //Plugins
     TextToSpeech,
     BarcodeScanner,

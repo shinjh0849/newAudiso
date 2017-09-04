@@ -1,6 +1,6 @@
 import { T3Page } from './../pages/t3/t3';
 import { T2Page } from './../pages/t2/t2';
-import { AndroidFullScreen } from '@ionic-native/android-full-screen';
+
 import { T1Page } from './../pages/t1/t1';
 import { HistoryPage } from './../pages/history/history';
 import { StyleCheck1Page } from './../pages/style-check1/style-check1';
@@ -26,9 +26,17 @@ import { Payment3Page } from '../pages/payment3/payment3';
 import { ProductColorPage } from '../pages/product-color/product-color';
 import { ProductConfirmPage } from '../pages/product-confirm/product-confirm';
 import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
+<<<<<<< HEAD
 
 import { Tut2_1Page } from "../pages/tut2-1/tut2-1";
 import { Result1Page } from "../pages/result1/result1";
+=======
+import { RecommendProductPage } from '../pages/recommend-product/recommend-product';
+import { ProductSizePage } from '../pages/product-size/product-size';
+import { StyleCheck2Page } from '../pages/style-check2/style-check2';
+import { StyleCheck3Page } from '../pages/style-check3/style-check3';
+
+>>>>>>> JihoShin
 
 // T1Page 에서 시작해야 한다.
 
@@ -37,19 +45,24 @@ import { Result1Page } from "../pages/result1/result1";
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage:any = ProductConfirmPage;
 
+=======
+  rootPage:any = RecommendPage;
+  
+>>>>>>> JihoShin
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, private androidFullScreen: AndroidFullScreen ) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/ ) {
     platform.ready().then(() => {
 
       //let splash = modalCtrl.create(SplashPage);
       //splash.present();
       statusBar.hide(); // statusBar hide 해볼까 말까
       //splash.present();
-      this.androidFullScreen.isImmersiveModeSupported()
-      .then(() => this.androidFullScreen.immersiveMode())
-      .catch((error: any) => console.log(error));
+      //this.androidFullScreen.isImmersiveModeSupported()
+      //.then(() => this.androidFullScreen.immersiveMode())
+      //.catch((error: any) => console.log(error));
 
     });
   }
