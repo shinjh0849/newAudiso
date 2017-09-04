@@ -53,10 +53,10 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
       })),
       state('r', style({
-        transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
+        transform: 'rotate(45deg) translateY(-370px) rotate(-45deg)',
       })),
       state('l', style({
-        transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
+        transform: 'rotate(-45deg) translateY(-370px) rotate(45deg)',
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')])
@@ -64,13 +64,13 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
     trigger('Right', [
       state('m', style({
-        transform: 'rotate(-30deg) translateY(-370px) rotate(30deg)',
+        transform: 'rotate(-45deg) translateY(-370px) rotate(45deg)',
       })),
       state('r', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
       })),
       state('l', style({
-        transform: 'rotate(-60deg) translateY(-370px) rotate(60deg)',
+        transform: 'rotate(-90deg) translateY(-370px) rotate(90deg)',
       })),
       transition('m<=>r', [animate('0.3s')]),
       transition('m<=>l', [animate('0.3s')])
@@ -78,10 +78,10 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
     trigger('Left', [
       state('m', style({
-        transform: 'rotate(30deg) translateY(-370px) rotate(-30deg)',
+        transform: 'rotate(45deg) translateY(-370px) rotate(-45deg)',
       })),
       state('r', style({
-        transform: 'rotate(60deg) translateY(-370px) rotate(-60deg)',
+        transform: 'rotate(90deg) translateY(-370px) rotate(-90deg)',
       })),
       state('l', style({
         transform: 'rotate(0deg) translateY(-370px) rotate(0deg)',
