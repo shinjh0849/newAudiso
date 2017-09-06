@@ -26,17 +26,14 @@ import { Payment3Page } from '../pages/payment3/payment3';
 import { ProductColorPage } from '../pages/product-color/product-color';
 import { ProductConfirmPage } from '../pages/product-confirm/product-confirm';
 import { Tut2_4Page } from "../pages/tut2-4/tut2-4";
-<<<<<<< HEAD
 
 import { Tut2_1Page } from "../pages/tut2-1/tut2-1";
 import { Result1Page } from "../pages/result1/result1";
-=======
 import { RecommendProductPage } from '../pages/recommend-product/recommend-product';
 import { ProductSizePage } from '../pages/product-size/product-size';
 import { StyleCheck2Page } from '../pages/style-check2/style-check2';
 import { StyleCheck3Page } from '../pages/style-check3/style-check3';
 
->>>>>>> JihoShin
 
 // T1Page 에서 시작해야 한다.
 
@@ -45,13 +42,10 @@ import { StyleCheck3Page } from '../pages/style-check3/style-check3';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
-  rootPage:any = ProductConfirmPage;
+  rootPage:any = RecommendProductPage;
 
-=======
-  rootPage:any = RecommendPage;
   
->>>>>>> JihoShin
+  
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/ ) {
     platform.ready().then(() => {

@@ -5,6 +5,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 //next page
 import { QRcodePage } from '../q-rcode/q-rcode';
+import { Result1Page } from '../result1/result1';
+import { Result2Page } from '../result2/result2';
 
 
 @Component({
@@ -13,8 +15,9 @@ import { QRcodePage } from '../q-rcode/q-rcode';
 })
 export class ScanPage {
 
+  str: string;
   options: BarcodeScannerOptions;
-  results: {};
+  results: any;
   constructor(private tts: TextToSpeech, private barcode: BarcodeScanner, public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -45,10 +48,17 @@ export class ScanPage {
     this.results = await this.barcode.scan(this.options);
     console.log(this.results);
     this.speak(``);
-    this.navCtrl.push(QRcodePage, {}, { animate: false });
+    this.str = this.results.text
+
+    if(this.str == 'yes')
+      this.navCtrl.push(Result1Page, {}, { animate: false });
+    else
+      this.navCtrl.push(Result2Page, {}, { animate: false });
   }
 
   clickevent() {
     this.navCtrl.push(QRcodePage, {}, { animate: false });
   }
+
+
 }

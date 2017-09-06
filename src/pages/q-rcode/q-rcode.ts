@@ -14,7 +14,7 @@ export class QRcodePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad QRresultPage');
+    console.log('ionViewDidLoad QRcodePage');
     this.speak(`찾으시던 블랙, 26inch 울트라스트레치진이 맞아요!
                 피팅룸에 가져가서 피팅 후 스타일체크를 해보세요.`)
   }

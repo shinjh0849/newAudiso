@@ -36,16 +36,50 @@ import { Payment1Page } from '../payment1/payment1';
 })
 export class StyleCheck3Page {
   flyinState: string = "out";
+  max: number = 5;
+  min: number = 1;
+  one: boolean = false;
+  two: boolean = false;
+  three: boolean = false;
+  four: boolean = false;
+  five: boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StyleCheck3Page');
+    switch (this.getRandom()) {
+      case 1: {
+        this.one = true;
+        break;
+      }
+      case 2: {
+        this.two = true;
+        break;
+      }
+      case 3: {
+        this.three = true;
+        break;
+      }
+      case 4: {
+        this.four = true;
+        break;
+      }
+      case 5: {
+        this.five = true;
+      }
+    }
+
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
   }
 
   nextP() {
     this.navCtrl.push(Payment1Page, {}, { animate: false });
+  }
+
+  getRandom() {
+    return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
   }
 
 }

@@ -1,11 +1,9 @@
 <ion-content t4-to-right (pan)="moveButton($event)" (doubleTap)="nextP()">
 
-  <div class="bgShadow"><img src="assets/shadow/bigCShadow.png"></div>
-  <div class="bgCircle"><img src="assets/background/보라큰원.png"></div>
-
-  <div class="styleCheck"><img src="assets/StyleCheck1/styleCheck.png"></div>
-  <div class="star" [@flyin]="flyinState"><img src="assets/StyleCheck3/star.png"></div>
-  <div class="mainText" [@flyin]="flyinState"><img src="assets/StyleCheck3/mainText.png"></div>
-  <div class="interactionOuter"><img src="assets/StyleCheck1/interAction.png"></div>
+  <div *ngIf="one" class="all"><img src="assets/StyleCheck3/1.jpg"></div>
+  <div *ngIf="two" class="all"><img src="assets/StyleCheck3/2.jpg"></div>
+  <div *ngIf="three" class="all"><img src="assets/StyleCheck3/3.jpg"></div>
+  <div *ngIf="four" class="all"><img src="assets/StyleCheck3/4.jpg"></div>
+  <div *ngIf="five" class="all"><img src="assets/StyleCheck3/5.jpg"></div>
 
 </ion-content>
