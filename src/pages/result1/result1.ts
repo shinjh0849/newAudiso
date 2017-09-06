@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { FittingRoomPage } from "../fitting-room/fitting-room";
 
 @Component({
   selector: 'page-result1',
@@ -12,6 +13,10 @@ export class Result1Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Result1Page');
+  }
+  
+  clickEvent(){
+    this.navCtrl.push(FittingRoomPage, {}, { animate: false });
   }
 
 }

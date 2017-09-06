@@ -54,7 +54,7 @@ export class NavigationPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NavigationPage');
+    console.log('ionViewDidLoad NavigationPage kikiasa');
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
     this.bounce = 'down';
 

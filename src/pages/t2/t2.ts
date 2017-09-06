@@ -1,7 +1,7 @@
-//import { NativeAudio } from '@ionic-native/native-audio';
+import { NativeAudio } from '@ionic-native/native-audio';
 import { Component, trigger, state, style, transition, animate, keyframes, group } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { T3Page } from "../t3/t3";
 
 @Component({
@@ -171,10 +171,10 @@ export class T2Page {
   show3: string = "first";
   show4: string = "first";
   show5: string = "first"; 
-  //nativeAudio: NativeAudio;
+  nativeAudio: NativeAudio;
 
-  constructor(/*private tts:TextToSpeech,*/ public navCtrl: NavController, public navParams: NavParams) {
-    //this.nativeAudio = new NativeAudio;
+  constructor(private tts:TextToSpeech, public navCtrl: NavController, public navParams: NavParams) {
+    this.nativeAudio = new NativeAudio;
   }
 
   ionViewDidLoad() {
@@ -184,13 +184,13 @@ export class T2Page {
     this.show3 = (this.show3 === "first" ? "second" : "first");
     this.show4 = (this.show4 === "first" ? "second" : "first");
     this.show5 = (this.show5 === "first" ? "second" : "first");
-    //this.hamsoo('오디쏘 서비스로 쇼핑을 시작하시려면 지문인식을 해주세요.');
-    //this.PLAY();
+    this.hamsoo('오디쏘 서비스로 쇼핑을 시작하시려면 지문인식을 해주세요.');
+    this.PLAY();
     
   
   }
 
- /* PLAY () {
+  PLAY () {
     this.nativeAudio.preloadSimple('test1', 'assets/sound/mm.wav').then(() => {
       this.nativeAudio.play('test1', () => console.log('fldjkflsf'));
     })
@@ -206,7 +206,7 @@ export class T2Page {
   catch(e) {
   }
  }
-*/
+
 
   onLongPress(e){
     this.navCtrl.push( T3Page, {}, {animate: false} );

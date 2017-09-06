@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FittingRoomPage } from "../fitting-room/fitting-room";
 
 /**
  * Generated class for the Result2Page page.
@@ -22,4 +23,8 @@ export class Result2Page {
     console.log('ionViewDidLoad Result2Page');
   }
 
+  clickEvent(){
+    this.navCtrl.push(FittingRoomPage, {}, { animate: false });
+  }
+  
 }

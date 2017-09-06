@@ -82,7 +82,7 @@
     <allow-navigation href="http://172.17.220.42:8100" />
     <allow-navigation href="http://172.17.218.25:8100" />
     <allow-navigation href="http://172.30.1.1:8100" />
-    <engine name="android" spec="^6.2.3" />
+    <allow-navigation href="http://172.17.220.214:8100" />
     <engine name="ios" spec="^4.4.0" />
     <plugin name="cordova-plugin-console" spec="^1.0.7" />
     <plugin name="cordova-plugin-device" spec="^1.1.6" />
