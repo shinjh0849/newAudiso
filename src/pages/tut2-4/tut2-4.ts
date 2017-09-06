@@ -28,23 +28,23 @@ import { Tut2_2Page } from "../tut2-2/tut2-2";
   ]
 })
 export class Tut2_4Page {
-  text4State: string = "off" ;
+  text4State: string = "off";
   position: number = 0;
   defaultX: number = 201.39475;
   triggered: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private tts:TextToSpeech) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
-    // 페이지 4 로드: 유니와 클로와 함께 진열대도 둘러볼 수 있어요!
+  // 페이지 4 로드: 유니와 클로와 함께 진열대도 둘러볼 수 있어요!
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tut2_4Page');
 
-      this.text4State = "on";
+    this.text4State = "on";
 
-      this.triggered = false;
-       this.position = this.defaultX;
+    this.triggered = false;
+    this.position = this.defaultX;
 
-      this.hamsoo(`
+    this.hamsoo(`
             유니와 클로와 함께 진열대도 둘러볼 수 있어요!
             진열대를 지나가면 실시간으로 진열대에 대한 설명을 들으실 수 있답니다.
             특정 진열대에서 5초 이상 계시면, 진열대에 진열된 상품들의 가격, 핏, 재질과 같은 추가 정보를 들으실 수도 있어요.
@@ -54,7 +54,7 @@ export class Tut2_4Page {
       `);
 
   }
-    
+
   // 다시 들으시려면 탭 두번을
   doubleTapEvent() {
 
@@ -73,9 +73,9 @@ export class Tut2_4Page {
   clickEvent() {
     this.navCtrl.push(Tut2_5Page, {}, { animate: false });
   }
-  
+
   // 이전으로 돌아가려면 왼쪽으로 스와이핑 해주세요.
-    panEvent(e) {
+  panEvent(e) {
 
     if (e.deltaX <= -140 && !this.triggered) {
       this.triggered = true;

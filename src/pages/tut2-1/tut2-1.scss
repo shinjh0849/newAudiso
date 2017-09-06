@@ -52,8 +52,7 @@ page-tut2-1 {
         border:     0;
         left:       32.5px;
         top:        186.5625px;
-        width:      289.68625px;
-        height:     209.12625px;
+        width:      311px;
     }
 
     .text2{
@@ -76,6 +75,34 @@ page-tut2-1 {
         height:     12.34px;
     }
 
+    .interationCircle{
+        position: absolute;
+        left: 201.39475px;
+        top : 505.58125px;
+        padding: 0;
+        border: 0;
+        width: 82.52375px;
+        height: 82.16875px;
+    }
 
+    .dotCircle{
+        position: fixed;
+        padding: 0;
+        border: 0;
+        left: 75.185px;
+        top: 512.60325px;
+        width: 67.25025px;
+        height: 67.25px;
+        }
 
+    .retext{
+        position: fixed;
+        padding: 0;
+        border: 0;
+        left: 76.308px;
+        top:192.3715px;
+        width: 207.384px;
+        height: 237.703px;
+        
+    }
 }

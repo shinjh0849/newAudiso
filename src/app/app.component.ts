@@ -43,7 +43,7 @@ import { ScanPage } from "../pages/scan/scan";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = T1Page;
+  rootPage:any = Tut2_1Page;
   
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/ ) {

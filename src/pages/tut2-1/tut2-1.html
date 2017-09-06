@@ -1,13 +1,19 @@
-<ion-content t4-to-right (longPress)="onLongPress($event)">
+<ion-content t4-to-right (pan)="panEvent($event)" (longPress)="onLongPress($event)">
 
   <div class="bg"><img src="assets/t2img/yellowBack2.png"></div>
  
   <!-- <div [@startCircleS]="startState" class="cShadow"><img src="assets/shadow/bigCShadow.png"></div>
   <div [@startCircle]="startState" class="wc"><img src="assets/background/흰 원.png"></div> -->
 
-  <!-- <div [@tutorial]="tutorialState" class="tutorial"><img src="assets/t2img/tutorial.png"></div> -->
-  <div [@text1]="text1State" class="text1"><img src="assets/t2img/p1_maintext2.png"></div>
-  <div [@text1_1]="text1State" class="text2"><img src="assets/t2img/p1_subtext2.png"></div>
-  <div [@nav1]="nav1State" class="page"><img src="assets/t2img/nav4_1.png"></div>
+  <div class="dotCircle"><img src="assets/t2img/dotnavCircle2.png"></div>
+  <div class="interationCircle" [style.left] = "position + 'px'"> <img src="assets/t2img/navCircle2.png"></div>
+
+  <!-- <div [@tutorial]="tutorialState" class="tutorial"><img src="assets/t2img/tutorial.png"></div> 
+  <div [@text1]="text1State" class="text1"><img src="assets/t2img/p1_maintext3.png"></div>
+  <div [@text1_1]="text1State" class="text2"><img src="assets/t2img/p1_subtext3.png"></div>-->
+
+  <div [@text1]="text1State" class="retext"> <img src="assets/t2img/p9_text-02.png"></div>
+  <div [@nav1]="nav1State" class="page"><img src="assets/t2img/Navigator1.png"></div>
+
 
 </ion-content>

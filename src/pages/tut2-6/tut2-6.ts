@@ -79,12 +79,12 @@ export class Tut2_6Page {
 
   // 다음으로 넘어가시려면 탭 한번을
   clickEvent() {
-    this.circleState = "go";
-    this.text6State = "d";
+    //this.circleState = "go";
+    //this.text6State = "d";
 
-    setTimeout(() => {
+    //setTimeout(() => {
       this.navCtrl.push(P1_1Page, {}, { animate: false });
-    }, 2000);
+    //}, 2000);
   }
 
 

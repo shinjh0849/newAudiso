@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { DomController } from 'ionic-angular';
 import { Tut2_2Page } from "../tut2-2/tut2-2";
+import { T5Page } from "../t5/t5";
 
 // @IonicPage()
 @Component({
@@ -37,7 +38,7 @@ import { Tut2_2Page } from "../tut2-2/tut2-2";
     ]),
     trigger('text1', [
       state('off', style({ left: '-1000px' })),
-      state('on', style({ left: '32.5px' })),
+      state('on', style({ left: '76.308px' })),
       state('d', style({ opacity: 0 })),
       transition('off=>on', [ animate('850ms 1.5s cubic-bezier(.45,.82,.8,1.05)')]), // 큰 글씨 이징: 850ms
       transition('on=>d', [ animate('100ms')])
@@ -76,7 +77,13 @@ export class Tut2_1Page {
   tutorialState: string = "off";
   startState: string = "off";
 
+  position: number = 0;
+  defaultX: number = 201.39475;
+  triggered: boolean = false;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
+    this.triggered = false;
+    this.position = this.defaultX;
   }
 
   ionViewDidLoad() {
@@ -125,5 +132,22 @@ export class Tut2_1Page {
     }
   }
 
+    // 이전으로 돌아가려면 왼쪽으로 스와이핑 해주세요.
+    panEvent(e) {
+      
+          if (e.deltaX <= -140 && !this.triggered) {
+            this.triggered = true;
+            this.position = 66.5;
+            //event 실행
+            this.navCtrl.push(T5Page, {}, { animate: false });
+          }
+          else if (this.position > 66.5) {
+            this.position = this.defaultX + e.deltaX;
+            if (e.isFinal == true) {
+              this.position = this.defaultX;
+              this.triggered = false;
+            }
+          }
+        }
 }
 
