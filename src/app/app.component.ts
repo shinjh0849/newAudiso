@@ -44,7 +44,7 @@ import { ScanPage } from "../pages/scan/scan";
 })
 export class MyApp {
   rootPage:any = T1Page;
-  
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/ ) {
     platform.ready().then(() => {

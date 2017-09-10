@@ -213,12 +213,19 @@ export class RecommendColorPage {
     this.panXi = this.inneerDefault;
     this.panXo = this.outerDefault;
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
-    this.speak('스와이핑으로 원하시는 색상을 선택해주세요! 좌우 스와이핑를 통해 선택하실 수 있고 더블탭을 통해 입력 하실 수 있어요! 딱히 없으시면 화면 아래로 슬라이딩해주세요.');
+    this.speak(`원하시는 색상을 선택해주세요!
+                좌우 스와이핑으로 선택하실 수 있고 더블탭으로 입력 하실 수 있어요!`);
   }
   
   nextP(){
     this.flyinState = 'down';
-    this.speak('어두운 색상이 선택되셨습니다.');
+    if(this.roomState == 'r')
+      this.speak('중간색이 선택되었습니다.');
+    else if(this.roomState == 'm')
+      this.speak('어두운색이 선택되었습니다.');
+    else if(this.roomState == 'l')
+      this.speak('밝은색이 선택되었습니다.');
+    
     setTimeout(()=> {
       this.navCtrl.push(RecommendMaterialPage, {}, { animate: false });
     },1500) 
