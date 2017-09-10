@@ -264,7 +264,7 @@ export class T4Page {
     this.show16 = (this.show16 === "first" ? "second" : "first");
 
     this.xxx = this.defaultX;
-    this.hamsoo('다음 동작은 ‘좌우 스와이핑’이에요. 삐 소리가 들리면 화면을 왼쪽에서 오른쪽으로 스와이핑을 해주세요. 띠링');
+    this.hamsoo('다음 동작은 ‘좌우 스와이핑’이에요. 준비가 되시면 화면을 왼쪽에서 오른쪽으로 스와이핑 해주세요');
   }
 
   onNext(e){  

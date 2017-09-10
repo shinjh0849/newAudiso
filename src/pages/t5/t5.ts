@@ -267,7 +267,7 @@ async hamsoo(hungry): Promise <any> {
     this.show21 = (this.show21 === "first" ? "second" : "first");
     
     this.yyy = this.defaultY;
-    this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? (띠링)');
+    this.hamsoo('다음 동작은 ‘위아래로 슬라이딩’이에요. 이번엔 ‘아래로 슬라이딩’ 을 해볼까요? ');
     
   }
 
