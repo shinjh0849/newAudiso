@@ -58,10 +58,10 @@ export class Tut2_6Page {
     this.position = this.defaultX;
 
     this.hamsoo(`
-      각각의 상품 가격표에 달려있는 QR코드를 통해 상세정보도 알아 보세요!
-
-      다음으로 넘어가시려면 탭 한 번 다시 들으시려면 더블탭을 이전으로 돌아가려면 왼쪽으로 스와이핑을 해주세요.
-    `);
+    각각의 상품 가격표에 달려있는 QR코드를 통해 상세정보도 알아 보세요!
+    다음으로 넘어가시려면 탭 한 번
+    이전으로 돌아가려면 왼쪽으로 스와이핑 해주세요.
+     `);
 
   }
 
@@ -70,9 +70,9 @@ export class Tut2_6Page {
     console.log('double tap in page 4');
     this.circleState = "go";
     this.hamsoo(`
-      각각의 상품 가격표에 달려있는 QR코드를 통해 상세정보도 알아 보세요!
-
-      다음으로 넘어가시려면 탭 한 번 다시 들으시려면 더블탭을 이전으로 돌아가려면 왼쪽으로 스와이핑을 해주세요.
+    각각의 상품 가격표에 달려있는 QR코드를 통해 상세정보도 알아 보세요!
+    다음으로 넘어가시려면 탭 한 번
+    이전으로 돌아가려면 왼쪽으로 스와이핑 해주세요.
     `);
 
   }
@@ -81,10 +81,12 @@ export class Tut2_6Page {
   clickEvent() {
     //this.circleState = "go";
     //this.text6State = "d";
-
-    //setTimeout(() => {
+    this.hamsoo(`
+    와, 정말 잘하셨어요. 모든 준비를 마쳤으니, 이제 본격적으로 쇼핑을 시작해 볼까요?
+    `);
+    setTimeout(() => {
       this.navCtrl.push(P1_1Page, {}, { animate: false });
-    //}, 2000);
+    }, 8000);
   }
 
 
@@ -94,6 +96,7 @@ export class Tut2_6Page {
     if (e.deltaX <= -140 && !this.triggered) {
       this.triggered = true;
       this.position = 66.5;
+      
       //event 실행
       this.navCtrl.push(Tut2_5Page, {}, { animate: false });
     }
