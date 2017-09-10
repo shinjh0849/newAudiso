@@ -37,7 +37,7 @@ import { Result1Page } from "../pages/result1/result1";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ProductConfirmPage;
+  rootPage:any = RecommendPage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, private androidFullScreen: AndroidFullScreen ) {

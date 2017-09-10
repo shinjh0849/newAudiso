@@ -577,7 +577,8 @@ flyinState: string = "out";
     this.panXi = this.inneerDefault;
     this.panXo = this.outerDefault;
      this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
-    this.speak('스와이핑으로 원하시는 가격대를 선택해주세요! 좌우 스와이핑를 통해 선택하실 수 있고 더블탭을 통해 입력 하실 수 있어요! 딱히 없으시면 화면 아래로 슬라이딩해주세요.');
+    this.speak(`원하시는 가격대를 선택해주세요!
+좌우 스와이핑으로 선택하실 수 있고 더블탭으로 입력 하실 수 있어요!`);
 
   }
   async speak(line): Promise<any>{
@@ -595,8 +596,17 @@ flyinState: string = "out";
   }
   nextP(){console.log("이야 신난다");
     this.flyinState = 'down';
-    this.speak('4만원 이상이 선택되셨습니다.');
-    setTimeout(()=> {
+    if(this.roomState == 'r')
+      this.speak('1만원 이하가 선택되었습니다.');
+    else if(this.roomState == 'm')
+      this.speak('1에서 2만원이 선택되었습니다.');
+    else if(this.roomState == 'l')
+      this.speak('2에서 3만원이 선택되었습니다.');
+    else if(this.roomState == 'l2')
+      this.speak('3에서 4만원이 선택되었습니다.');
+    else if(this.roomState == 'l2')
+      this.speak('4만원 이상이 선택되었습니다.');
+        setTimeout(()=> {
       this.navCtrl.push(RecommendColorPage, {}, { animate: false });
     }, 1500);
   }
