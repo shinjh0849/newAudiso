@@ -289,7 +289,9 @@ export class RecommendPage {
     this.panXi = this.inneerDefault;
     this.panXo = this.outerDefault;
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
-    this.speak('스와이핑으로 원하시는 의류 카테고리를 선택해주세요!. 좌우 스와이핑를 통해 선택하실 수 있고 더블탭을 통해 입력 하실 수 있어요! 딱히 없으시면 화면 아래로 슬라이딩해주세요. (띠링)');
+    this.speak(`보고 싶은 옷이 있으시군요!
+                원하시는 의류 카테고리를 선택해주세요!
+                좌우로 스와이핑해서 선택하실 수 있고 더블 탭으로 입력 하실 수 있어요!`);
   }
   
   async speak(line): Promise<any>{
@@ -309,7 +311,15 @@ export class RecommendPage {
   nextP(){
     console.log("이야 신난다");
     this.flyinState = 'down';
-    this.speak('Bottom이 선택되셨습니다.');
+    if(this.roomState == 'r')
+      this.speak('상의가 선택되었습니다.');
+    else if(this.roomState == 'm')
+      this.speak('아우터가 선택되었습니다.');
+    else if(this.roomState == 'l')
+      this.speak('바텀이 선택되었습니다.');
+    else if(this.roomState == 'l2')
+      this.speak('속옷이 선택되었습니다.');
+
     setTimeout(()=> {
       this.navCtrl.push(RecommendPricePage, {}, { animate: false });
     }, 1500);
