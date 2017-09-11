@@ -43,7 +43,7 @@ import { ScanPage } from "../pages/scan/scan";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = T1Page;
+  rootPage:any = P1Page;
 
 
 
