@@ -46,7 +46,8 @@ export class MyApp {
   rootPage:any = T1Page;
 
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/ ) {
+
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/) {
     platform.ready().then(() => {
 
       //let splash = modalCtrl.create(SplashPage);

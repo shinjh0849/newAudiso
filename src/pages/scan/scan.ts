@@ -27,8 +27,8 @@ export class ScanPage {
     this.scanQRcode();
   }
 
-    async speak(line): Promise<any>{
-    try{
+  async speak(line): Promise<any> {
+    try {
       await this.tts.speak({
         text: line,
         locale: 'ko-KR',
@@ -36,21 +36,21 @@ export class ScanPage {
       });
       console.log('speak function start!');
     }
-    catch(e){
+    catch (e) {
       console.log(e);
     }
   }
 
-  async scanQRcode(){
+  async scanQRcode() {
     this.options = {
-      prompt : 'Scan a barcode to see the result'
+      prompt: 'Scan a barcode to see the result'
     }
     this.results = await this.barcode.scan(this.options);
     console.log(this.results);
     this.speak(``);
     this.str = this.results.text
 
-    if(this.str == 'yes')
+    if (this.str == 'yes')
       this.navCtrl.push(Result1Page, {}, { animate: false });
     else
       this.navCtrl.push(Result2Page, {}, { animate: false });

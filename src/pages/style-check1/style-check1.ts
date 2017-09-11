@@ -42,14 +42,15 @@ export class StyleCheck1Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StyleCheck1Page');
+    this.speak(`스타일체크를 시작해볼게요. 먼저 음성안내를 받아, 스타일체크 블록 장판으로 이동해 주세요!`);
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
   }
 
-  nextP(){
+  nextP() {
     this.navCtrl.push(StyleCheck2Page, {}, { animate: false });
   }
 
-    async speak(line): Promise<any> {
+  async speak(line): Promise<any> {
     try {
       await this.tts.speak({
         text: line,

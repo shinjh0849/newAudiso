@@ -1,3 +1,4 @@
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import {
   Component,
   trigger,
@@ -36,15 +37,32 @@ import { Payment2Page } from '../payment2/payment2';
 })
 export class Payment1Page {
   flyinState: string = "out";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public tts: TextToSpeech, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Payment1Page');
+    this.speak(`결제대에 도착하셨어요! 
+직원의 도움을 받아 결제를 진행해주세요.
+`);
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
   }
 
   nextP() {
     this.navCtrl.push(Payment2Page, {}, { animate: false });
+  }
+
+  async speak(line): Promise<any> {
+    try {
+      await this.tts.speak({
+        text: line,
+        locale: 'ko-KR',
+        rate: 1
+      });
+      console.log('speak function start!');
+    }
+    catch (e) {
+      console.log(e);
+    }
   }
 }
