@@ -23,8 +23,8 @@ import { SplashPage } from '../pages/splash/splash';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Tutorial2Page } from "../pages/tutorial2/tutorial2";
-import { Tut2_1Page } from '../pages/tut2-1/tut2-1' 
-import { Tut2_2Page } from '../pages/tut2-2/tut2-2' 
+import { Tut2_1Page } from '../pages/tut2-1/tut2-1'
+import { Tut2_2Page } from '../pages/tut2-2/tut2-2'
 import { P1Page } from "../pages/p1/p1";
 import { ProductSizePage } from '../pages/product-size/product-size';
 import { ProductColorPage } from '../pages/product-color/product-color';
@@ -65,7 +65,7 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
 @NgModule({
   declarations: [
     MyApp,
-    
+
     //Directives
     DoubleTapDirective,
     ShortPressDirective,
@@ -95,7 +95,7 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     NavigationPage,
     ScanPage,
     QRcodePage,
-    
+
     P1Page,
     Tutorial2Page,
     T1Page,
@@ -106,7 +106,7 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     T5Page,
     P1_1Page,
     P1_2Page,
-    
+
     FittingRoomPage,
     Navigation2Page,
     StyleCheck1Page,
@@ -152,10 +152,10 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     NavigationPage,
     ScanPage,
     QRcodePage,
-    
+
     P1Page,
     Tutorial2Page,
-    
+
     T1Page,
     T2Page,
     T3Page,
@@ -164,7 +164,7 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     T5Page,
     P1_1Page,
     P1_2Page,
-  
+
     FittingRoomPage,
     Navigation2Page,
     StyleCheck1Page,
@@ -183,10 +183,10 @@ import { FittingRoomPage } from '../pages/fitting-room/fitting-room';
     SplashScreen,
     AndroidFullScreen,
     NativeAudio,
-    
+
     TextToSpeech,
     BarcodeScanner,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

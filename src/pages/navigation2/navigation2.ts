@@ -49,8 +49,7 @@ export class Navigation2Page {
 
   onDoubleTap() {
     this.flyinState = 'down';
-    this.speak(`피팅룸에 도착하셨어요! 피팅을 하시고 스타일체크를 원하시면 언제든 다시 저를 불러서 
-                유니야 스타일체크 할래’라고 말씀해주시거나 화면을 두번 탭해 주세요!`);
+    this.speak(`피팅룸에 도착하셨어요! 피팅을 하시고 스타일체크를 원하시면 화면을 두번 탭해 주세요!`);
     this.navCtrl.push(StyleCheck1Page, {}, { animate: false });
   }
 

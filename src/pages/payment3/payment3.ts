@@ -1,3 +1,4 @@
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import {
   Component,
   trigger,
@@ -36,15 +37,34 @@ import { HistoryPage } from '../history/history';
 })
 export class Payment3Page {
   flyinState: string = "out";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public tts: TextToSpeech, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Payment3Page');
+    this.speak(`영수증에 인쇄된 QR코드를 통해 결제정보 확인이 가능하고
+옷 태그의 QR코드를 통해 언제든 옷의 상세정보를 알 수 있어요. 
+다음에 또 봐요. 
+00님, 오늘도 저와 함께 쇼핑을 해주어 정말 기뻐요! 
+`);
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
   }
 
   nextP() {
     this.navCtrl.push(HistoryPage, {}, { animate: false });
+  }
+
+  async speak(line): Promise<any> {
+    try {
+      await this.tts.speak({
+        text: line,
+        locale: 'ko-KR',
+        rate: 1
+      });
+      console.log('speak function start!');
+    }
+    catch (e) {
+      console.log(e);
+    }
   }
 }
