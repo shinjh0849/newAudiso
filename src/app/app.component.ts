@@ -34,6 +34,7 @@ import { ProductSizePage } from '../pages/product-size/product-size';
 import { StyleCheck2Page } from '../pages/style-check2/style-check2';
 import { StyleCheck3Page } from '../pages/style-check3/style-check3';
 import { ScanPage } from "../pages/scan/scan";
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 
 
 // T1Page 에서 시작해야 한다.
@@ -44,19 +45,20 @@ import { ScanPage } from "../pages/scan/scan";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Result1Page;
+  rootPage:any = T1Page;
 
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, private androidFullScreen: AndroidFullScreen) {
     platform.ready().then(() => {
 
-      //let splash = modalCtrl.create(SplashPage);
+      let splash = modalCtrl.create(SplashPage);
+      splash.present();
+      //statusBar.hide(); // statusBar hide 해볼까 말까
       //splash.present();
-      statusBar.hide(); // statusBar hide 해볼까 말까
-      //splash.present();
-      //this.androidFullScreen.isImmersiveModeSupported()
-      //.then(() => this.androidFullScreen.immersiveMode())
-      //.catch((error: any) => console.log(error));
+      this.androidFullScreen.isImmersiveModeSupported()
+      .then(() => this.androidFullScreen.immersiveMode())
+      .catch((error: any) => console.log(error));
+      console.log('hihihihih')
 
     });
   }
