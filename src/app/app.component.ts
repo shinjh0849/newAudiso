@@ -38,13 +38,13 @@ import { ScanPage } from "../pages/scan/scan";
 
 // T1Page 에서 시작해야 한다.
 
+// QR 이후 창은 Result1Page
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = P1Page;
-
+  rootPage:any = Result1Page;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController/*, private androidFullScreen: AndroidFullScreen*/) {

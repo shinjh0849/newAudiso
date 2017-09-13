@@ -95,8 +95,8 @@ export class StyleCheck3Page {
   }
 
   nextP() {
-    //this.navCtrl.push(Payment1Page, {}, { animate: false });
-    //this.speak(`다 고르셨군요! 그럼 이제 저와 결제대로 이동해보아요~!`);
+    this.navCtrl.push(Payment1Page, {}, { animate: false });
+    this.speak(`다 고르셨군요! 그럼 이제 저와 결제대로 이동해보아요~!`);
   }
 
   getRandom() {
