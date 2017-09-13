@@ -33,6 +33,8 @@ import { RecommendProductPage } from '../pages/recommend-product/recommend-produ
 import { ProductSizePage } from '../pages/product-size/product-size';
 import { StyleCheck2Page } from '../pages/style-check2/style-check2';
 import { StyleCheck3Page } from '../pages/style-check3/style-check3';
+import { ScanPage } from '../pages/scan/scan';
+
 
 
 // T1Page 에서 시작해야 한다.
@@ -42,7 +44,7 @@ import { StyleCheck3Page } from '../pages/style-check3/style-check3';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = RecommendProductPage;
+  rootPage:any = T1Page;
 
   
   

@@ -43,8 +43,9 @@ export class ScanPage {
 
   async scanQRcode(){
     this.options = {
-      prompt : 'Scan a barcode to see the result'
+      prompt : 'Scan a code to see the result'
     }
+    
     this.results = await this.barcode.scan(this.options);
     console.log(this.results);
     this.speak(``);
