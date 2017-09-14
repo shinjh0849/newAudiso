@@ -42,7 +42,9 @@ export class StyleCheck1Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StyleCheck1Page');
-    this.speak(`스타일체크를 시작해볼게요. 먼저 음성안내를 받아, 스타일체크 블록 장판으로 이동해 주세요!`);
+    this.speak(`스타일체크를 시작해볼게요. 먼저 음성안내를 받아, 스타일체크 블록 장판으로 이동해 주세요! 
+    스타일체크 볼록 장판에 바르게 서면 효과음과 함께 스타일체크를 시작합니다. 
+    네, 스타일 볼록 장판에 서셨어요. 두번 탭하시면 스타일 체크가 5초 후에 시작됩니다.`);
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
   }
 

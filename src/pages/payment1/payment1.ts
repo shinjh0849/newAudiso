@@ -44,6 +44,7 @@ export class Payment1Page {
     console.log('ionViewDidLoad Payment1Page');
     this.speak(`결제대에 도착하셨어요! 
 직원의 도움을 받아 결제를 진행해주세요.
+결제가 완료되면 두번 탭 해주세요.  
 `);
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
   }

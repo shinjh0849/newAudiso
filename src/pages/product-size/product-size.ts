@@ -114,7 +114,11 @@ export class ProductSizePage {
   nextP() {
     this.flyinState = 'down';
     this.speak('26인치가 선택되었어요');
-    this.navCtrl.push(ProductConfirmPage, {}, { animate: false });
+    
+     setTimeout(()=> {
+      this.navCtrl.push(ProductConfirmPage, {}, { animate: false });
+    }, 2000);
+    
   }
 
     async speak(line): Promise<any>{
@@ -137,10 +141,14 @@ export class ProductSizePage {
     if (e.deltaX >= 50 && this.triggered == false) {
       this.triggered = true;
       this.panXi = this.innerDefault;
-      if (this.roomState == 'l')
+      if (this.roomState == 'l'){
         this.roomState = 'm';
-      else if (this.roomState == 'm')
+        this.speak(`25인치`);
+      }
+      else if (this.roomState == 'm'){
         this.roomState = 'r';
+        this.speak(`24인치`);
+      }
       else if (this.roomState == 'l2')
         this.roomState = 'l';
 
@@ -148,10 +156,14 @@ export class ProductSizePage {
     } else if (e.deltaX <= -50 && this.triggered == false) {
       this.triggered = true;
       this.panXi = this.innerDefault;
-      if (this.roomState == 'r')
+      if (this.roomState == 'r'){
         this.roomState = 'm';
-      else if (this.roomState == 'm')
+        this.speak(`25인치`);
+      }
+      else if (this.roomState == 'm'){
         this.roomState = 'l';
+        this.speak(`26인치`);
+      }
 
 
     } else {

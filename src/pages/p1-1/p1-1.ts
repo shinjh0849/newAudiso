@@ -367,7 +367,8 @@ export class P1_1Page {
     this.showUni = (this.showUni === "first" ? "second" : "first");
     this.showCircleUp = (this.showCircleUp === "none" ? "first" : "none");
     this.showQloUp = (this.showQloUp === "none" ? "first" : "none");
-    this.hamsoo('쇼핑에 함께하고 싶은 음성 친구를 선택해주세요.  상냥한 유니와 함께하고 싶으시면 위로 슬라이딩, 자상한 클로와 함께하고 싶으시면 아래로 슬라이딩 해주세요.');
+    this.hamsoo(`쇼핑에 함께하고 싶은 음성 친구를 선택해주세요.  
+    상냥한 유니와 함께하고 싶으시면 위로 슬라이딩, 자상한 클로와 함께하고 싶으시면 아래로 슬라이딩 해주세요.`);
     
   }
 async hamsoo(hungry): Promise <any> {
@@ -382,6 +383,7 @@ async hamsoo(hungry): Promise <any> {
 }
 
   upCircle(){
+   /*
     this.showCircleUp = (this.showCircleUp === "first" ? "second" : "first");
     this.showQloUp = (this.showQloUp === "first" ? "second" : "first");
     this.showRecoUp = (this.showRecoUp === "first" ? "second" : "first");
@@ -389,10 +391,10 @@ async hamsoo(hungry): Promise <any> {
     this.showT4Up = (this.showT4Up === "first" ? "second" : "first");
     this.showBUp = (this.showBUp === "first" ? "second" : "first");
 
-     
+     */
    setTimeout(() => {
       this.navCtrl.push( P1_2Page, {}, {animate: false} );
-        }, 2500);
+        }, 500);
   }
 
 }

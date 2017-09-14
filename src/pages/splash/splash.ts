@@ -1,6 +1,8 @@
 import { Component, trigger, state, style, transition, animate, keyframes, group } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, NavController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { T1Page } from "../t1/t1";
+import { T2Page } from "../t2/t2";
 
 @Component({
   selector: 'page-splash',
@@ -57,7 +59,7 @@ export class SplashPage {
   dropState: string = "up";
   fastState: string = "up";
  
-  constructor(public viewCtrl: ViewController, public splashScreen: SplashScreen) {
+  constructor(public viewCtrl: ViewController, public splashScreen: SplashScreen, public navCtrl: NavController) {
   }
 
   ionViewDidLoad(){
@@ -68,10 +70,11 @@ export class SplashPage {
  
   ionViewDidEnter() {
  
-    this.splashScreen.show();
+    //this.splashScreen.show();
  
     setTimeout(() => {
-      this.viewCtrl.dismiss();
+      //this.viewCtrl.dismiss();
+      this.navCtrl.push(T2Page);
     }, 1500);
  
   }

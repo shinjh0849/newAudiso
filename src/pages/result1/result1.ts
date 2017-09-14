@@ -13,10 +13,10 @@ export class Result1Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Result1Page');
-    this.speak(`찾으시던 진청, 26inch 울트라스트레치진 A가 맞아요!`);
+    this.speak(`찾으시던 진청, 26inch 울트라스트레치진 A가 맞아요! 피팅룸으로 이동하시려면 탭 두번 해주세요.`);
   }
 
-  clickEvent() {
+  doubleTapEvent() {
     this.navCtrl.push(FittingRoomPage, {}, { animate: false });
   }
 

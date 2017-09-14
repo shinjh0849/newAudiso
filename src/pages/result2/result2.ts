@@ -21,7 +21,7 @@ export class Result2Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Result2Page');
-    this.speak(`이 옷은 울트라스트레치진 A 검정색 22inch에요, 좀 더 왼쪽 옷을 확인해보세요!`);
+    this.speak(`이 옷은 supima cotton V넥 반팔, 흰색 S 에요, 지금 확인하신 옷 아래쪽 옷을 확인해보세요!`);
   }
 
   clickEvent(){

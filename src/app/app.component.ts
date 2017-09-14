@@ -37,7 +37,7 @@ import { ScanPage } from "../pages/scan/scan";
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 
 
-// T1Page 에서 시작해야 한다.
+// SplashPage 에서 시작해야 한다.
 
 // QR 이후 창은 Result1Page
 
@@ -45,22 +45,22 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = T1Page;
-
+  rootPage:any = SplashPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, private androidFullScreen: AndroidFullScreen) {
     platform.ready().then(() => {
 
-      let splash = modalCtrl.create(SplashPage);
-      splash.present();
+      //let splash = modalCtrl.create(SplashPage);
+      //splash.present();
       //statusBar.hide(); // statusBar hide 해볼까 말까
       //splash.present();
       this.androidFullScreen.isImmersiveModeSupported()
       .then(() => this.androidFullScreen.immersiveMode())
       .catch((error: any) => console.log(error));
-      console.log('hihihihih')
+      console.log('hihihihidgjadgadga')
 
     });
+    
   }
 }
 

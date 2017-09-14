@@ -228,7 +228,7 @@ export class RecommendColorPage {
     
     setTimeout(()=> {
       this.navCtrl.push(RecommendMaterialPage, {}, { animate: false });
-    },1500) 
+    },2000) 
   }
 
   async speak(line): Promise<any>{
@@ -252,20 +252,28 @@ export class RecommendColorPage {
         // 오른쪽으로 넘기기 발생
         this.triggered = true;
         this.panXi = this.inneerDefault;
-        if(this.roomState == 'l')
+        if(this.roomState == 'l'){
           this.roomState = 'm';
-        else if(this.roomState == 'm')
+          this.speak(`어두운색`);
+        }
+        else if(this.roomState == 'm'){
           this.roomState = 'r';
+          this.speak(`중간색`);
+        }
 
         
       } else if (e.deltaX <= -50 && this.triggered == false){
         //왼 쪽으로 넘기기 발생
         this.triggered = true;
         //this.panXi = this.inneerDefault;
-        if(this.roomState == 'r')
+        if(this.roomState == 'r'){
           this.roomState = 'm';
-        else if(this.roomState == 'm')
+          this.speak(`어두운색`);
+      }
+        else if(this.roomState == 'm'){
           this.roomState = 'l';
+          this.speak('밝은색');
+        }
       } else {
         //넘기기 발생 안했을 때, 조이스틱 움직이는 코드
         this.panXi = this.inneerDefault + e.deltaX;

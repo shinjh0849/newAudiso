@@ -112,8 +112,12 @@ export class ProductColorPage {
 
   nextP() {
     this.flyinState = 'down';
-    this.speak('블랙이 선택되었어요');
-    this.navCtrl.push(ProductSizePage, {}, { animate: false });
+    this.speak('진청이 선택되었어요');
+    
+    setTimeout(()=> {
+      this.navCtrl.push(ProductSizePage, {}, { animate: false });
+    },2000)
+    
   }
 
   async speak(line): Promise<any>{
@@ -137,20 +141,28 @@ export class ProductColorPage {
     if (e.deltaX >= 50 && this.triggered == false) {
       this.triggered = true;
       this.panXi = this.innerDefault;
-      if (this.roomState == 'l')
+      if (this.roomState == 'l'){
         this.roomState = 'm';
-      else if (this.roomState == 'm')
+        this.speak(`블랙`);
+      }
+      else if (this.roomState == 'm'){
         this.roomState = 'r';
+        this.speak(`진청`);
+      }
 
 
 
     } else if (e.deltaX <= -50 && this.triggered == false) {
       this.triggered = true;
       this.panXi = this.innerDefault;
-      if (this.roomState == 'r')
+      if (this.roomState == 'r'){
         this.roomState = 'm';
-      else if (this.roomState == 'm')
+        this.speak(`블랙`);
+      }
+      else if (this.roomState == 'm'){
         this.roomState = 'l';
+        this.speak(`화이트`);
+      }
 
 
     } else {

@@ -43,14 +43,14 @@ export class Navigation2Page {
     console.log('ionViewDidLoad NavigationPage');
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState)
     this.speak(`앞으로 10m만 직진 해주세요~!
-                5m만 더 가면 되요~! 
-                네 이제 왼쪽으로 방향으로 돌아주셔서 10m만 전진해주세요~!`);
+    앞으로 5m만 더 가면 돼요. 피팅룸에 도착했어요.
+    피팅을 하시고 스타일체크를 원하시면 화면을 두번 탭해 주세요!`);
   }
 
   onDoubleTap() {
     this.flyinState = 'down';
-    this.speak(`피팅룸에 도착하셨어요! 피팅을 하시고 스타일체크를 원하시면 화면을 두번 탭해 주세요!`);
-    this.navCtrl.push(StyleCheck1Page, {}, { animate: false });
+      this.navCtrl.push(StyleCheck1Page, {}, { animate: false });
+  
   }
 
   async speak(line): Promise<any> {

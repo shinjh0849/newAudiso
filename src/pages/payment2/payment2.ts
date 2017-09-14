@@ -41,7 +41,8 @@ export class Payment2Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Payment2Page');
-    this.speak(`결제가 완료 되었습니다! `);
+    this.speak(`49900원, 진청, 26인치 여성 울트라스트레치A의 결제가 완료되었습니다. 
+    구매를 확정하시려면 두번 탭해주세요. `);
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
   }
 

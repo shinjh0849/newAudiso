@@ -389,10 +389,10 @@ export class RecommendMaterialPage {
 
   nextP() {
     this.flyinState = 'down';
-    this.speak('면 소재가 선택되셨습니다.');
+    this.speak('면 소재가 선택되었습니다.');
     setTimeout(()=> {
       this.navCtrl.push(RecommendProductPage, {}, { animate: false });
-    }, 1500);
+    }, 2000);
   }
 
   async speak(line): Promise<any>{
@@ -416,23 +416,35 @@ export class RecommendMaterialPage {
     if (e.deltaX >= 50 && this.triggered == false) {
       this.triggered = true;
       this.panXi = this.innerDefault;
-      if (this.roomState == 'l')
+      if (this.roomState == 'l'){
         this.roomState = 'm';
-      else if (this.roomState == 'm')
+        this.speak(`면`);
+      }
+      else if (this.roomState == 'm'){
         this.roomState = 'r';
-      else if (this.roomState == 'l2')
+        this.speak(`나일론`);
+      }
+      else if (this.roomState == 'l2'){
         this.roomState = 'l';
+        this.speak(`에어리즘`);
+      }
 
 
     } else if (e.deltaX <= -50 && this.triggered == false) {
       this.triggered = true;
       this.panXi = this.innerDefault;
-      if (this.roomState == 'r')
+      if (this.roomState == 'r'){
         this.roomState = 'm';
-      else if (this.roomState == 'm')
+        this.speak(`면`);
+      }
+      else if (this.roomState == 'm'){
         this.roomState = 'l';
-      else if (this.roomState == 'l')
+        this.speak(`에어리즘`);
+      }
+      else if (this.roomState == 'l'){
         this.roomState = 'l2';
+        this.speak(`히트텍`);
+      }
 
     } else {
       this.panXi = this.innerDefault + e.deltaX;

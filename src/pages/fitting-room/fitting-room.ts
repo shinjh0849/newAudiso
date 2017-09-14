@@ -43,11 +43,10 @@ export class FittingRoomPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FittingRoomPage');
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
-    this.speak('그럼 제가 피팅룸으로 안내해드릴게요!');
+    this.speak('그럼 제가 피팅룸으로 안내해드릴게요! 계속하시려면 화면을 탭해주세요. ');
   }
 
   nextP() {
-    this.speak(`2블럭 앞에서 왼쪽으로 회전 후, 10m만 직진하시면 피팅룸이 있어요~! 그럼 가볼까요?`);
     this.navCtrl.push(Navigation2Page, {}, { animate: false });
   }
 

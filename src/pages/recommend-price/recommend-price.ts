@@ -556,7 +556,6 @@ import { NavController, NavParams } from 'ionic-angular';
       transition('l2<=>l3', [animate('0.3s')])
     ]),
 
-     
 
   ]
 })
@@ -576,7 +575,8 @@ flyinState: string = "out";
     console.log('ionViewDidLoad RecommendPage');
     this.panXi = this.inneerDefault;
     this.panXo = this.outerDefault;
-     this.flyinState = "in"; console.log('flyState: ' + this.flyinState);
+    this.flyinState = "in"; 
+    console.log('flyState: ' + this.flyinState);
     this.speak(`원하시는 가격대를 선택해주세요!
 좌우 스와이핑으로 선택하실 수 있고 더블탭으로 입력 하실 수 있어요!`);
 
@@ -594,7 +594,8 @@ flyinState: string = "out";
 
     }
   }
-  nextP(){console.log("이야 신난다");
+  nextP(){
+    //console.log("이야 신난다");
     this.flyinState = 'down';
     if(this.roomState == 'r')
       this.speak('1만원 이하가 선택되었습니다.');
@@ -604,11 +605,11 @@ flyinState: string = "out";
       this.speak('2에서 3만원이 선택되었습니다.');
     else if(this.roomState == 'l2')
       this.speak('3에서 4만원이 선택되었습니다.');
-    else if(this.roomState == 'l2')
+    else if(this.roomState == 'l3')
       this.speak('4만원 이상이 선택되었습니다.');
-        setTimeout(()=> {
+    setTimeout(()=> {
       this.navCtrl.push(RecommendColorPage, {}, { animate: false });
-    }, 1500);
+    }, 2000);
   }
 
 
@@ -619,27 +620,43 @@ flyinState: string = "out";
         // 오른쪽으로 넘기기 발생
         this.triggered = true;
         this.panXi = this.inneerDefault;
-        if(this.roomState == 'l')
+        if(this.roomState == 'l'){
           this.roomState = 'm';
-        else if(this.roomState == 'm')
+          this.speak('1에서 2만원');
+        }
+        else if(this.roomState == 'm'){
           this.roomState = 'r';
-        else if(this.roomState == 'l2')
+          this.speak(`1만원 이하`);
+        }
+        else if(this.roomState == 'l2'){
           this.roomState = 'l';
-        else if(this.roomState == 'l3')
+          this.speak(`2에서 3만원`);
+        }
+        else if(this.roomState == 'l3'){
           this.roomState = 'l2'
+          this.speak(`3에서 4만원`);
+        }
         
       } else if (e.deltaX <= -50 && this.triggered == false){
         //왼 쪽으로 넘기기 발생
         this.triggered = true;
         this.panXi = this.inneerDefault;
-        if(this.roomState == 'r')
+        if(this.roomState == 'r'){
           this.roomState = 'm';
-        else if(this.roomState == 'm')
+          this.speak(`1에서 2만원`);
+        }
+        else if(this.roomState == 'm'){
           this.roomState = 'l'; 
-        else if(this.roomState == 'l')
+          this.speak(`2에서 3만원`);
+        }
+        else if(this.roomState == 'l'){
           this.roomState = 'l2';
-        else if (this.roomState == 'l2')
+          this.speak(`3에서 4만원`);
+        }
+        else if (this.roomState == 'l2'){
           this.roomState = 'l3';
+          this.speak(`4만원 이상`);
+        }
       } else {
         //넘기기 발생 안했을 때, 조이스틱 움직이는 코드
         this.panXi = this.inneerDefault + e.deltaX;

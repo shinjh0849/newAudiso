@@ -69,6 +69,7 @@
             "cordova-plugin-fullscreen": {}
         },
         "platforms": [
+            "android",
             "ios"
         ]
     }

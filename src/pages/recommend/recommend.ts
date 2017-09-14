@@ -316,13 +316,13 @@ export class RecommendPage {
     else if(this.roomState == 'm')
       this.speak('아우터가 선택되었습니다.');
     else if(this.roomState == 'l')
-      this.speak('바텀이 선택되었습니다.');
+      this.speak('하의가 선택되었습니다.');
     else if(this.roomState == 'l2')
       this.speak('속옷이 선택되었습니다.');
 
     setTimeout(()=> {
       this.navCtrl.push(RecommendPricePage, {}, { animate: false });
-    }, 1500);
+    }, 2000);
   }
 
 
@@ -334,24 +334,36 @@ export class RecommendPage {
         // 오른쪽으로 넘기기 발생
         this.triggered = true;
         //this.panXi = this.inneerDefault;
-        if(this.roomState == 'l')
+        if(this.roomState == 'l'){
           this.roomState = 'm';
-        else if(this.roomState == 'm')
+          this.speak(`아우터`);
+        }
+        else if(this.roomState == 'm'){
           this.roomState = 'r';
-        else if(this.roomState == 'l2')
+          this.speak(`상의`);
+        }
+        else if(this.roomState == 'l2'){
           this.roomState = 'l';
-
+          this.speak(`하의`);
+          
+        }
         
       } else if (e.deltaX <= -50 && this.triggered == false){
         //왼 쪽으로 넘기기 발생
         this.triggered = true;
         //this.panXi = this.inneerDefault;
-        if(this.roomState == 'r')
+        if(this.roomState == 'r'){
           this.roomState = 'm';
-        else if(this.roomState == 'm')
+          this.speak(`아우터`);
+        }
+        else if(this.roomState == 'm'){
           this.roomState = 'l';
-        else if(this.roomState == 'l')
+          this.speak(`하의`);
+        }
+        else if(this.roomState == 'l'){
           this.roomState = 'l2';
+          this.speak(`속옷`);
+        }
       } else {
         //넘기기 발생 안했을 때, 조이스틱 움직이는 코드
         this.panXi = this.inneerDefault + e.deltaX;
