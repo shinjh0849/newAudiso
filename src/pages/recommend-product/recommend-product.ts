@@ -258,14 +258,14 @@ export class RecommendProductPage {
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState)
     this.appearState = 'on';
     this.speak('세건의 추천 상품을 찾았어요. \
-        추천 상품들을 확인해 보시려면 좌우로 스와이핑 해주세요.');
+        추천 상품들을 확인해 보시려면 좌우로 스와이핑을 해주세요.');
   }
 
   nextP() {
     this.flyinState = 'down';
     this.speak('여성 울트라스트레치진 A 사만구천구백원이 선택되었습니다.\
     간단한 상품설명을 듣고 싶으시면 탭 한 번을 \
-    스킵하시려면 화면을 아래로 슬라이딩를해주세요.')
+    스킵하시려면 화면을 아래로 슬라이딩을 해주세요.')
      setTimeout(()=> {
       this.navCtrl.push(ProductColorPage, {}, { animate: false });
     }, 5000);

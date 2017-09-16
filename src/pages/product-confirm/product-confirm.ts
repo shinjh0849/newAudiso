@@ -62,7 +62,7 @@ export class ProductConfirmPage {
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState)
     this.speak(`49900원, 진청, 26인치
 여성 울트라 스트레치진 A가 선택되었어요. 상품을 찾으러 가시려면 탭 한번을, 
-위시리스트에 넣고 싶으시면 아래로 화면 슬라이딩를 해주세요`)
+위시리스트에 넣고 싶으시면 아래로 화면 슬라이딩을 해주세요`)
   }
 
 
@@ -82,7 +82,7 @@ export class ProductConfirmPage {
 
   nextP() {
     this.flyinState = 'down';
-    this.speak('울트라스트레치진 A를 같이 찾으러 가볼게요. 3블럭 앞에서 왼쪽으로 회전 후, 왼쪽 매대에 상품이 비치되어 있어요~! 그럼 가볼까요?')
+    this.speak('울트라스트레치진 A를 같이 찾으러 가볼게요. 세 블럭 앞에서 왼쪽으로 회전 후, 왼쪽 매대에 상품이 비치되어 있어요~! 그럼 가볼까요?')
     
     setTimeout(()=> {
       this.navCtrl.push(NavigationPage, {}, { animate: false });

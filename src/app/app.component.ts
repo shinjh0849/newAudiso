@@ -45,7 +45,8 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SplashPage;
+  //rootPage:any = SplashPage;
+  rootPage:any = StyleCheck1Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, private androidFullScreen: AndroidFullScreen) {
     platform.ready().then(() => {

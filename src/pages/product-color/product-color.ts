@@ -107,7 +107,7 @@ export class ProductColorPage {
     this.panXi = this.innerDefault;
     this.panXo = this.outerDefault
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState)
-    this.speak('원하시는 색상을 화면 오른쪽으로 스와이핑를 통해 선택 해주세요');
+    this.speak('원하시는 색상을 화면 오른쪽으로 스와이핑을 통해 선택 해주세요');
   }
 
   nextP() {

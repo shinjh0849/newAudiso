@@ -318,7 +318,7 @@ export class RecommendPage {
     else if(this.roomState == 'l')
       this.speak('하의가 선택되었습니다.');
     else if(this.roomState == 'l2')
-      this.speak('속옷이 선택되었습니다.');
+      this.speak('언더웨어가 선택되었습니다.');
 
     setTimeout(()=> {
       this.navCtrl.push(RecommendPricePage, {}, { animate: false });
@@ -362,7 +362,7 @@ export class RecommendPage {
         }
         else if(this.roomState == 'l'){
           this.roomState = 'l2';
-          this.speak(`속옷`);
+          this.speak(`언더웨어`);
         }
       } else {
         //넘기기 발생 안했을 때, 조이스틱 움직이는 코드

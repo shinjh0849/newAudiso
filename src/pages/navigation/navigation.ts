@@ -60,14 +60,22 @@ export class NavigationPage {
 
     this.speak(`앞으로 10m만 직진 해주세요~!
      5m만 더 가면 되요~! 네 이제 왼쪽 방향으로 돌아주셔서 3m만 전진해주세요~!`);
-  }
+    
+    
+  setTimeout(()=> {
+        this.speak(`울트라스트레치진 A 진열대 앞에 도착했어요! 
+                앞에 있는 상품의 상세정보를 확인하시려면 탭 한번 해주세요.
+              `)
+
+    }, 7000);
+  
+   }
 
   onDoubleTap() {
     this.flyinState = 'down';
-    this.speak('울트라스트레치진 A 진열대 앞에 도착했어요! ')
-     setTimeout(()=> {
+     //setTimeout(()=> {
       this.navCtrl.push(ScanPage, {}, { animate: false });
-    }, 5000);
+   // }, 5000);
     //this.navCtrl.push(ScanPage, {}, { animate: false });
   }
 

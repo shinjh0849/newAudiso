@@ -108,7 +108,7 @@ export class ProductSizePage {
     this.panXi = this.innerDefault;
     this.panXo = this.outerDefault
     this.flyinState = "in"; console.log('flyState: ' + this.flyinState)
-    this.speak('원하시는 사이즈를 스와이핑를를 통해 선택 해주세요');
+    this.speak('원하시는 사이즈를 스와이핑을 통해 선택 해주세요');
   }
 
   nextP() {
